@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Merriweather, Montserrat, Open_Sans, Lato } from "next/font/google";
+import { Merriweather, Montserrat, Open_Sans, Lato, Roboto } from "next/font/google";
 import "./globals.css";
 
 const merriweather = Merriweather({
@@ -30,6 +30,13 @@ const lato = Lato({
   display: "swap",
 });
 
+const roboto = Roboto({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto-sans",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Dil Chahal Constructions Ltd.",
   description:
@@ -42,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${merriweather.variable} ${montserrat.variable} ${openSans.variable} ${lato.variable}`}
+      className={`${merriweather.variable} ${montserrat.variable} ${openSans.variable} ${lato.variable} ${roboto.variable}`}
     >
       <body>{children}</body>
     </html>

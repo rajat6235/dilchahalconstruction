@@ -23,9 +23,9 @@ export default function Footer() {
             <Image
               src="/images/logo.png"
               alt="Dil Chahal Constructions Ltd."
-              width={160}
-              height={55}
-              style={{ height: "55px", width: "auto" }}
+              width={547}
+              height={456}
+              style={{ height: "65px", width: "auto" }}
               className="object-contain"
             />
             <p

@@ -1,6 +1,5 @@
-import Header from "@/components/layout/Header";
+import HeroWithHeader from "@/components/sections/HeroWithHeader";
 import Footer from "@/components/layout/Footer";
-import Hero from "@/components/sections/Hero";
 import InnovateSpace from "@/components/sections/InnovateSpace";
 import QualityServices from "@/components/sections/QualityServices";
 import QualitySafety from "@/components/sections/QualitySafety";
@@ -16,9 +15,8 @@ import QuoteAndFAQ from "@/components/sections/QuoteAndFAQ";
 export default function Home() {
   return (
     <>
-      <Header />
+      <HeroWithHeader />
       <main>
-        <Hero />
         <InnovateSpace />
         <QualityServices />
         <QualitySafety />

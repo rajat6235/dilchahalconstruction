@@ -9,6 +9,7 @@
   --color-gray-mid: #7A7A7A;
   --color-gray-light: #BEB9B9;
   --color-gray-muted: #737373;
+  --color-button-gray: #737373;
   --color-blue: #007BE2;
   --color-white: #FFFFFF;
 
@@ -17,6 +18,7 @@
   --font-subheading: var(--font-montserrat);
   --font-body: var(--font-open-sans);
   --font-nav: var(--font-lato);
+  --font-roboto: var(--font-roboto-sans);
 }
 
 /* Reset */
