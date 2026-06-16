@@ -1,77 +1,117 @@
-import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 export default function FounderVision() {
   return (
     <section className="bg-white pb-[60px]">
       <div className="max-w-[1140px] mx-auto px-4">
-        <div className="flex flex-col md:flex-row gap-12 items-start">
-          {/* Left: founder photo */}
-          <div className="flex-[0_0_auto] w-full md:w-[280px]">
-            <div className="relative w-full" style={{ paddingBottom: "120%" }}>
-              <Image
-                src="/images/founder.jpeg"
-                alt="Dilbagh Singh Chahal, CEO"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 280px"
-              />
-            </div>
-            <div className="mt-3 text-center">
-              <p
-                className="text-black font-[700] text-[15px]"
-                style={{ fontFamily: "var(--font-subheading)" }}
-              >
-                Dilbagh Singh Chahal
-              </p>
-              <p
-                className="text-[#7A7A7A] text-[13px]"
-                style={{ fontFamily: "var(--font-body)" }}
-              >
-                CEO
-              </p>
+        <div className="flex flex-col md:flex-row gap-8">
+
+          {/* Left column — photo card, no overlay */}
+          <div className="flex-1">
+            <div
+              className="relative flex flex-col justify-end"
+              style={{
+                backgroundImage: "url('/images/founder.jpeg')",
+                backgroundSize: "cover",
+                backgroundPosition: "top center",
+                margin: "10px",
+                minHeight: "500px",
+                paddingBottom: "50px",
+                paddingLeft: "50px",
+                paddingRight: "50px",
+              }}
+            >
+              {/* Dilbagh Singh Chahal / CEO — white text over dark suit */}
+              <div className="relative z-10">
+                <h3
+                  className="text-white font-[700]"
+                  style={{
+                    fontFamily: "var(--font-subheading)",
+                    fontSize: "clamp(16px, 1.6vw, 22px)",
+                    marginBottom: "0px",
+                  }}
+                >
+                  Dilbagh Singh Chahal
+                </h3>
+                <p
+                  className="text-white text-[14px]"
+                  style={{ fontFamily: "var(--font-body)" }}
+                >
+                  CEO
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Right: text */}
-          <div className="flex-1">
-            <p
-              className="text-[#E00201] text-[13px] font-[600] uppercase tracking-widest mb-3"
-              style={{ fontFamily: "var(--font-subheading)" }}
-            >
-              Founder&apos;s Vision
-            </p>
+          {/* Right column — text content */}
+          <div className="flex-1 md:pl-4">
+            {/* "Founder's Vision" — red, Merriweather 40px 700 */}
             <h2
-              className="text-black font-[700] leading-tight mb-5"
+              className="leading-tight mb-5"
               style={{
                 fontFamily: "var(--font-heading)",
-                fontSize: "clamp(24px, 2.5vw, 36px)",
+                fontSize: "clamp(28px, 3.2vw, 40px)",
+                fontWeight: 700,
+                color: "#E00201",
+                letterSpacing: "0.5px",
+              }}
+            >
+              Founder&apos;s Vision
+            </h2>
+
+            <p
+              className="text-[#7A7A7A] leading-relaxed mb-6"
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "clamp(14px, 1.3vw, 16px)",
+                textAlign: "justify",
+              }}
+            >
+              Under the visionary leadership of Dilbagh Singh Chahal, our founder
+              and CEO, Dil Chahal Constructions aims to set new benchmarks in the
+              industry. Dil Chahal&apos;s forward-thinking approach and unwavering
+              commitment to quality have been the driving forces behind our
+              innovative solutions and exceptional service standards.
+            </p>
+
+            {/* "Why Choose Us?" — Montserrat 36px weight 500 */}
+            <h3
+              className="text-black leading-tight mb-5"
+              style={{
+                fontFamily: "var(--font-subheading)",
+                fontSize: "clamp(24px, 2.8vw, 36px)",
+                fontWeight: 500,
+                letterSpacing: "0.5px",
               }}
             >
               Why Choose Us?
-            </h2>
+            </h3>
+
             <p
-              className="text-[#7A7A7A] text-[15px] leading-relaxed mb-4"
-              style={{ fontFamily: "var(--font-body)", wordSpacing: "3px" }}
+              className="text-[#7A7A7A] leading-relaxed mb-8"
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "clamp(14px, 1.3vw, 16px)",
+                textAlign: "justify",
+              }}
             >
-              Under the visionary leadership of Dilbagh Singh Chahal, our founder
-              and CEO, Dil Chahal Constructions Ltd. has set new benchmarks in
-              the industry. Our forward-thinking approach and unwavering
-              commitment to excellence have earned us the trust of countless
-              satisfied clients.
+              Choosing Dil Chahal Constructions means choosing reliability,
+              innovation, and unparalleled customer service. Our founder&apos;s
+              passion for excellence drives us to continuously improve and adapt
+              to our clients&apos; needs. With a proven track record of success
+              and a team of highly skilled professionals, we are your trusted
+              partner in Saskatchewan.
             </p>
-            <p
-              className="text-[#7A7A7A] text-[15px] leading-relaxed mb-8"
-              style={{ fontFamily: "var(--font-body)", wordSpacing: "3px" }}
+
+            <Button
+              variant="primary"
+              href="#services"
+              className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
             >
-              We combine years of hands-on experience with modern technology and
-              the highest performance. As your trusted construction partner in
-              Saskatchewan, we are your premier partner in excellence.
-            </p>
-            <Button variant="primary" href="#services">
               Our Services
             </Button>
           </div>
+
         </div>
       </div>
     </section>
