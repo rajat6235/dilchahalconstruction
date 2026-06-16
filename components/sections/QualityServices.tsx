@@ -9,7 +9,7 @@ const services = [
       "Quality drywall services providing strong and even surfaces for any space.",
   },
   {
-    src: "/images/glasroc.jpeg",
+    src: "/images/work7.jpeg",
     alt: "GlassRoc sheathing",
     title: "GlassRoc",
     description:
@@ -30,28 +30,28 @@ const services = [
       "Superior T-Bar ceiling systems for a modern, clean, and professional appearance.",
   },
   {
-    src: "/images/insulation.jpeg",
+    src: "/images/work5.jpeg",
     alt: "Insulation services",
     title: "Insulation",
     description:
       "Top-tier insulation services to keep your property energy-efficient and cozy.",
   },
   {
-    src: "/images/bulkhead.jpeg",
+    src: "/images/bullcat2.jpeg",
     alt: "Bulkhead ceiling",
     title: "Bulkhead Ceiling",
     description:
       "Enhance your space with our expertly crafted bulkhead ceilings, designed to add dimension, style, and functionality to any room.",
   },
   {
-    src: "/images/mudding.jpeg",
+    src: "/images/quality-right-bg.jpeg",
     alt: "Mudding and taping",
     title: "Mudding",
     description:
       "Seamless mudding services for a smooth, impeccable finish on all surfaces.",
   },
   {
-    src: "/images/texture.jpeg",
+    src: "/images/team2.jpeg",
     alt: "Texture finishing",
     title: "Texture",
     description:
@@ -78,7 +78,7 @@ export default function QualityServices() {
         >
           Quality Services
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-8 sm:gap-x-4 lg:gap-x-5">
           {services.map((svc) => (
             <ServiceCard key={svc.title} {...svc} />
           ))}

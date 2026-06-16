@@ -22,7 +22,7 @@ export default function OurExperts() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="relative w-full" style={{ paddingBottom: "60%" }}>
             <Image
-              src="/images/team.jpeg"
+              src="/images/work4.jpeg"
               alt="Dil Chahal Construction team"
               fill
               className="object-cover"
@@ -31,7 +31,7 @@ export default function OurExperts() {
           </div>
           <div className="relative w-full" style={{ paddingBottom: "60%" }}>
             <Image
-              src="/images/team2.jpeg"
+              src="/images/work6.jpeg"
               alt="Dil Chahal Construction crew"
               fill
               className="object-cover"

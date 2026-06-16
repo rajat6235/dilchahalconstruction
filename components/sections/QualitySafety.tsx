@@ -17,7 +17,7 @@ export default function QualitySafety() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/quality-left-bg.jpg')" }}
+          style={{ backgroundImage: "url('/images/image-1-min.jpg')" }}
         />
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 max-w-[480px]">
@@ -57,7 +57,7 @@ export default function QualitySafety() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/quality-right-bg.jpeg')" }}
+          style={{ backgroundImage: "url('/images/image-2-min.jpg')" }}
         />
         <div className="absolute inset-0 bg-[#8B0001]/75" />
         <div className="relative z-10 max-w-[480px]">
