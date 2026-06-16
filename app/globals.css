@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand colors */
+  --color-red: #E00201;
+  --color-dark-red: #8B0001;
+  --color-black: #000000;
+  --color-gray-dark: #54595F;
+  --color-gray-mid: #7A7A7A;
+  --color-gray-light: #BEB9B9;
+  --color-gray-muted: #737373;
+  --color-blue: #007BE2;
+  --color-white: #FFFFFF;
+
+  /* Font families — set by layout.tsx via next/font */
+  --font-heading: var(--font-merriweather);
+  --font-subheading: var(--font-montserrat);
+  --font-body: var(--font-open-sans);
+  --font-nav: var(--font-lato);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #000;
+  font-family: var(--font-body), Open Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: none !important;
+}
+.fade-in-left  { transform: translateX(-40px); }
+.fade-in-right { transform: translateX(40px); }
+.fade-in-up    { transform: translateY(30px); }
+.fade-in-down  { transform: translateY(-30px); }
+.zoom-in-anim  { transform: scale(0.88); }
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
 }

@@ -1,0 +1,89 @@
+import ServiceCard from "@/components/ui/ServiceCard";
+
+const services = [
+  {
+    src: "/images/drywall.jpg",
+    alt: "Drywall installation",
+    title: "Drywall",
+    description:
+      "Quality drywall services providing strong and even surfaces for any space.",
+  },
+  {
+    src: "/images/glasroc.jpeg",
+    alt: "GlassRoc sheathing",
+    title: "GlassRoc",
+    description:
+      "Safeguard your building with GlasRoc Sheathing superior fire, moisture, and mold resistance for durable exterior walls and roofs.",
+  },
+  {
+    src: "/images/steel-frame.jpeg",
+    alt: "Steel frame construction",
+    title: "Steel Frame",
+    description:
+      "Durable steel frame constructions that provide excellent structural support.",
+  },
+  {
+    src: "/images/t-bar.jpeg",
+    alt: "T-Bar ceiling installation",
+    title: "T-Bar",
+    description:
+      "Superior T-Bar ceiling systems for a modern, clean, and professional appearance.",
+  },
+  {
+    src: "/images/insulation.jpeg",
+    alt: "Insulation services",
+    title: "Insulation",
+    description:
+      "Top-tier insulation services to keep your property energy-efficient and cozy.",
+  },
+  {
+    src: "/images/bulkhead.jpeg",
+    alt: "Bulkhead ceiling",
+    title: "Bulkhead Ceiling",
+    description:
+      "Enhance your space with our expertly crafted bulkhead ceilings, designed to add dimension, style, and functionality to any room.",
+  },
+  {
+    src: "/images/mudding.jpeg",
+    alt: "Mudding and taping",
+    title: "Mudding",
+    description:
+      "Seamless mudding services for a smooth, impeccable finish on all surfaces.",
+  },
+  {
+    src: "/images/texture.jpeg",
+    alt: "Texture finishing",
+    title: "Texture",
+    description:
+      "Stylish texturing techniques to enhance the visual appeal of your interiors.",
+  },
+];
+
+export default function QualityServices() {
+  return (
+    <section id="services" className="bg-white py-[100px]">
+      <div className="max-w-[1140px] mx-auto px-4">
+        <p
+          className="text-[#E00201] text-[14px] font-[600] uppercase tracking-widest mb-3"
+          style={{ fontFamily: "var(--font-subheading)" }}
+        >
+          Comprehensive Solutions
+        </p>
+        <h2
+          className="font-[700] text-black mb-12"
+          style={{
+            fontFamily: "var(--font-heading)",
+            fontSize: "clamp(32px, 4vw, 48px)",
+          }}
+        >
+          Quality Services
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((svc) => (
+            <ServiceCard key={svc.title} {...svc} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
