@@ -63,17 +63,28 @@ export default function QualityServices() {
   return (
     <section id="services" className="bg-white py-[100px]">
       <div className="max-w-[1140px] mx-auto px-4">
-        <p
-          className="text-[#E00201] text-[14px] font-[600] uppercase tracking-widest mb-3"
-          style={{ fontFamily: "var(--font-subheading)" }}
+        {/* H4 label — WP: Montserrat 24px weight 300 #E00201 lineHeight 28.8px */}
+        <h4
+          className="mb-3"
+          style={{
+            fontFamily: "var(--font-subheading)",
+            fontSize: "24px",
+            fontWeight: 300,
+            color: "#E00201",
+            lineHeight: "28.8px",
+            letterSpacing: "normal",
+          }}
         >
           Comprehensive Solutions
-        </p>
+        </h4>
+        {/* H2 — WP: Merriweather 48px weight 700 #000000 letterSpacing 0.5px lineHeight 62.4px */}
         <h2
           className="font-[700] text-black mb-12"
           style={{
             fontFamily: "var(--font-heading)",
             fontSize: "clamp(32px, 4vw, 48px)",
+            letterSpacing: "0.5px",
+            lineHeight: "62.4px",
           }}
         >
           Quality Services

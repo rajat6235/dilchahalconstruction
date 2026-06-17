@@ -3,108 +3,167 @@ import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export default function QuoteAndFAQ() {
   return (
-    <section id="contact" className="bg-[#2d2d2d] pb-[120px] pt-[80px]">
-      <div className="max-w-[1140px] mx-auto px-4">
-        <div className="flex flex-col md:flex-row gap-16">
-          {/* Left: Request a Quote form */}
-          <div className="flex-1">
+    // WP: section bg #F5F5F5, 728px height
+    <section id="contact" style={{ backgroundColor: "rgb(245,245,245)" }}>
+      <div className="max-w-[1140px] mx-auto" style={{ paddingBottom: "150px" }}>
+        <div className="flex flex-col md:flex-row">
+
+          {/* Left — WP: bg #8B0001, 570px wide, 688px height, padding 64px */}
+          <div
+            className="flex-1"
+            style={{
+              backgroundColor: "rgb(139,0,1)",
+              padding: "64px",
+            }}
+          >
+            {/* H2 "Request a Quote" — WP: Montserrat 36px weight 500 white lineHeight 46.8px */}
             <h2
-              className="text-white font-[700] mb-8"
+              className="mb-4"
               style={{
-                fontFamily: "var(--font-heading)",
+                fontFamily: "var(--font-subheading)",
                 fontSize: "clamp(24px, 2.5vw, 36px)",
+                fontWeight: 500,
+                color: "rgb(255,255,255)",
+                lineHeight: "46.8px",
+                letterSpacing: "0.5px",
               }}
             >
               Request a Quote
             </h2>
-            <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-              <div>
-                <label
-                  className="block text-white/80 text-[13px] mb-1"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 px-4 py-3 text-[14px] focus:outline-none focus:border-[#E00201] transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-body)" }}
-                />
-              </div>
-              <div>
-                <label
-                  className="block text-white/80 text-[13px] mb-1"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 px-4 py-3 text-[14px] focus:outline-none focus:border-[#E00201] transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-body)" }}
-                />
-              </div>
-              <div>
-                <label
-                  className="block text-white/80 text-[13px] mb-1"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  placeholder="Phone"
-                  className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 px-4 py-3 text-[14px] focus:outline-none focus:border-[#E00201] transition-colors duration-200"
-                  style={{ fontFamily: "var(--font-body)" }}
-                />
-              </div>
-              <div>
-                <label
-                  className="block text-white/80 text-[13px] mb-1"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  Message
-                </label>
-                <textarea
-                  rows={4}
-                  placeholder="Tell us about your project..."
-                  className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 px-4 py-3 text-[14px] focus:outline-none focus:border-[#E00201] transition-colors duration-200 resize-none"
-                  style={{ fontFamily: "var(--font-body)" }}
-                />
-              </div>
+
+            {/* Subtitle — WP: Open Sans 16px white */}
+            <p
+              className="mb-8"
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "16px",
+                fontWeight: 400,
+                color: "rgb(255,255,255)",
+                lineHeight: "24.75px",
+              }}
+            >
+              Ready to Work Together? Build a project with us!
+            </p>
+
+            {/* Form — WP: white bg inputs, 16px, borderRadius 3px */}
+            <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                className="w-full focus:outline-none"
+                style={{
+                  backgroundColor: "rgb(255,255,255)",
+                  border: "1px solid rgba(0,0,0,0.25)",
+                  borderRadius: "3px",
+                  color: "rgba(0,0,0,0.7)",
+                  fontSize: "16px",
+                  fontFamily: "var(--font-body)",
+                  padding: "10px 14px",
+                }}
+              />
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="w-full focus:outline-none"
+                style={{
+                  backgroundColor: "rgb(255,255,255)",
+                  border: "1px solid rgba(0,0,0,0.25)",
+                  borderRadius: "3px",
+                  color: "rgba(0,0,0,0.7)",
+                  fontSize: "16px",
+                  fontFamily: "var(--font-body)",
+                  padding: "10px 14px",
+                }}
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                className="w-full focus:outline-none"
+                style={{
+                  backgroundColor: "rgb(255,255,255)",
+                  border: "1px solid rgba(0,0,0,0.25)",
+                  borderRadius: "3px",
+                  color: "rgba(0,0,0,0.7)",
+                  fontSize: "16px",
+                  fontFamily: "var(--font-body)",
+                  padding: "10px 14px",
+                }}
+              />
+              <textarea
+                rows={4}
+                placeholder="Message"
+                className="w-full focus:outline-none resize-none"
+                style={{
+                  backgroundColor: "rgb(255,255,255)",
+                  border: "1px solid rgba(0,0,0,0.25)",
+                  borderRadius: "3px",
+                  color: "rgba(0,0,0,0.7)",
+                  fontSize: "16px",
+                  fontFamily: "var(--font-body)",
+                  padding: "10px 14px",
+                }}
+              />
+              {/* Submit — WP: bg #737373, white, 17px weight 500, "SEND MESSAGE" */}
               <div>
                 <button
                   type="submit"
-                  className="bg-[#8B0001] text-white px-8 py-3 text-[15px] font-[600] hover:bg-[#E00201] transition-colors duration-300 cursor-pointer"
-                  style={{ fontFamily: "var(--font-subheading)" }}
+                  className="cursor-pointer hover:bg-[#5a5a5a] transition-colors duration-300"
+                  style={{
+                    backgroundColor: "rgb(115,115,115)",
+                    color: "rgb(255,255,255)",
+                    fontSize: "17px",
+                    fontWeight: 500,
+                    fontFamily: "var(--font-subheading)",
+                    padding: "12px 24px",
+                    letterSpacing: "normal",
+                    border: "none",
+                    borderRadius: "3px",
+                  }}
                 >
-                  Submit
+                  SEND MESSAGE
                 </button>
               </div>
             </form>
           </div>
 
-          {/* Right: FAQ */}
-          <div className="flex-1">
-            <p
-              className="text-[#E00201] text-[13px] font-[600] uppercase tracking-widest mb-3"
-              style={{ fontFamily: "var(--font-subheading)" }}
+          {/* Right — WP: transparent bg (#F5F5F5 inherited), 570px wide, padding 0px 0px 0px 100px, justify-center */}
+          <div
+            className="flex-1"
+            style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "0px 0px 0px 100px" }}
+          >
+            {/* H4 "Learn More From" — WP: Montserrat 24px weight 600 #E00201 */}
+            <h4
+              className="mb-3"
+              style={{
+                fontFamily: "var(--font-subheading)",
+                fontSize: "24px",
+                fontWeight: 600,
+                color: "#E00201",
+                lineHeight: "28.8px",
+                letterSpacing: "normal",
+              }}
             >
               Learn More From
-            </p>
+            </h4>
+
+            {/* H2 "Frequently Asked Questions" — WP: Montserrat 36px weight 500 #000000 lineHeight 46.8px */}
             <h2
-              className="text-white font-[700] mb-8"
+              className="mb-8"
               style={{
-                fontFamily: "var(--font-heading)",
+                fontFamily: "var(--font-subheading)",
                 fontSize: "clamp(24px, 2.5vw, 36px)",
+                fontWeight: 500,
+                color: "#000000",
+                lineHeight: "46.8px",
+                letterSpacing: "0.5px",
               }}
             >
               Frequently Asked Questions
             </h2>
+
             <FAQAccordion />
           </div>
+
         </div>
       </div>
     </section>

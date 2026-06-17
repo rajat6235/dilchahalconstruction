@@ -1,30 +1,38 @@
 export default function AboutFounder() {
   return (
-    <section id="about" className="bg-white pt-[100px] pb-[60px]">
-      <div className="max-w-[1140px] mx-auto px-4 text-center">
-        {/* h4 — Montserrat weight 300, red, small uppercase */}
-        <p
-          className="text-[#E00201] font-[300] tracking-widest mb-3"
-          style={{
-            fontFamily: "var(--font-subheading)",
-            fontSize: "clamp(13px, 1.1vw, 16px)",
-          }}
-        >
-          About Founder
-        </p>
+    // WP: section 90def38 — 212px, inner padding 10px top 60px bottom, content 685px wide centered
+    <section id="about" className="bg-white" style={{ padding: "10px 0 60px" }}>
+      <div className="max-w-[1140px] mx-auto px-4">
+        <div style={{ maxWidth: "685px", margin: "0 auto", textAlign: "center" }}>
+          {/* H4 — WP: Montserrat 24px weight 300 #E00201 lineHeight 28.8px */}
+          <h4
+            style={{
+              fontFamily: "var(--font-subheading)",
+              fontSize: "24px",
+              fontWeight: 300,
+              color: "#E00201",
+              lineHeight: "28.8px",
+              letterSpacing: "normal",
+              marginBottom: "20px",
+            }}
+          >
+            About Founder
+          </h4>
 
-        {/* h2 — Montserrat 36px weight 500, ddc72f6 global type, color #242424 */}
-        <h2
-          className="text-[#242424] leading-tight"
-          style={{
-            fontFamily: "var(--font-subheading)",
-            fontSize: "clamp(30px, 3vw, 36px)",
-            fontWeight: 500,
-            letterSpacing: "0.5px",
-          }}
-        >
-          We Are Leading Company In The Saskatchewan
-        </h2>
+          {/* H2 — WP: Montserrat 36px weight 500 #242424 letterSpacing 0.5px lineHeight 46.8px — wraps to 2 lines at 685px */}
+          <h2
+            style={{
+              fontFamily: "var(--font-subheading)",
+              fontSize: "clamp(30px, 3vw, 36px)",
+              fontWeight: 500,
+              color: "#242424",
+              letterSpacing: "0.5px",
+              lineHeight: "46.8px",
+            }}
+          >
+            We Are Leading Company In The Saskatchewan
+          </h2>
+        </div>
       </div>
     </section>
   );

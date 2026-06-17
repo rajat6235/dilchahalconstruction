@@ -27,7 +27,11 @@ export default function Home() {
         <OurExperts />
         <LatestWorks />
         <HouseRenovations />
+        {/* WP spacer bb98507 — 290px white, separates HouseRenovations from QuoteAndFAQ */}
+        <div style={{ height: "290px", backgroundColor: "#ffffff" }} />
         <QuoteAndFAQ />
+        {/* WP spacer d67cf34 — 200px white, separates QuoteAndFAQ from Footer */}
+        <div style={{ height: "200px", backgroundColor: "#ffffff" }} />
       </main>
       <Footer />
     </>

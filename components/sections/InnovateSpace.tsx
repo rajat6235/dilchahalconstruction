@@ -4,44 +4,50 @@ export default function InnovateSpace() {
   return (
     <section className="relative z-10" style={{ marginTop: "-100px" }}>
       <div className="max-w-[1140px] mx-auto px-4">
-        {/* Responsive padding: 24px on mobile, 50px on desktop */}
+        {/* WP: red section b81be35 — 391px, padding 50px all sides */}
         <div
-          className="p-6 md:p-[50px]"
+          className="p-[50px]"
           style={{ background: "#8B0001" }}
         >
-          {/* Label — fluid from 12px (mobile) to 21.888px (desktop) */}
-          <p
-            className="uppercase tracking-wider md:tracking-widest mb-3"
+          {/* H4 label — WP: Montserrat 24px weight 300 #BEB9B9, lineHeight 28.8px */}
+          <h4
+            className="mb-3"
             style={{
               fontFamily: "var(--font-subheading)",
-              fontSize: "clamp(12px, 1.8vw, 21.888px)",
-              fontWeight: 600,
+              fontSize: "24px",
+              fontWeight: 300,
               color: "#BEB9B9",
+              lineHeight: "28.8px",
+              letterSpacing: "normal",
             }}
           >
             Innovate Your Space
-          </p>
+          </h4>
 
-          {/* Heading — 42px desktop, fluid to 26px mobile */}
+          {/* H2 — WP: Merriweather 48px weight 700 #000000 letterSpacing 0.5px lineHeight 62.4px */}
           <h2
-            className="font-[700] leading-tight mb-5"
+            className="leading-tight mb-5"
             style={{
               fontFamily: "var(--font-heading)",
-              fontSize: "clamp(26px, 3.7vw, 42px)",
+              fontSize: "clamp(28px, 4vw, 48px)",
+              fontWeight: 700,
               color: "#000000",
+              letterSpacing: "0.5px",
+              lineHeight: "62.4px",
             }}
           >
             7+ Years of Unmatched Excellence
           </h2>
 
-          {/* Body — Open Sans, fluid from 13px to 13.68px */}
+          {/* Para — WP: Open Sans 16px weight 500 white lineHeight 24.75px */}
           <p
-            className="leading-relaxed mb-8"
+            className="mb-8"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "clamp(13px, 1.2vw, 13.68px)",
-              color: "rgba(255,255,255,0.85)",
-              wordSpacing: "3px",
+              fontSize: "16px",
+              fontWeight: 500,
+              color: "rgb(255,255,255)",
+              lineHeight: "24.75px",
             }}
           >
             For more than 7 years, Dil Chahal Construction Ltd. has been

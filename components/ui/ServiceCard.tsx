@@ -14,8 +14,9 @@ export default function ServiceCard({
   description,
 }: ServiceCardProps) {
   return (
-    <div className="flex flex-col gap-3">
-      <div className="relative w-full" style={{ paddingBottom: "62.5%" }}>
+    <div className="flex flex-col">
+      {/* WP: image is 284×189px (aspect ~1.5:1), top-position layout */}
+      <div className="relative w-full" style={{ paddingBottom: "66.5%" }}>
         <Image
           src={src}
           alt={alt}
@@ -24,15 +25,28 @@ export default function ServiceCard({
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
       </div>
+      {/* WP: Montserrat 26px weight 700 #000000 letterSpacing 0.2px lineHeight 33.8px */}
       <h3
-        className="text-[18px] font-[700] text-black"
-        style={{ fontFamily: "var(--font-subheading)" }}
+        className="text-black mt-4 mb-2"
+        style={{
+          fontFamily: "var(--font-subheading)",
+          fontSize: "26px",
+          fontWeight: 700,
+          letterSpacing: "0.2px",
+          lineHeight: "33.8px",
+        }}
       >
         {title}
       </h3>
+      {/* WP: Open Sans 16px weight 500 #7A7A7A lineHeight 24.75px */}
       <p
-        className="text-[15px] text-[#7A7A7A] leading-relaxed"
-        style={{ fontFamily: "var(--font-body)" }}
+        style={{
+          fontFamily: "var(--font-body)",
+          fontSize: "16px",
+          fontWeight: 500,
+          color: "#7A7A7A",
+          lineHeight: "24.75px",
+        }}
       >
         {description}
       </p>

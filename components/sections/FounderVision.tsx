@@ -59,12 +59,14 @@ export default function FounderVision() {
               Founder&apos;s Vision
             </h2>
 
+            {/* p: 16px Open Sans #7A7A7A, margin-bottom 25.6px (DevTools confirmed) */}
             <p
-              className="text-[#7A7A7A] leading-relaxed mb-6"
+              className="text-[#7A7A7A] leading-relaxed"
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "clamp(14px, 1.3vw, 16px)",
+                fontSize: "16px",
                 textAlign: "justify",
+                marginBottom: "25.6px",
               }}
             >
               Under the visionary leadership of Dilbagh Singh Chahal, our founder
@@ -74,25 +76,28 @@ export default function FounderVision() {
               innovative solutions and exceptional service standards.
             </p>
 
-            {/* "Why Choose Us?" — Montserrat 36px weight 500 */}
+            {/* "Why Choose Us?" — 36px Montserrat #000000 (DevTools confirmed) */}
             <h3
-              className="text-black leading-tight mb-5"
+              className="leading-tight mb-5"
               style={{
                 fontFamily: "var(--font-subheading)",
-                fontSize: "clamp(24px, 2.8vw, 36px)",
+                fontSize: "clamp(26px, 3.16vw, 36px)",
                 fontWeight: 500,
+                color: "#000000",
                 letterSpacing: "0.5px",
               }}
             >
               Why Choose Us?
             </h3>
 
+            {/* p: 16px Open Sans #7A7A7A, margin-bottom 25.6px (DevTools confirmed) */}
             <p
-              className="text-[#7A7A7A] leading-relaxed mb-8"
+              className="text-[#7A7A7A] leading-relaxed"
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "clamp(14px, 1.3vw, 16px)",
+                fontSize: "16px",
                 textAlign: "justify",
+                marginBottom: "25.6px",
               }}
             >
               Choosing Dil Chahal Constructions means choosing reliability,

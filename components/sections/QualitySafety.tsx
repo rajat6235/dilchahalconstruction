@@ -42,36 +42,56 @@ const features: { icon: ReactNode; label: string }[] = [
 
 export default function QualitySafety() {
   return (
-    <section className="w-full flex flex-col md:flex-row" style={{ minHeight: "600px" }}>
-      {/* Left column */}
+    <section className="w-full flex flex-col md:flex-row" style={{ minHeight: "688px" }}>
+      {/* Left column — WP: 604px wide, bg image, padding 80px top/bottom */}
       <div
-        className="relative flex-1 flex items-center p-10 md:p-16"
-        style={{ minHeight: "400px" }}
+        className="relative flex-1 flex items-start"
+        style={{ minHeight: "688px", padding: "80px 52px" }}
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/image-1-min.jpg')" }}
         />
         <div className="absolute inset-0 bg-black/70" />
-        <div className="relative z-10 max-w-[480px]">
-          <p
-            className="text-[#E00201] text-[13px] font-[600] uppercase tracking-widest mb-4"
-            style={{ fontFamily: "var(--font-subheading)" }}
+        <div className="relative z-10" style={{ maxWidth: "500px" }}>
+          {/* H4 label — WP: Montserrat 24px weight 300 #E00201 lineHeight 28.8px */}
+          <h4
+            className="mb-4"
+            style={{
+              fontFamily: "var(--font-subheading)",
+              fontSize: "24px",
+              fontWeight: 300,
+              color: "#E00201",
+              lineHeight: "28.8px",
+              letterSpacing: "normal",
+            }}
           >
             Quality and Safety
-          </p>
+          </h4>
+          {/* H2 — WP: Merriweather 48px weight 700 #BEB9B9 letterSpacing 0.5px lineHeight 62.4px */}
           <h2
-            className="text-white font-[700] leading-tight mb-5"
+            className="leading-tight mb-5"
             style={{
               fontFamily: "var(--font-heading)",
-              fontSize: "clamp(28px, 3vw, 42px)",
+              fontSize: "clamp(28px, 3.5vw, 48px)",
+              fontWeight: 700,
+              color: "#BEB9B9",
+              letterSpacing: "0.5px",
+              lineHeight: "62.4px",
             }}
           >
             Committed to Safe and Healthy Construction Practices
           </h2>
+          {/* Para — WP: Open Sans 16px weight 500 white lineHeight 24.75px */}
           <p
-            className="text-white/80 text-[15px] leading-relaxed mb-8"
-            style={{ fontFamily: "var(--font-body)" }}
+            className="mb-8"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "16px",
+              fontWeight: 500,
+              color: "rgb(255,255,255)",
+              lineHeight: "24.75px",
+            }}
           >
             Our commitment to safety is unwavering. From planning to execution,
             we implement rigorous safety protocols and health practices to protect
@@ -87,29 +107,41 @@ export default function QualitySafety() {
         </div>
       </div>
 
-      {/* Right column */}
+      {/* Right column — WP: 604px wide, bg image, padding 80px top/bottom */}
       <div
-        className="relative flex-1 flex items-center p-10 md:p-16"
-        style={{ minHeight: "400px" }}
+        className="relative flex-1 flex items-start"
+        style={{ minHeight: "688px", padding: "80px 52px" }}
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/images/image-2-min.jpg')" }}
         />
         <div className="absolute inset-0 bg-[#8B0001]/75" />
-        <div className="relative z-10 max-w-[480px]">
-          <h2
-            className="text-white font-[700] leading-tight mb-4"
+        <div className="relative z-10" style={{ maxWidth: "500px" }}>
+          {/* H3 — WP: Montserrat 26px weight 700 #000000 letterSpacing 0.2px lineHeight 33.8px */}
+          <h3
+            className="leading-tight mb-4"
             style={{
-              fontFamily: "var(--font-heading)",
-              fontSize: "clamp(24px, 2.5vw, 36px)",
+              fontFamily: "var(--font-subheading)",
+              fontSize: "26px",
+              fontWeight: 700,
+              color: "#000000",
+              letterSpacing: "0.2px",
+              lineHeight: "33.8px",
             }}
           >
             Dedicated to Superior Construction Standards
-          </h2>
+          </h3>
+          {/* Para — WP: Open Sans 16px weight 500 white lineHeight 24.75px */}
           <p
-            className="text-white/85 text-[15px] leading-relaxed mb-8"
-            style={{ fontFamily: "var(--font-body)" }}
+            className="mb-8"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "16px",
+              fontWeight: 500,
+              color: "rgb(255,255,255)",
+              lineHeight: "24.75px",
+            }}
           >
             Quality is at the core of our construction philosophy. From planning
             to completion, we maintain stringent quality control measures to
@@ -119,10 +151,14 @@ export default function QualitySafety() {
             {features.map((f) => (
               <li
                 key={f.label}
-                className="flex items-center gap-3 text-white text-[15px] font-[500]"
-                style={{ fontFamily: "var(--font-body)" }}
+                className="flex items-center gap-3 text-white"
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "16px",
+                  fontWeight: 500,
+                }}
               >
-                <span className="flex-shrink-0 flex items-center justify-center w-[20px] text-[18px]">{f.icon}</span>
+                <span className="flex-shrink-0 flex items-center justify-center w-[20px]">{f.icon}</span>
                 {f.label}
               </li>
             ))}

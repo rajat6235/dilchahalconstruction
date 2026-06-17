@@ -68,19 +68,19 @@ export default function HeroWithHeader() {
       {/* ─── HEADER ─── */}
       <header className="relative z-20 w-full">
 
-        {/* Primary header: logo left | phone center | socials right */}
+        {/* Primary header: logo left | phone center | socials right — WP: 198px min-height */}
         <div
           className="w-full flex items-center justify-between"
-          style={{ padding: "16px 40px" }}
+          style={{ padding: "16px 40px", minHeight: "198px" }}
         >
-          {/* Logo — 110px tall (35% smaller than intrinsic 168px) */}
+          {/* Logo — exact WP size: 230×168px */}
           <a href="#" className="flex-shrink-0">
             <Image
               src="/images/logo-header.png"
               alt="Dil Chahal Constructions"
               width={230}
               height={168}
-              style={{ height: "110px", width: "auto" }}
+              style={{ height: "168px", width: "auto" }}
               className="object-contain"
               priority
             />
@@ -139,19 +139,19 @@ export default function HeroWithHeader() {
           </button>
         </div>
 
-        {/* Below header: nav left | GET A QUOTE right */}
+        {/* Below header: nav left | GET A QUOTE right — WP: 60px height */}
         <nav
           className="w-full flex items-stretch"
           style={{
-            minHeight: "58px",
+            minHeight: "60px",
             borderTop: "1px solid rgba(255,255,255,0.08)",
             borderBottom: "1px solid rgba(255,255,255,0.18)",
           }}
         >
-          {/* Nav links */}
+          {/* Nav links — WP: Open Sans 15px weight 500, padding 0px 15px */}
           <div
             className="hidden md:flex items-center flex-1"
-            style={{ gap: "50px", paddingLeft: "40px" }}
+            style={{ paddingLeft: "40px" }}
           >
             {navLinks.map((link) => (
               <a
@@ -159,9 +159,10 @@ export default function HeroWithHeader() {
                 href={link.href}
                 className="text-white hover:text-[#E00201] transition-colors duration-200 whitespace-nowrap"
                 style={{
-                  fontFamily: "var(--font-nav)",
-                  fontSize: "14px",
-                  fontWeight: 400,
+                  fontFamily: "var(--font-body)",
+                  fontSize: "15px",
+                  fontWeight: 500,
+                  padding: "0px 15px",
                 }}
               >
                 {link.label}
@@ -227,43 +228,44 @@ export default function HeroWithHeader() {
         className="relative z-10 max-w-[1140px] mx-auto px-4"
         style={{ paddingTop: "40px", paddingBottom: "160px" }}
       >
-        {/* h3 — 36px desktop, fluid down to 20px mobile */}
+        {/* h3 — WP: Montserrat 36px weight 500 #BEB9B9 letterSpacing 0.5px lineHeight 46.8px */}
         <h3
           className="mb-3"
           style={{
             fontFamily: "var(--font-subheading)",
             fontSize: "clamp(20px, 4.5vw, 36px)",
-            fontWeight: 400,
+            fontWeight: 500,
             color: "#BEB9B9",
-            lineHeight: 1.3,
+            lineHeight: "46.8px",
+            letterSpacing: "0.5px",
           }}
         >
           Welcome to
         </h3>
 
-        {/* h1 — 48px desktop, fluid down to 22px mobile */}
+        {/* h1 — WP: Roboto 48px weight 600 #E00201 uppercase lineHeight 67.2px */}
         <h1
           className="uppercase mb-6"
           style={{
             fontFamily: "var(--font-roboto-sans)",
-            fontWeight: 700,
+            fontWeight: 600,
             color: "#E00201",
             fontSize: "clamp(22px, 4.2vw, 48px)",
-            lineHeight: 1.3,
+            lineHeight: "67.2px",
           }}
         >
           Dil Chahal Constructions Ltd.
         </h1>
 
-        {/* Body text — capped at 650px so it doesn't stretch too wide */}
+        {/* Body text — WP: Open Sans 16px weight 400 white, capped width */}
         <p
           className="mb-8"
           style={{
             fontFamily: "var(--font-body)",
-            fontSize: "15px",
+            fontSize: "16px",
             fontWeight: 400,
             color: "rgba(255,255,255,0.88)",
-            lineHeight: 1.85,
+            lineHeight: "1.65",
             maxWidth: "650px",
           }}
         >

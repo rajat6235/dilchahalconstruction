@@ -49,7 +49,7 @@ function AnimatedRow({
         <div
           key={img.src}
           className="relative overflow-hidden group"
-          style={{ height: "250px" }}
+          style={{ height: "400px" }}
         >
           <div
             className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -65,13 +65,17 @@ function AnimatedRow({
 export default function LatestWorks() {
   return (
     <section id="latest-works" className="bg-white pt-[100px] pb-[50px]">
-      <div className="max-w-[1140px] mx-auto px-4 mb-10">
+      <div className="max-w-[1140px] mx-auto px-4">
         <div className="flex items-center justify-between flex-wrap gap-4">
+          {/* WP: Montserrat 36px weight 500 #242424 letterSpacing 0.5px lineHeight 46.8px */}
           <h2
-            className="text-black font-[700]"
             style={{
-              fontFamily: "var(--font-heading)",
-              fontSize: "clamp(28px, 3vw, 40px)",
+              fontFamily: "var(--font-subheading)",
+              fontSize: "clamp(28px, 3vw, 36px)",
+              fontWeight: 500,
+              color: "#242424",
+              letterSpacing: "0.5px",
+              lineHeight: "46.8px",
             }}
           >
             Our Latest Works
