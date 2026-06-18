@@ -64,25 +64,50 @@ function AnimatedRow({
 
 export default function LatestWorks() {
   return (
-    <section id="latest-works" className="bg-white pt-[100px] pb-[50px]">
-      <div className="max-w-[1140px] mx-auto px-4">
-        <div className="flex items-center justify-between flex-wrap gap-4">
-          {/* WP: Montserrat 36px weight 500 #242424 letterSpacing 0.5px lineHeight 46.8px */}
-          <h2
-            style={{
-              fontFamily: "var(--font-subheading)",
-              fontSize: "clamp(28px, 3vw, 36px)",
-              fontWeight: 500,
-              color: "#242424",
-              letterSpacing: "0.5px",
-              lineHeight: "46.8px",
-            }}
-          >
-            Our Latest Works
-          </h2>
-          <Button variant="primary" href="#">
-            View Projects
-          </Button>
+    <section
+      id="latest-works"
+      className="bg-white"
+      style={{
+        // WP 2d96af2: desktop pt-100 pb-50 | tablet pt-80 pb-50 | mobile pt-30 pb-40
+        paddingTop: "clamp(30px, 8vw, 100px)",
+        paddingBottom: "clamp(40px, 4vw, 50px)",
+      }}
+    >
+      {/* WP 2d96af2 e-con-boxed inner container — max-width 1140px centered, pb-50px gap before image grid */}
+      <div className="max-w-[1140px] mx-auto px-4 pb-[50px]">
+        {/* WP: flex-row, gap 0, align-items stretch */}
+        <div className="flex flex-row items-stretch" style={{ gap: "0px" }}>
+
+          {/* WP 2c852fe — 50% width, left-aligned heading */}
+          <div className="w-1/2">
+            {/* WP ead625b — Montserrat 36px/500/#242424/ls 0.5px (ddc72f6 token) */}
+            <h2
+              style={{
+                fontFamily: "var(--font-subheading)",
+                fontSize: "clamp(24px, 3vw, 36px)",
+                fontWeight: 500,
+                color: "#242424",
+                letterSpacing: "0.5px",
+                lineHeight: "46.8px",
+                textAlign: "left",
+              }}
+            >
+              Our Latest Works
+            </h2>
+          </div>
+
+          {/* WP 100091c — 50% width, justify-content flex-end (right-align button) */}
+          <div className="w-1/2 flex justify-end items-center">
+            {/* WP 3e4d438: #737373 bg (44eb35c token), Montserrat 16px/600/ls 0.2px (da2e6c4 token) */}
+            <Button
+              variant="primary"
+              href="#"
+              className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
+            >
+              View Projects
+            </Button>
+          </div>
+
         </div>
       </div>
       <AnimatedRow images={row1} animClass="fade-in-down" />

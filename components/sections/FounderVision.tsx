@@ -1,41 +1,71 @@
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 
 export default function FounderVision() {
   return (
-    <section className="bg-white pb-[60px]">
-      <div className="max-w-[1140px] mx-auto px-4">
-        <div className="flex flex-col md:flex-row gap-8">
+    // WP: fa48280 — bg white, 30px side padding
+    <section className="bg-white" style={{ padding: "0 30px" }}>
+      {/* WP: e-con-inner — max-width 1024px, 60px top/bottom padding */}
+      <div className="mx-auto" style={{ maxWidth: "1024px", padding: "60px 0" }}>
+        {/* WP: column-gap 20px between cols */}
+        <div className="flex flex-col lg:flex-row" style={{ gap: "20px" }}>
 
-          {/* Left column — photo card, no overlay */}
-          <div className="flex-1">
+          {/* Left col — photo, 50% at lg+ */}
+          <div className="w-full lg:w-1/2 flex flex-col pt-0 md:pt-[50px] lg:pt-0">
+            {/*
+              Desktop (lg+): overflow-hidden + max-h caps height to ~542px matching WP,
+              image uses object-cover to fill without distorting.
+              Mobile: natural height (no max-h), no crop.
+            */}
             <div
-              className="relative flex flex-col justify-end"
-              style={{
-                backgroundImage: "url('/images/founder.jpeg')",
-                backgroundSize: "cover",
-                backgroundPosition: "top center",
-                margin: "10px",
-                minHeight: "500px",
-                paddingBottom: "50px",
-                paddingLeft: "50px",
-                paddingRight: "50px",
-              }}
+              className="relative overflow-hidden lg:max-h-[542px]"
+              style={{ margin: "10px" }}
             >
-              {/* Dilbagh Singh Chahal / CEO — white text over dark suit */}
-              <div className="relative z-10">
+              {/* Gradient at bottom for name/CEO legibility */}
+              <div
+                className="absolute bottom-0 left-0 right-0 z-10"
+                style={{
+                  height: "35%",
+                  background:
+                    "linear-gradient(0deg, rgba(33,45,69,0.63) 0%, transparent 100%)",
+                  pointerEvents: "none",
+                }}
+              />
+              {/* Mobile: width:100% height:auto (no crop). Desktop: object-cover fills the capped container. */}
+              <Image
+                src="/images/founder.jpeg"
+                alt="Dilbagh Singh Chahal, CEO"
+                width={1080}
+                height={1362}
+                className="w-full h-auto lg:h-full lg:object-cover lg:object-top"
+                style={{ display: "block" }}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              {/* Name / title overlay at bottom-left */}
+              <div
+                className="absolute z-20"
+                style={{ bottom: "30px", left: "30px" }}
+              >
                 <h3
-                  className="text-white font-[700]"
                   style={{
-                    fontFamily: "var(--font-subheading)",
-                    fontSize: "clamp(16px, 1.6vw, 22px)",
+                    fontFamily: "var(--font-roboto-sans)",
+                    fontSize: "24px",
+                    fontWeight: 600,
+                    color: "rgb(255,255,255)",
+                    lineHeight: "31.2px",
                     marginBottom: "0px",
                   }}
                 >
                   Dilbagh Singh Chahal
                 </h3>
                 <p
-                  className="text-white text-[14px]"
-                  style={{ fontFamily: "var(--font-body)" }}
+                  style={{
+                    fontFamily: "var(--font-roboto-sans)",
+                    fontSize: "15px",
+                    fontWeight: 400,
+                    color: "rgb(255,255,255)",
+                    lineHeight: "24.75px",
+                  }}
                 >
                   CEO
                 </p>
@@ -43,30 +73,32 @@ export default function FounderVision() {
             </div>
           </div>
 
-          {/* Right column — text content */}
-          <div className="flex-1 md:pl-4">
-            {/* "Founder's Vision" — red, Merriweather 40px 700 */}
+          {/* Right col — text, 50% at lg+ */}
+          <div
+            className="w-full lg:w-1/2 pt-8 lg:pt-0 flex flex-col"
+            style={{ gap: "20px" }}
+          >
             <h2
-              className="leading-tight mb-5"
               style={{
                 fontFamily: "var(--font-heading)",
                 fontSize: "clamp(28px, 3.2vw, 40px)",
                 fontWeight: 700,
                 color: "#E00201",
                 letterSpacing: "0.5px",
+                lineHeight: "52px",
               }}
             >
               Founder&apos;s Vision
             </h2>
 
-            {/* p: 16px Open Sans #7A7A7A, margin-bottom 25.6px (DevTools confirmed) */}
             <p
-              className="text-[#7A7A7A] leading-relaxed"
               style={{
                 fontFamily: "var(--font-body)",
                 fontSize: "16px",
+                fontWeight: 500,
+                color: "#7A7A7A",
+                lineHeight: "24.75px",
                 textAlign: "justify",
-                marginBottom: "25.6px",
               }}
             >
               Under the visionary leadership of Dilbagh Singh Chahal, our founder
@@ -76,28 +108,27 @@ export default function FounderVision() {
               innovative solutions and exceptional service standards.
             </p>
 
-            {/* "Why Choose Us?" — 36px Montserrat #000000 (DevTools confirmed) */}
             <h3
-              className="leading-tight mb-5"
               style={{
                 fontFamily: "var(--font-subheading)",
                 fontSize: "clamp(26px, 3.16vw, 36px)",
                 fontWeight: 500,
                 color: "#000000",
                 letterSpacing: "0.5px",
+                lineHeight: "46.8px",
               }}
             >
               Why Choose Us?
             </h3>
 
-            {/* p: 16px Open Sans #7A7A7A, margin-bottom 25.6px (DevTools confirmed) */}
             <p
-              className="text-[#7A7A7A] leading-relaxed"
               style={{
                 fontFamily: "var(--font-body)",
                 fontSize: "16px",
+                fontWeight: 500,
+                color: "#7A7A7A",
+                lineHeight: "24.75px",
                 textAlign: "justify",
-                marginBottom: "25.6px",
               }}
             >
               Choosing Dil Chahal Constructions means choosing reliability,
@@ -111,7 +142,7 @@ export default function FounderVision() {
             <Button
               variant="primary"
               href="#services"
-              className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
+              className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a] self-start"
             >
               Our Services
             </Button>
