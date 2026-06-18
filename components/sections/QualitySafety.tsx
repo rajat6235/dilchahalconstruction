@@ -1,5 +1,7 @@
+"use client";
 import { type ReactNode } from "react";
 import Button from "@/components/ui/Button";
+import AnimateIn from "@/components/ui/AnimateIn";
 
 function IconRecycle() {
   return (
@@ -43,8 +45,9 @@ const features: { icon: ReactNode; label: string }[] = [
 export default function QualitySafety() {
   return (
     <section className="w-full flex flex-col md:flex-row" style={{ minHeight: "688px" }}>
-      {/* Left column — WP: 604px wide, bg image, padding 80px top/bottom */}
-      <div
+      {/* Left column — WP e9f5c4a: fadeInLeft */}
+      <AnimateIn
+        variant="fadeInLeft"
         className="relative flex-1 flex items-start"
         style={{ minHeight: "688px", padding: "80px 52px" }}
       >
@@ -54,7 +57,6 @@ export default function QualitySafety() {
         />
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10" style={{ maxWidth: "500px" }}>
-          {/* H4 label — WP: Montserrat 24px weight 300 #E00201 lineHeight 28.8px */}
           <h4
             className="mb-4"
             style={{
@@ -68,7 +70,6 @@ export default function QualitySafety() {
           >
             Quality and Safety
           </h4>
-          {/* H2 — WP: Merriweather 48px weight 700 #BEB9B9 letterSpacing 0.5px lineHeight 62.4px */}
           <h2
             className="leading-tight mb-5"
             style={{
@@ -82,7 +83,6 @@ export default function QualitySafety() {
           >
             Committed to Safe and Healthy Construction Practices
           </h2>
-          {/* Para — WP: Open Sans 16px weight 500 white lineHeight 24.75px */}
           <p
             className="mb-8"
             style={{
@@ -105,10 +105,11 @@ export default function QualitySafety() {
             Get In Touch
           </Button>
         </div>
-      </div>
+      </AnimateIn>
 
-      {/* Right column — WP: 604px wide, bg image, padding 80px top/bottom */}
-      <div
+      {/* Right column — WP b42b0cf: fadeInRight */}
+      <AnimateIn
+        variant="fadeInRight"
         className="relative flex-1 flex items-start"
         style={{ minHeight: "688px", padding: "80px 52px" }}
       >
@@ -118,7 +119,6 @@ export default function QualitySafety() {
         />
         <div className="absolute inset-0 bg-[#8B0001]/75" />
         <div className="relative z-10" style={{ maxWidth: "500px" }}>
-          {/* H3 — WP: Montserrat 26px weight 700 #000000 letterSpacing 0.2px lineHeight 33.8px */}
           <h3
             className="leading-tight mb-4"
             style={{
@@ -132,7 +132,6 @@ export default function QualitySafety() {
           >
             Dedicated to Superior Construction Standards
           </h3>
-          {/* Para — WP: Open Sans 16px weight 500 white lineHeight 24.75px */}
           <p
             className="mb-8"
             style={{
@@ -164,7 +163,7 @@ export default function QualitySafety() {
             ))}
           </ul>
         </div>
-      </div>
+      </AnimateIn>
     </section>
   );
 }

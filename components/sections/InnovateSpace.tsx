@@ -1,15 +1,18 @@
+"use client";
 import Button from "@/components/ui/Button";
+import AnimateIn from "@/components/ui/AnimateIn";
 
 export default function InnovateSpace() {
   return (
     <section className="relative z-10" style={{ marginTop: "-100px" }}>
       <div className="max-w-[1140px] mx-auto px-4">
-        {/* WP: red section b81be35 — 391px, padding 50px all sides */}
-        <div
+        {/* WP b81be35: fadeInUp — whole red card */}
+        <AnimateIn
+          variant="fadeInUp"
           className="p-[50px]"
           style={{ background: "#8B0001" }}
         >
-          {/* H4 label — WP: Montserrat 24px weight 300 #BEB9B9, lineHeight 28.8px */}
+          {/* H4 label — WP: Montserrat 24px weight 300 #BEB9B9 lineHeight 28.8px */}
           <h4
             className="mb-3"
             style={{
@@ -64,7 +67,7 @@ export default function InnovateSpace() {
           >
             Work With Us
           </Button>
-        </div>
+        </AnimateIn>
       </div>
     </section>
   );

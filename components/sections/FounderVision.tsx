@@ -1,5 +1,7 @@
+"use client";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
+import AnimateIn from "@/components/ui/AnimateIn";
 
 export default function FounderVision() {
   return (
@@ -10,8 +12,8 @@ export default function FounderVision() {
         {/* WP: column-gap 20px between cols */}
         <div className="flex flex-col lg:flex-row" style={{ gap: "20px" }}>
 
-          {/* Left col — photo, 50% at lg+ */}
-          <div className="w-full lg:w-1/2 flex flex-col pt-0 md:pt-[50px] lg:pt-0">
+          {/* Left col — photo, 50% at lg+ — WP: zoomIn */}
+          <AnimateIn variant="zoomIn" className="w-full lg:w-1/2 flex flex-col pt-0 md:pt-[50px] lg:pt-0">
             {/*
               Desktop (lg+): overflow-hidden + max-h caps height to ~542px matching WP,
               image uses object-cover to fill without distorting.
@@ -71,10 +73,11 @@ export default function FounderVision() {
                 </p>
               </div>
             </div>
-          </div>
+          </AnimateIn>
 
-          {/* Right col — text, 50% at lg+ */}
-          <div
+          {/* Right col — text, 50% at lg+ — WP: fadeInRight */}
+          <AnimateIn
+            variant="fadeInRight"
             className="w-full lg:w-1/2 pt-8 lg:pt-0 flex flex-col"
             style={{ gap: "20px" }}
           >
@@ -146,7 +149,7 @@ export default function FounderVision() {
             >
               Our Services
             </Button>
-          </div>
+          </AnimateIn>
 
         </div>
       </div>

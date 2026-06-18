@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import AnimateIn from "@/components/ui/AnimateIn";
 
 const slides = [
   { src: "/images/reno1.jpeg", alt: "House renovation 1" },
@@ -174,9 +175,10 @@ function RenovationCarousel() {
 export default function HouseRenovations() {
   return (
     <>
-      {/* Section 1: WP 1b490cc — pt:10px pb:60px (desktop), bg astglobalcolor5=#FFFFFF */}
+      {/* Section 1: WP 1b490cc — fadeInDown on scroll */}
       <section className="bg-white" style={{ padding: "10px 0 60px" }}>
         <div className="max-w-[1140px] mx-auto px-4 text-center">
+          <AnimateIn variant="fadeInDown" style={{ display: "inline-block", width: "100%" }}>
           <h2
             style={{
               fontFamily: "var(--font-subheading)",
@@ -189,6 +191,7 @@ export default function HouseRenovations() {
           >
             House Renovations
           </h2>
+          </AnimateIn>
         </div>
       </section>
 
@@ -201,16 +204,18 @@ export default function HouseRenovations() {
       >
         <div className="max-w-[1140px] mx-auto px-4">
           <div className="flex flex-col md:flex-row" style={{ gap: "0px" }}>
-            {/* WP 828acec — 55% width, margin-right:30px desktop */}
-            <div
+            {/* WP 828acec — 55% width — fadeInLeft */}
+            <AnimateIn
+              variant="fadeInLeft"
               className="w-full md:w-[55%] flex-shrink-0"
               style={{ marginRight: "clamp(0px, 2.5vw, 30px)" }}
             >
               <RenovationCarousel />
-            </div>
+            </AnimateIn>
 
-            {/* WP c4b0a9a — remaining 45%, flex col, text content */}
-            <div
+            {/* WP c4b0a9a — remaining 45% — fadeInRight */}
+            <AnimateIn
+              variant="fadeInRight"
               className="flex-1 flex flex-col justify-center"
               style={{ padding: "40px 0 40px 20px" }}
             >
@@ -271,7 +276,7 @@ export default function HouseRenovations() {
               >
                 Get a Quote
               </Button>
-            </div>
+            </AnimateIn>
           </div>
         </div>
       </section>

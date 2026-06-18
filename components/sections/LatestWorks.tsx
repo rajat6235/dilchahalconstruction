@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Button from "@/components/ui/Button";
+import AnimateIn from "@/components/ui/AnimateIn";
 
 const row1 = [
   { src: "/images/work1.jpg", alt: "Construction project 1" },
@@ -78,9 +79,9 @@ export default function LatestWorks() {
         {/* WP: flex-row, gap 0, align-items stretch */}
         <div className="flex flex-row items-stretch" style={{ gap: "0px" }}>
 
-          {/* WP 2c852fe — 50% width, left-aligned heading */}
-          <div className="w-1/2">
-            {/* WP ead625b — Montserrat 36px/500/#242424/ls 0.5px (ddc72f6 token) */}
+          {/* WP 2c852fe — 50% width, left-aligned heading — fadeInLeft */}
+          <AnimateIn variant="fadeInLeft" className="w-1/2">
+            {/* WP ead625b — Montserrat 36px/500/#242424/ls 0.5px */}
             <h2
               style={{
                 fontFamily: "var(--font-subheading)",
@@ -94,10 +95,10 @@ export default function LatestWorks() {
             >
               Our Latest Works
             </h2>
-          </div>
+          </AnimateIn>
 
-          {/* WP 100091c — 50% width, justify-content flex-end (right-align button) */}
-          <div className="w-1/2 flex justify-end items-center">
+          {/* WP 100091c — 50% width, right-aligned button — fadeInRight */}
+          <AnimateIn variant="fadeInRight" className="w-1/2 flex justify-end items-center">
             {/* WP 3e4d438: #737373 bg (44eb35c token), Montserrat 16px/600/ls 0.2px (da2e6c4 token) */}
             <Button
               variant="primary"
@@ -106,7 +107,7 @@ export default function LatestWorks() {
             >
               View Projects
             </Button>
-          </div>
+          </AnimateIn>
 
         </div>
       </div>

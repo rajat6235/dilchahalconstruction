@@ -1,5 +1,6 @@
 "use client";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import AnimateIn from "@/components/ui/AnimateIn";
 
 export default function QuoteAndFAQ() {
   return (
@@ -8,8 +9,9 @@ export default function QuoteAndFAQ() {
       <div className="max-w-[1140px] mx-auto" style={{ paddingBottom: "150px" }}>
         <div className="flex flex-col md:flex-row">
 
-          {/* Left — WP: bg #8B0001, 570px wide, 688px height, padding 64px */}
-          <div
+          {/* Left — WP: 7671b54 bounceIn */}
+          <AnimateIn
+            variant="bounceIn"
             className="flex-1"
             style={{
               backgroundColor: "rgb(139,0,1)",
@@ -124,10 +126,11 @@ export default function QuoteAndFAQ() {
                 </button>
               </div>
             </form>
-          </div>
+          </AnimateIn>
 
-          {/* Right — WP: transparent bg (#F5F5F5 inherited), 570px wide, padding 0px 0px 0px 100px, justify-center */}
-          <div
+          {/* Right — WP: d118cc3 fadeInRight */}
+          <AnimateIn
+            variant="fadeInRight"
             className="flex-1"
             style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "0px 0px 0px 100px" }}
           >
@@ -162,7 +165,7 @@ export default function QuoteAndFAQ() {
             </h2>
 
             <FAQAccordion />
-          </div>
+          </AnimateIn>
 
         </div>
       </div>

@@ -1,11 +1,14 @@
+"use client";
 import Button from "@/components/ui/Button";
+import AnimateIn from "@/components/ui/AnimateIn";
 
 export default function LocationCard() {
   return (
     <section className="bg-white pb-[100px]">
       <div className="max-w-[1140px] mx-auto px-4">
-        {/* Card — full container width, 10px margin, 50px padding (30px on small screens) */}
-        <div
+        {/* WP c31875b: fadeInUp — location card */}
+        <AnimateIn
+          variant="fadeInUp"
           className="p-[30px] md:p-[50px]"
           style={{
             border: "1px solid #E1E1E1",
@@ -31,10 +34,10 @@ export default function LocationCard() {
           >
             Unit 107, 1222 Alberta Ave, Saskatoon, SK S7K 1R4
           </p>
-        </div>
+        </AnimateIn>
 
-        {/* Button — centered, 50px top spacing */}
-        <div className="flex justify-center" style={{ paddingTop: "50px" }}>
+        {/* WP d14cf69: zoomIn — "View Our Office" button */}
+        <AnimateIn variant="zoomIn" style={{ display: "flex", justifyContent: "center", paddingTop: "50px" }}>
           <Button
             variant="primary"
             href="#contact"
@@ -42,7 +45,7 @@ export default function LocationCard() {
           >
             View Our Office
           </Button>
-        </div>
+        </AnimateIn>
       </div>
     </section>
   );

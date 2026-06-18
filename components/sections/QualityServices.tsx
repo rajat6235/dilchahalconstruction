@@ -1,4 +1,6 @@
+"use client";
 import ServiceCard from "@/components/ui/ServiceCard";
+import AnimateIn from "@/components/ui/AnimateIn";
 
 const services = [
   {
@@ -63,37 +65,42 @@ export default function QualityServices() {
   return (
     <section id="services" className="bg-white py-[100px]">
       <div className="max-w-[1140px] mx-auto px-4">
-        {/* H4 label — WP: Montserrat 24px weight 300 #E00201 lineHeight 28.8px */}
-        <h4
-          className="mb-3"
-          style={{
-            fontFamily: "var(--font-subheading)",
-            fontSize: "24px",
-            fontWeight: 300,
-            color: "#E00201",
-            lineHeight: "28.8px",
-            letterSpacing: "normal",
-          }}
-        >
-          Comprehensive Solutions
-        </h4>
-        {/* H2 — WP: Merriweather 48px weight 700 #000000 letterSpacing 0.5px lineHeight 62.4px */}
-        <h2
-          className="font-[700] text-black mb-12"
-          style={{
-            fontFamily: "var(--font-heading)",
-            fontSize: "clamp(32px, 4vw, 48px)",
-            letterSpacing: "0.5px",
-            lineHeight: "62.4px",
-          }}
-        >
-          Quality Services
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-8 sm:gap-x-4 lg:gap-x-5">
-          {services.map((svc) => (
-            <ServiceCard key={svc.title} {...svc} />
-          ))}
-        </div>
+        {/* WP f91e953: fadeInLeft — heading block */}
+        <AnimateIn variant="fadeInLeft">
+          <h4
+            className="mb-3"
+            style={{
+              fontFamily: "var(--font-subheading)",
+              fontSize: "24px",
+              fontWeight: 300,
+              color: "#E00201",
+              lineHeight: "28.8px",
+              letterSpacing: "normal",
+            }}
+          >
+            Comprehensive Solutions
+          </h4>
+          <h2
+            className="font-[700] text-black mb-12"
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(32px, 4vw, 48px)",
+              letterSpacing: "0.5px",
+              lineHeight: "62.4px",
+            }}
+          >
+            Quality Services
+          </h2>
+        </AnimateIn>
+
+        {/* WP 847a90d: slideInUp — services grid */}
+        <AnimateIn variant="slideInUp">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-8 sm:gap-x-4 lg:gap-x-5">
+            {services.map((svc) => (
+              <ServiceCard key={svc.title} {...svc} />
+            ))}
+          </div>
+        </AnimateIn>
       </div>
     </section>
   );
