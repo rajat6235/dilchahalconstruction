@@ -13,23 +13,21 @@ const services = [
 
 export default function Footer() {
   return (
-    // WP: black bg #000000, outer padding 0px 10px
     <footer style={{ backgroundColor: "#000000", color: "#ffffff" }}>
-      {/* WP: inner row — 4 equal columns, each 297px, 10px padding, height ~362px */}
       <div
         className="max-w-[1208px] mx-auto"
         style={{ padding: "10px 10px" }}
       >
         <div className="grid grid-cols-1 md:grid-cols-4" style={{ gap: "0px" }}>
 
-          {/* Col 0 — Logo + tagline — WP: 222×162px logo, Roboto 15px white tagline */}
+          {/* Col 0 — Logo + tagline */}
           <div
             className="flex flex-col items-center justify-start text-center"
             style={{ padding: "10px" }}
           >
             <Image
               src="/images/logo-header.png"
-              alt="Dil Chahal Constructions Ltd."
+              alt="Dil Chahal Constructions Ltd. — Drywall &amp; General Contractor in Saskatoon, SK"
               width={230}
               height={168}
               style={{ height: "162px", width: "auto", marginBottom: "16px" }}
@@ -48,12 +46,12 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Col 1 — Our Services — WP: H2 Roboto 32px 600 white, links centered 15px white */}
+          {/* Col 1 — Our Services */}
           <div
             className="flex flex-col items-center text-center"
             style={{ padding: "10px" }}
           >
-            <h2
+            <h3
               className="mb-4"
               style={{
                 fontFamily: "var(--font-roboto-sans)",
@@ -64,7 +62,7 @@ export default function Footer() {
               }}
             >
               Our Services
-            </h2>
+            </h3>
             <ul className="flex flex-col" style={{ gap: "20px" }}>
               {services.map((s) => (
                 <li key={s.label}>
@@ -86,49 +84,53 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 2 — Projects + About us — WP: H2 anchors 32px 600 white */}
-          <div
+          {/* Col 2 — Navigation links */}
+          <nav
+            aria-label="Footer navigation"
             className="flex flex-col items-center text-center"
             style={{ padding: "10px" }}
           >
-            <h2 className="mb-2">
+            <h3
+              className="mb-2"
+              style={{
+                fontFamily: "var(--font-roboto-sans)",
+                fontSize: "32px",
+                fontWeight: 600,
+                color: "rgb(255,255,255)",
+                lineHeight: "41.6px",
+              }}
+            >
               <a
                 href="#latest-works"
-                style={{
-                  fontFamily: "var(--font-roboto-sans)",
-                  fontSize: "32px",
-                  fontWeight: 600,
-                  color: "rgb(255,255,255)",
-                  lineHeight: "41.6px",
-                  display: "block",
-                }}
+                style={{ color: "rgb(255,255,255)", display: "block" }}
               >
                 Projects
               </a>
-            </h2>
-            <h2>
+            </h3>
+            <h3
+              style={{
+                fontFamily: "var(--font-roboto-sans)",
+                fontSize: "32px",
+                fontWeight: 600,
+                color: "rgb(255,255,255)",
+                lineHeight: "41.6px",
+              }}
+            >
               <a
                 href="#about"
-                style={{
-                  fontFamily: "var(--font-roboto-sans)",
-                  fontSize: "32px",
-                  fontWeight: 600,
-                  color: "rgb(255,255,255)",
-                  lineHeight: "41.6px",
-                  display: "block",
-                }}
+                style={{ color: "rgb(255,255,255)", display: "block" }}
               >
                 About us
               </a>
-            </h2>
-          </div>
+            </h3>
+          </nav>
 
-          {/* Col 3 — Contact Us — WP: H2 32px 600, info spans 15px 400 white */}
+          {/* Col 3 — Contact Us */}
           <div
             className="flex flex-col items-center text-center"
             style={{ padding: "10px" }}
           >
-            <h2
+            <h3
               className="mb-4"
               style={{
                 fontFamily: "var(--font-roboto-sans)",
@@ -139,9 +141,9 @@ export default function Footer() {
               }}
             >
               Contact Us
-            </h2>
+            </h3>
             <address
-              aria-label="Company address"
+              aria-label="Company address and contact information"
               style={{ fontStyle: "normal" }}
               className="flex flex-col gap-3"
             >
@@ -193,7 +195,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright bar — WP: black bg, Roboto 15px #BEB9B9 */}
+      {/* Copyright bar */}
       <div style={{ backgroundColor: "#000000" }}>
         <div className="max-w-[1208px] mx-auto px-[10px] py-[8px]">
           <p

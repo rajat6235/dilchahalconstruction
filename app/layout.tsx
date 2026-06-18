@@ -108,12 +108,7 @@ export const metadata: Metadata = {
     },
   },
   category: "construction",
-  verification: {
-    google: "REPLACE_WITH_GOOGLE_VERIFICATION",
-    other: {
-      "msvalidate.01": "REPLACE_WITH_BING_VERIFICATION",
-    },
-  },
+  /* verification keys go here once tokens are obtained from Search Console */
 };
 
 /* ── JSON-LD structured data ── */

@@ -1,4 +1,3 @@
-"use client";
 import ServiceCard from "@/components/ui/ServiceCard";
 import AnimateIn from "@/components/ui/AnimateIn";
 
@@ -67,7 +66,7 @@ export default function QualityServices() {
       <div className="max-w-[1140px] mx-auto px-4">
         {/* WP f91e953: fadeInLeft — heading block */}
         <AnimateIn variant="fadeInLeft">
-          <h4
+          <p
             className="mb-3"
             style={{
               fontFamily: "var(--font-subheading)",
@@ -79,7 +78,7 @@ export default function QualityServices() {
             }}
           >
             Comprehensive Solutions
-          </h4>
+          </p>
           <h2
             className="font-[700] text-black mb-12"
             style={{
@@ -96,8 +95,8 @@ export default function QualityServices() {
         {/* WP 847a90d: slideInUp — services grid */}
         <AnimateIn variant="slideInUp">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-8 sm:gap-x-4 lg:gap-x-5">
-            {services.map((svc, idx) => (
-              <ServiceCard key={svc.title} {...svc} priority={idx < 2} />
+            {services.map((svc) => (
+              <ServiceCard key={svc.title} {...svc} />
             ))}
           </div>
         </AnimateIn>

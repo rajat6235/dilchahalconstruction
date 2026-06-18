@@ -26,8 +26,8 @@ export default function FAQAccordion() {
     <div className="flex flex-col" style={{ gap: "0px" }}>
       {faqs.map((item, i) => (
         <div key={i} style={{ borderTop: i === 0 ? "1px solid #d5d5d5" : "none" }}>
-          {/* WP: bg #F5F5F5, color #4B4F58, 15px weight 700, padding 20px */}
           <button
+            id={`faq-btn-${i}`}
             className="w-full flex items-center justify-between text-left cursor-pointer"
             style={{
               backgroundColor: "rgb(245,245,245)",
@@ -40,20 +40,26 @@ export default function FAQAccordion() {
             }}
             onClick={() => setOpen(open === i ? null : i)}
             aria-expanded={open === i}
+            aria-controls={`faq-panel-${i}`}
           >
             <span>{item.question}</span>
-            <span className="ml-4 text-[20px] leading-none flex-shrink-0" style={{ color: "rgb(75,79,88)" }}>
+            <span className="ml-4 text-[20px] leading-none flex-shrink-0" style={{ color: "rgb(75,79,88)" }} aria-hidden="true">
               {open === i ? "−" : "+"}
             </span>
           </button>
-          {open === i && (
-            <div
-              style={{
-                backgroundColor: "rgb(245,245,245)",
-                padding: "0px 20px 20px 20px",
-                borderBottom: "1px solid #d5d5d5",
-              }}
-            >
+
+          <div
+            id={`faq-panel-${i}`}
+            role="region"
+            aria-labelledby={`faq-btn-${i}`}
+            hidden={open !== i}
+            style={{
+              backgroundColor: "rgb(245,245,245)",
+              padding: open === i ? "0px 20px 20px 20px" : undefined,
+              borderBottom: open === i ? "1px solid #d5d5d5" : undefined,
+            }}
+          >
+            {open === i && (
               <p
                 style={{
                   fontFamily: "var(--font-body)",
@@ -65,8 +71,8 @@ export default function FAQAccordion() {
               >
                 {item.answer}
               </p>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       ))}
     </div>

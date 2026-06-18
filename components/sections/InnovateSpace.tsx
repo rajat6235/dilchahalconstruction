@@ -1,4 +1,3 @@
-"use client";
 import Button from "@/components/ui/Button";
 import AnimateIn from "@/components/ui/AnimateIn";
 
@@ -13,7 +12,7 @@ export default function InnovateSpace() {
           style={{ background: "#8B0001" }}
         >
           {/* H4 label — WP: Montserrat 24px weight 300 #BEB9B9 lineHeight 28.8px */}
-          <h4
+          <p
             className="mb-3"
             style={{
               fontFamily: "var(--font-subheading)",
@@ -25,7 +24,7 @@ export default function InnovateSpace() {
             }}
           >
             Innovate Your Space
-          </h4>
+          </p>
 
           {/* H2 — WP: Merriweather 48px weight 700 white letterSpacing 0.5px lineHeight 62.4px */}
           <h2

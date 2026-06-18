@@ -14,7 +14,7 @@ const navLinks = [
 /* Social icons — exact SVG paths from WordPress/Astra, all bright red */
 function FacebookIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 448 512">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 448 512" aria-hidden="true">
       <path
         fill="#E00201"
         d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
@@ -25,7 +25,7 @@ function FacebookIcon() {
 
 function GoogleIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 24 28">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 24 28" aria-hidden="true">
       <path
         fill="#E00201"
         d="M12 12.281h11.328c.109.609.187 1.203.187 2C23.515 21.125 18.921 26 11.999 26c-6.641 0-12-5.359-12-12s5.359-12 12-12c3.234 0 5.953 1.188 8.047 3.141L16.78 8.282c-.891-.859-2.453-1.859-4.781-1.859-4.094 0-7.438 3.391-7.438 7.578s3.344 7.578 7.438 7.578c4.75 0 6.531-3.406 6.813-5.172h-6.813v-4.125z"
@@ -36,7 +36,7 @@ function GoogleIcon() {
 
 function InstagramIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 448 512">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 448 512" aria-hidden="true">
       <path
         fill="#E00201"
         d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"
@@ -50,11 +50,17 @@ export default function HeroWithHeader() {
 
   return (
     <section className="relative w-full">
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-bg.jpeg')" }}
-      />
+      {/* Background image — next/image with priority for LCP */}
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src="/images/hero-bg.jpeg"
+          alt=""
+          fill
+          preload
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
 
       {/* Overlay — darker to match WordPress reference */}
       <div
@@ -82,7 +88,7 @@ export default function HeroWithHeader() {
               height={168}
               style={{ height: "168px", width: "auto" }}
               className="object-contain"
-              priority
+              loading="eager"
             />
           </a>
 
@@ -123,7 +129,9 @@ export default function HeroWithHeader() {
           <button
             className="md:hidden text-white p-2"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav"
           >
             <svg
               width="24"
@@ -132,6 +140,7 @@ export default function HeroWithHeader() {
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
+              aria-hidden="true"
             >
               {menuOpen ? (
                 <path d="M18 6L6 18M6 6l12 12" />
@@ -148,6 +157,7 @@ export default function HeroWithHeader() {
 
         {/* Below header: nav left | GET A QUOTE right — WP: 60px height */}
         <nav
+          aria-label="Primary navigation"
           className="w-full flex items-stretch"
           style={{
             minHeight: "60px",
@@ -208,6 +218,7 @@ export default function HeroWithHeader() {
         {/* Mobile dropdown */}
         {menuOpen && (
           <div
+            id="mobile-nav"
             className="md:hidden w-full"
             style={{ background: "rgba(0,0,0,0.92)", borderTop: "1px solid rgba(255,255,255,0.06)" }}
           >
@@ -239,8 +250,8 @@ export default function HeroWithHeader() {
         className="relative z-10 max-w-[1140px] mx-auto px-4"
         style={{ paddingTop: "40px", paddingBottom: "160px" }}
       >
-        {/* h3 — WP: Montserrat 36px weight 500 #BEB9B9 letterSpacing 0.5px lineHeight 46.8px */}
-        <h3
+        {/* Decorative subtitle — not a heading; h3 before h1 breaks hierarchy */}
+        <p
           className="mb-3"
           style={{
             fontFamily: "var(--font-subheading)",
@@ -252,7 +263,7 @@ export default function HeroWithHeader() {
           }}
         >
           Welcome to
-        </h3>
+        </p>
 
         {/* h1 — WP: Roboto 48px weight 600 #E00201 uppercase lineHeight 67.2px */}
         <h1

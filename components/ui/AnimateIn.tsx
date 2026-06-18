@@ -1,70 +1,14 @@
 "use client";
-import { motion, type Variants, type HTMLMotionProps } from "framer-motion";
+import { useEffect, useRef } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
-// Elementor "normal" duration ≈ 1s; we use 0.7s for a snappier feel
-const DUR = 0.7;
-const EASE = [0.25, 0.1, 0.25, 1] as const;
-
-type TransitionConfig =
-  | { duration: number; ease: readonly number[]; delay?: number }
-  | { type: "spring"; stiffness: number; damping: number; delay?: number };
-
-interface VariantDef {
-  hidden: Record<string, unknown>;
-  visible: { transition: TransitionConfig } & Record<string, unknown>;
-}
-
-export const VARIANTS: Record<string, VariantDef> = {
-  fadeIn: {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: DUR, ease: EASE } },
-  },
-  fadeInDown: {
-    hidden: { opacity: 0, y: -40 },
-    visible: { opacity: 1, y: 0, transition: { duration: DUR, ease: EASE } },
-  },
-  fadeInUp: {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: DUR, ease: EASE } },
-  },
-  fadeInLeft: {
-    hidden: { opacity: 0, x: -40 },
-    visible: { opacity: 1, x: 0, transition: { duration: DUR, ease: EASE } },
-  },
-  fadeInRight: {
-    hidden: { opacity: 0, x: 40 },
-    visible: { opacity: 1, x: 0, transition: { duration: DUR, ease: EASE } },
-  },
-  slideInDown: {
-    hidden: { opacity: 0, y: -80 },
-    visible: { opacity: 1, y: 0, transition: { duration: DUR, ease: EASE } },
-  },
-  slideInUp: {
-    hidden: { opacity: 0, y: 80 },
-    visible: { opacity: 1, y: 0, transition: { duration: DUR, ease: EASE } },
-  },
-  zoomIn: {
-    hidden: { opacity: 0, scale: 0.82 },
-    visible: { opacity: 1, scale: 1, transition: { duration: DUR, ease: EASE } },
-  },
-  zoomInDown: {
-    hidden: { opacity: 0, scale: 0.82, y: -40 },
-    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: DUR, ease: EASE } },
-  },
-  bounceIn: {
-    hidden: { opacity: 0, scale: 0.3 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { type: "spring", stiffness: 260, damping: 18 },
-    },
-  },
-};
-
-interface AnimateInProps extends Omit<HTMLMotionProps<"div">, "variants" | "initial" | "whileInView" | "viewport"> {
-  variant: keyof typeof VARIANTS;
+interface AnimateInProps {
+  variant: string;
   delay?: number;
   amount?: number;
+  children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
 }
 
 export default function AnimateIn({
@@ -72,22 +16,40 @@ export default function AnimateIn({
   delay = 0,
   amount = 0.15,
   children,
-  ...rest
+  className,
+  style,
 }: AnimateInProps) {
-  const def = VARIANTS[variant];
-  const visible = delay
-    ? { ...def.visible, transition: { ...def.visible.transition, delay } }
-    : def.visible;
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const show = () => {
+      if (delay) {
+        setTimeout(() => { el.dataset.visible = "true"; }, delay * 1000);
+      } else {
+        el.dataset.visible = "true";
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          show();
+          observer.unobserve(el);
+        }
+      },
+      { threshold: amount }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [delay, amount]);
 
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount }}
-      variants={{ hidden: def.hidden as Variants["hidden"], visible: visible as Variants["visible"] }}
-      {...rest}
-    >
+    <div ref={ref} data-animate={variant} className={className} style={style}>
       {children}
-    </motion.div>
+    </div>
   );
 }

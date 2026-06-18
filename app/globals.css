@@ -50,14 +50,46 @@ body {
   border-width: 0;
 }
 
-/* Scroll-triggered animations */
+/* ─── CSS-only scroll animations (replaces framer-motion) ─── */
+/* Base: hidden until in view */
+[data-animate] {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Triggered state — IntersectionObserver sets data-visible="true" */
+[data-animate][data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Variant initial transforms */
+[data-animate="fadeIn"]      { /* opacity only — no transform */ }
+[data-animate="fadeInDown"]  { transform: translateY(-40px); }
+[data-animate="fadeInUp"]    { transform: translateY(40px); }
+[data-animate="fadeInLeft"]  { transform: translateX(-40px); }
+[data-animate="fadeInRight"] { transform: translateX(40px); }
+[data-animate="slideInDown"] { transform: translateY(-80px); }
+[data-animate="slideInUp"]   { transform: translateY(80px); }
+[data-animate="zoomIn"]      { transform: scale(0.82); }
+[data-animate="zoomInDown"]  { transform: scale(0.82) translateY(-40px); }
+
+/* bounceIn — spring-approximation via cubic-bezier overshoot */
+[data-animate="bounceIn"] {
+  transform: scale(0.3);
+  transition: opacity 0.6s ease,
+              transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ─── Legacy class-based scroll animations (LatestWorks gallery rows) ─── */
 .animate-on-scroll {
   opacity: 0;
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .animate-on-scroll.is-visible {
   opacity: 1;
-  transform: none !important;
+  transform: none;
 }
 .fade-in-left  { transform: translateX(-40px); }
 .fade-in-right { transform: translateX(40px); }
@@ -65,12 +97,17 @@ body {
 .fade-in-down  { transform: translateY(-30px); }
 .zoom-in-anim  { transform: scale(0.88); }
 
-/* Keyframes */
+/* ─── Keyframes ─── */
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
 @keyframes pulse-scale {
   0%, 100% { transform: scale(1); }
   50%       { transform: scale(1.05); }
+}
+
+@keyframes preloader-spin {
+  to { transform: rotate(360deg); }
 }

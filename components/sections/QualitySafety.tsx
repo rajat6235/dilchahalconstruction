@@ -1,5 +1,5 @@
-"use client";
-import { type ReactNode } from "react";
+import type { ReactNode } from "react";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import AnimateIn from "@/components/ui/AnimateIn";
 
@@ -51,13 +51,16 @@ export default function QualitySafety() {
         className="relative flex-1 flex items-start"
         style={{ minHeight: "688px", padding: "80px 52px" }}
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/image-1-min.jpg')" }}
+        <Image
+          src="/images/image-1-min.jpg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10" style={{ maxWidth: "500px" }}>
-          <h4
+          <p
             className="mb-4"
             style={{
               fontFamily: "var(--font-subheading)",
@@ -69,7 +72,7 @@ export default function QualitySafety() {
             }}
           >
             Quality and Safety
-          </h4>
+          </p>
           <h2
             className="leading-tight mb-5"
             style={{
@@ -113,9 +116,12 @@ export default function QualitySafety() {
         className="relative flex-1 flex items-start"
         style={{ minHeight: "688px", padding: "80px 52px" }}
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/image-2-min.jpg')" }}
+        <Image
+          src="/images/image-2-min.jpg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
         <div className="absolute inset-0 bg-[#8B0001]/75" />
         <div className="relative z-10" style={{ maxWidth: "500px" }}>

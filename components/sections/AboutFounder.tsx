@@ -1,4 +1,3 @@
-"use client";
 import AnimateIn from "@/components/ui/AnimateIn";
 
 export default function AboutFounder() {
