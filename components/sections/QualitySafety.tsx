@@ -125,7 +125,7 @@ export default function QualitySafety() {
               fontFamily: "var(--font-subheading)",
               fontSize: "26px",
               fontWeight: 700,
-              color: "#000000",
+              color: "rgb(255,255,255)",
               letterSpacing: "0.2px",
               lineHeight: "33.8px",
             }}

@@ -6,9 +6,9 @@ import Button from "@/components/ui/Button";
 import AnimateIn from "@/components/ui/AnimateIn";
 
 const slides = [
-  { src: "/images/reno1.jpeg", alt: "House renovation 1" },
-  { src: "/images/reno2.jpeg", alt: "House renovation 2" },
-  { src: "/images/reno3.jpeg", alt: "House renovation 3" },
+  { src: "/images/reno1.jpeg", alt: "House renovation project — drywall and interior finishing completed by Dil Chahal Constructions in Saskatoon, SK" },
+  { src: "/images/reno2.jpeg", alt: "Residential renovation showcasing mudding, taping, and texturing work in Saskatoon" },
+  { src: "/images/reno3.jpeg", alt: "Completed home renovation with drywall installation and ceiling work in Saskatoon, Saskatchewan" },
 ];
 
 function RenovationCarousel() {

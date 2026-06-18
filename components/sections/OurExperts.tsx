@@ -46,7 +46,7 @@ export default function OurExperts() {
             <div className="flex-1">
               <Image
                 src="/images/work4.jpeg"
-                alt="Dil Chahal Construction team"
+                alt="Dil Chahal Constructions expert drywall and framing team on a commercial project in Saskatoon, SK"
                 width={1024}
                 height={768}
                 style={{ width: "100%", height: "auto", display: "block" }}
@@ -58,7 +58,7 @@ export default function OurExperts() {
             <div className="flex-1">
               <Image
                 src="/images/work6.jpeg"
-                alt="Dil Chahal Construction crew"
+                alt="Skilled construction crew from Dil Chahal Constructions working on a renovation project in Saskatoon"
                 width={1024}
                 height={768}
                 style={{ width: "100%", height: "auto", display: "block" }}

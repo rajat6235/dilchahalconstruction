@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const services = [
-  "Drywall",
-  "GlassRoc",
-  "Steel Frame",
-  "T-Bar",
-  "Insulation",
-  "Bulkhead Ceiling",
-  "Mudding",
-  "Texture",
+  { label: "Drywall Installation Saskatoon", href: "#services" },
+  { label: "GlassRoc Sheathing Saskatoon", href: "#services" },
+  { label: "Steel Framing Saskatoon", href: "#services" },
+  { label: "T-Bar Ceiling Saskatoon", href: "#services" },
+  { label: "Insulation Saskatoon", href: "#services" },
+  { label: "Bulkhead Ceiling Saskatoon", href: "#services" },
+  { label: "Mudding & Taping Saskatoon", href: "#services" },
+  { label: "Texturing Saskatoon", href: "#services" },
 ];
 
 export default function Footer() {
@@ -67,9 +67,9 @@ export default function Footer() {
             </h2>
             <ul className="flex flex-col" style={{ gap: "20px" }}>
               {services.map((s) => (
-                <li key={s}>
+                <li key={s.label}>
                   <a
-                    href="#services"
+                    href={s.href}
                     style={{
                       fontFamily: "var(--font-roboto-sans)",
                       fontSize: "15px",
@@ -79,7 +79,7 @@ export default function Footer() {
                       display: "block",
                     }}
                   >
-                    {s}
+                    {s.label}
                   </a>
                 </li>
               ))}
@@ -140,8 +140,14 @@ export default function Footer() {
             >
               Contact Us
             </h2>
-            <div className="flex flex-col gap-3">
-              <span
+            <address
+              aria-label="Company address"
+              style={{ fontStyle: "normal" }}
+              className="flex flex-col gap-3"
+            >
+              <a
+                href="tel:+13067171994"
+                aria-label="Call Dil Chahal Constructions at +1 306 717 1994"
                 style={{
                   fontFamily: "var(--font-roboto-sans)",
                   fontSize: "15px",
@@ -149,11 +155,14 @@ export default function Footer() {
                   color: "rgb(255,255,255)",
                   lineHeight: "15px",
                   display: "block",
+                  textDecoration: "none",
                 }}
               >
                 Make a call: +1 (306) 717-1994
-              </span>
-              <span
+              </a>
+              <a
+                href="mailto:contact@dilchahalconstruction.com"
+                aria-label="Email Dil Chahal Constructions"
                 style={{
                   fontFamily: "var(--font-roboto-sans)",
                   fontSize: "15px",
@@ -161,10 +170,11 @@ export default function Footer() {
                   color: "rgb(255,255,255)",
                   lineHeight: "15px",
                   display: "block",
+                  textDecoration: "none",
                 }}
               >
                 contact@dilchahalconstruction.com
-              </span>
+              </a>
               <span
                 style={{
                   fontFamily: "var(--font-roboto-sans)",
@@ -177,7 +187,7 @@ export default function Footer() {
               >
                 Unit 107, 1222 Alberta Ave, Saskatoon, SK S7K 1R4
               </span>
-            </div>
+            </address>
           </div>
 
         </div>

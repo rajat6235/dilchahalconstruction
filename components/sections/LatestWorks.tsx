@@ -4,16 +4,16 @@ import Button from "@/components/ui/Button";
 import AnimateIn from "@/components/ui/AnimateIn";
 
 const row1 = [
-  { src: "/images/work1.jpg", alt: "Construction project 1" },
-  { src: "/images/work2.jpg", alt: "Construction project 2" },
-  { src: "/images/work3.jpg", alt: "Construction project 3" },
-  { src: "/images/work4.jpeg", alt: "Construction project 4" },
+  { src: "/images/work1.jpg", alt: "Completed drywall installation project by Dil Chahal Constructions in Saskatoon, SK" },
+  { src: "/images/work2.jpg", alt: "Residential renovation project showcasing interior construction in Saskatoon" },
+  { src: "/images/work3.jpg", alt: "Commercial drywall and framing project completed in Saskatoon, Saskatchewan" },
+  { src: "/images/work4.jpeg", alt: "Steel framing and drywall work for a commercial renovation in Saskatoon" },
 ];
 const row2 = [
-  { src: "/images/work5.jpeg", alt: "Construction project 5" },
-  { src: "/images/work6.jpeg", alt: "Construction project 6" },
-  { src: "/images/work7.jpeg", alt: "Construction project 7" },
-  { src: "/images/work8.jpeg", alt: "Construction project 8" },
+  { src: "/images/work5.jpeg", alt: "Insulation and drywall installation for a Saskatoon residential project" },
+  { src: "/images/work6.jpeg", alt: "T-bar ceiling and interior construction work completed in Saskatoon, SK" },
+  { src: "/images/work7.jpeg", alt: "Mudding, taping, and texturing finish work by Dil Chahal Constructions Saskatoon" },
+  { src: "/images/work8.jpeg", alt: "House renovation project featuring drywall and interior finishing in Saskatoon" },
 ];
 
 function AnimatedRow({

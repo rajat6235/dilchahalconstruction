@@ -27,14 +27,14 @@ export default function InnovateSpace() {
             Innovate Your Space
           </h4>
 
-          {/* H2 — WP: Merriweather 48px weight 700 #000000 letterSpacing 0.5px lineHeight 62.4px */}
+          {/* H2 — WP: Merriweather 48px weight 700 white letterSpacing 0.5px lineHeight 62.4px */}
           <h2
             className="leading-tight mb-5"
             style={{
               fontFamily: "var(--font-heading)",
               fontSize: "clamp(28px, 4vw, 48px)",
               fontWeight: 700,
-              color: "#000000",
+              color: "rgb(255,255,255)",
               letterSpacing: "0.5px",
               lineHeight: "62.4px",
             }}

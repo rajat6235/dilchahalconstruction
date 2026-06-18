@@ -5,56 +5,56 @@ import AnimateIn from "@/components/ui/AnimateIn";
 const services = [
   {
     src: "/images/drywall.jpg",
-    alt: "Drywall installation",
+    alt: "Professional drywall installation service in Saskatoon, SK by Dil Chahal Constructions",
     title: "Drywall",
     description:
       "Quality drywall services providing strong and even surfaces for any space.",
   },
   {
     src: "/images/work7.jpeg",
-    alt: "GlassRoc sheathing",
+    alt: "GlasRoc sheathing installation for fire, moisture, and mold resistance in Saskatoon",
     title: "GlassRoc",
     description:
       "Safeguard your building with GlasRoc Sheathing superior fire, moisture, and mold resistance for durable exterior walls and roofs.",
   },
   {
     src: "/images/steel-frame.jpeg",
-    alt: "Steel frame construction",
+    alt: "Steel framing construction for commercial and residential buildings in Saskatoon, SK",
     title: "Steel Frame",
     description:
       "Durable steel frame constructions that provide excellent structural support.",
   },
   {
     src: "/images/t-bar.jpeg",
-    alt: "T-Bar ceiling installation",
+    alt: "T-bar ceiling installation by certified ceiling contractor in Saskatoon",
     title: "T-Bar",
     description:
       "Superior T-Bar ceiling systems for a modern, clean, and professional appearance.",
   },
   {
     src: "/images/work5.jpeg",
-    alt: "Insulation services",
+    alt: "Insulation installation service for energy-efficient homes and buildings in Saskatoon, SK",
     title: "Insulation",
     description:
       "Top-tier insulation services to keep your property energy-efficient and cozy.",
   },
   {
     src: "/images/bullcat2.jpeg",
-    alt: "Bulkhead ceiling",
+    alt: "Custom bulkhead ceiling construction adding dimension and style in Saskatoon",
     title: "Bulkhead Ceiling",
     description:
       "Enhance your space with our expertly crafted bulkhead ceilings, designed to add dimension, style, and functionality to any room.",
   },
   {
     src: "/images/quality-right-bg.jpeg",
-    alt: "Mudding and taping",
+    alt: "Mudding and taping drywall finishing service for smooth surfaces in Saskatoon, SK",
     title: "Mudding",
     description:
       "Seamless mudding services for a smooth, impeccable finish on all surfaces.",
   },
   {
     src: "/images/team2.jpeg",
-    alt: "Texture finishing",
+    alt: "Interior wall texturing service for residential and commercial spaces in Saskatoon",
     title: "Texture",
     description:
       "Stylish texturing techniques to enhance the visual appeal of your interiors.",
@@ -96,8 +96,8 @@ export default function QualityServices() {
         {/* WP 847a90d: slideInUp — services grid */}
         <AnimateIn variant="slideInUp">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-8 sm:gap-x-4 lg:gap-x-5">
-            {services.map((svc) => (
-              <ServiceCard key={svc.title} {...svc} />
+            {services.map((svc, idx) => (
+              <ServiceCard key={svc.title} {...svc} priority={idx < 2} />
             ))}
           </div>
         </AnimateIn>

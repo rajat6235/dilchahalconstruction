@@ -77,7 +77,7 @@ export default function HeroWithHeader() {
           <a href="#" className="flex-shrink-0">
             <Image
               src="/images/logo-header.png"
-              alt="Dil Chahal Constructions"
+              alt="Dil Chahal Constructions Ltd. — Drywall Contractor and General Contractor in Saskatoon, SK"
               width={230}
               height={168}
               style={{ height: "168px", width: "auto" }}
@@ -96,7 +96,14 @@ export default function HeroWithHeader() {
               fontWeight: 400,
             }}
           >
-            Make a call: +1 (306) 717-1994
+            Make a call:{" "}
+            <a
+              href="tel:+13067171994"
+              style={{ color: "inherit", textDecoration: "none" }}
+              aria-label="Call Dil Chahal Constructions at +1 306 717 1994"
+            >
+              +1 (306) 717-1994
+            </a>
           </p>
 
           {/* Social icons — bright red, small */}
@@ -172,9 +179,13 @@ export default function HeroWithHeader() {
 
           {/* Mobile phone */}
           <div className="md:hidden flex items-center px-4 flex-1">
-            <span style={{ color: "#E00201", fontFamily: "var(--font-body)", fontSize: "13px" }}>
+            <a
+              href="tel:+13067171994"
+              style={{ color: "#E00201", fontFamily: "var(--font-body)", fontSize: "13px", textDecoration: "none" }}
+              aria-label="Call Dil Chahal Constructions at +1 306 717 1994"
+            >
               +1 (306) 717-1994
-            </span>
+            </a>
           </div>
 
           {/* GET A QUOTE — flush right, reduced size */}
@@ -255,6 +266,8 @@ export default function HeroWithHeader() {
           }}
         >
           Dil Chahal Constructions Ltd.
+          {/* Screen-reader supplement targets primary keyword without changing visible display */}
+          <span className="sr-only"> — Drywall Contractor &amp; General Contractor in Saskatoon, SK</span>
         </h1>
 
         {/* Body text — WP: Open Sans 16px weight 400 white, capped width */}

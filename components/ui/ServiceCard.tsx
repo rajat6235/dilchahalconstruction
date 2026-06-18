@@ -5,6 +5,8 @@ interface ServiceCardProps {
   alt: string;
   title: string;
   description: string;
+  /** Pass true for above-the-fold cards to eagerly load the image (LCP) */
+  priority?: boolean;
 }
 
 export default function ServiceCard({
@@ -12,6 +14,7 @@ export default function ServiceCard({
   alt,
   title,
   description,
+  priority = false,
 }: ServiceCardProps) {
   return (
     <div className="flex flex-col">
@@ -23,6 +26,8 @@ export default function ServiceCard({
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          priority={priority}
+          loading={priority ? "eager" : "lazy"}
         />
       </div>
       {/* WP: Montserrat 26px weight 700 #000000 letterSpacing 0.2px lineHeight 33.8px */}

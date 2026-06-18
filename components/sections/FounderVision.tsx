@@ -36,7 +36,7 @@ export default function FounderVision() {
               {/* Mobile: width:100% height:auto (no crop). Desktop: object-cover fills the capped container. */}
               <Image
                 src="/images/founder.jpeg"
-                alt="Dilbagh Singh Chahal, CEO"
+                alt="Dilbagh Singh Chahal, CEO and founder of Dil Chahal Constructions Ltd., drywall contractor and general contractor in Saskatoon, SK"
                 width={1080}
                 height={1362}
                 className="w-full h-auto lg:h-full lg:object-cover lg:object-top"
