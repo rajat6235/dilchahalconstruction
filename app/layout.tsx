@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Merriweather, Montserrat, Open_Sans, Lato, Roboto } from "next/font/google";
 import "./globals.css";
+import Preloader from "@/components/ui/Preloader";
 
 const merriweather = Merriweather({
   weight: ["700"],
@@ -51,7 +52,10 @@ export default function RootLayout({
       lang="en"
       className={`${merriweather.variable} ${montserrat.variable} ${openSans.variable} ${lato.variable} ${roboto.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Preloader />
+        {children}
+      </body>
     </html>
   );
 }
