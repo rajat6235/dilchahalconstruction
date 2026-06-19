@@ -270,7 +270,7 @@ export default function HouseRenovations() {
 
               <Button
                 variant="primary"
-                href="#contact"
+                href="/contact-us"
                 className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a] self-start"
               >
                 Get a Quote

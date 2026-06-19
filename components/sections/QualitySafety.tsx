@@ -102,7 +102,7 @@ export default function QualitySafety() {
           </p>
           <Button
             variant="primary"
-            href="#contact"
+            href="/contact-us"
             className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
           >
             Get In Touch
