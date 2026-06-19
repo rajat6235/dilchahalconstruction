@@ -44,8 +44,8 @@ const BASE_URL = "https://dilchahalconstruction.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Dil Chahal Constructions Ltd. | Drywall & General Contractor Saskatoon",
-    template: "%s | Dil Chahal Constructions Ltd.",
+    default: "Dil Chahal Construction Ltd. | Drywall & General Contractor Saskatoon",
+    template: "%s | Dil Chahal Construction Ltd.",
   },
   description:
     "Dil Chahal Construction Ltd. is Saskatoon's trusted drywall contractor and general contractor. Expert drywall installation, drywall repair, steel framing, T-bar ceilings, insulation, mudding, taping, texturing, and home & commercial renovations. Serving Saskatoon, Warman, Martensville, Regina, and Prince Albert.",
@@ -92,9 +92,9 @@ export const metadata: Metadata = {
     "renovation contractor saskatchewan",
     "drywall cost saskatoon",
   ],
-  authors: [{ name: "Dil Chahal Constructions Ltd.", url: BASE_URL }],
-  creator: "Dil Chahal Constructions Ltd.",
-  publisher: "Dil Chahal Constructions Ltd.",
+  authors: [{ name: "Dil Chahal Construction Ltd.", url: BASE_URL }],
+  creator: "Dil Chahal Construction Ltd.",
+  publisher: "Dil Chahal Construction Ltd.",
   alternates: {
     canonical: BASE_URL,
   },
@@ -102,8 +102,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
     url: BASE_URL,
-    siteName: "Dil Chahal Constructions Ltd.",
-    title: "Dil Chahal Constructions Ltd. | Drywall & General Contractor Saskatoon",
+    siteName: "Dil Chahal Construction Ltd.",
+    title: "Dil Chahal Construction Ltd. | Drywall & General Contractor Saskatoon",
     description:
       "Saskatoon's trusted drywall contractor and general contractor. Specializing in drywall installation, steel framing, T-bar ceilings, insulation, mudding, taping, texturing, and residential & commercial renovations.",
     images: [
@@ -111,13 +111,13 @@ export const metadata: Metadata = {
         url: "/images/hero-bg.jpeg",
         width: 1200,
         height: 630,
-        alt: "Dil Chahal Constructions Ltd. — Drywall and General Contractor in Saskatoon, SK",
+        alt: "Dil Chahal Construction Ltd. — Drywall and General Contractor in Saskatoon, SK",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dil Chahal Constructions Ltd. | Drywall & General Contractor Saskatoon",
+    title: "Dil Chahal Construction Ltd. | Drywall & General Contractor Saskatoon",
     description:
       "Saskatoon's trusted drywall contractor. Expert drywall installation, steel framing, T-bar ceilings, insulation, mudding, taping, texturing, and home & commercial renovations.",
     images: ["/images/hero-bg.jpeg"],
@@ -143,11 +143,11 @@ const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "GeneralContractor"],
   "@id": `${BASE_URL}/#business`,
-  name: "Dil Chahal Constructions Ltd.",
-  legalName: "Dil Chahal Constructions Ltd.",
-  alternateName: ["Dil Chahal Construction", "Dil Chahal Constructions"],
+  name: "Dil Chahal Construction Ltd.",
+  legalName: "Dil Chahal Construction Ltd.",
+  alternateName: ["Dil Chahal Construction", "DCC Saskatoon"],
   description:
-    "Dil Chahal Constructions Ltd. is a licensed general contractor and drywall specialist serving Saskatoon, SK and surrounding areas. Services include drywall installation, drywall repair, steel framing, T-bar ceilings, insulation, mudding, taping, texturing, and residential and commercial renovations.",
+    "Dil Chahal Construction Ltd. is a licensed general contractor and drywall specialist serving Saskatoon, SK and surrounding areas. Services include drywall installation, drywall repair, steel framing, T-bar ceilings, insulation, mudding, taping, texturing, and residential and commercial renovations.",
   url: BASE_URL,
   telephone: "+13067171994",
   email: "info@dilchahalconstruction.com",
@@ -240,7 +240,7 @@ const founderJsonLd = {
   "@id": `${BASE_URL}/#founder`,
   name: "Dilbagh Singh Chahal",
   jobTitle: "CEO & Founder",
-  description: "Founder and CEO of Dil Chahal Constructions Ltd., a licensed general contractor with 7+ years of experience in drywall installation, steel framing, insulation, ceiling systems, and interior renovations across Saskatchewan.",
+  description: "Founder and CEO of Dil Chahal Construction Ltd., a licensed general contractor with 7+ years of experience in drywall installation, steel framing, insulation, ceiling systems, and interior renovations across Saskatchewan.",
   worksFor: {
     "@id": `${BASE_URL}/#business`,
   },
@@ -263,7 +263,7 @@ const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${BASE_URL}/#professional-service`,
-  name: "Dil Chahal Constructions Ltd.",
+  name: "Dil Chahal Construction Ltd.",
   description:
     "Licensed professional drywall contractor and general contractor serving Saskatoon, SK. Specializing in drywall installation, steel framing, T-bar ceilings, insulation, mudding, taping, texturing, and residential and commercial renovations.",
   url: BASE_URL,
@@ -309,8 +309,8 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${BASE_URL}/#organization`,
-  name: "Dil Chahal Constructions Ltd.",
-  legalName: "Dil Chahal Constructions Ltd.",
+  name: "Dil Chahal Construction Ltd.",
+  legalName: "Dil Chahal Construction Ltd.",
   alternateName: ["Dil Chahal Construction", "DCC Saskatoon"],
   description: "Licensed general contractor and drywall specialist in Saskatoon, SK — providing drywall installation, steel framing, insulation, ceiling systems, and full interior renovations across Saskatchewan since 2016.",
   slogan: "Quality You Can Trust, Excellence You Can See",
@@ -379,7 +379,7 @@ const websiteJsonLd = {
   "@type": "WebSite",
   "@id": `${BASE_URL}/#website`,
   url: BASE_URL,
-  name: "Dil Chahal Constructions Ltd.",
+  name: "Dil Chahal Construction Ltd.",
   description:
     "Saskatoon's trusted drywall contractor and general contractor for residential and commercial construction projects.",
   publisher: {
@@ -427,6 +427,7 @@ export default function RootLayout({
         <Preloader />
         <RouteLoader />
         {children}
+
       </body>
     </html>
   );

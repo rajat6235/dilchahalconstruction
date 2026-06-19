@@ -6,7 +6,7 @@ const SLUG = "projects/interior-home-renovation-saskatoon";
 const CANONICAL = `${BASE_URL}/${SLUG}/`;
 
 export const metadata: Metadata = {
-  title: "Interior Home Renovation — Saskatoon, SK | Dil Chahal Constructions",
+  title: "Interior Home Renovation — Saskatoon, SK | Dil Chahal Construction",
   description:
     "Full interior home renovation in Saskatoon, SK — drywall, insulation, texturing and complete interior finishing for a residential renovation. Licensed contractor. View the completed project.",
   keywords: [
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Interior Home Renovation — Saskatoon, SK | Dil Chahal Constructions",
+    title: "Interior Home Renovation — Saskatoon, SK | Dil Chahal Construction",
     description: "Full interior home renovation in Saskatoon — drywall, insulation, and interior finishing. Licensed contractor. View the completed project.",
     url: CANONICAL,
-    images: [{ url: "/images/reno1.jpeg", width: 1200, height: 630, alt: "Interior home renovation project in Saskatoon, SK by Dil Chahal Constructions" }],
+    images: [{ url: "/images/reno1.jpeg", width: 1200, height: 630, alt: "Interior home renovation project in Saskatoon, SK by Dil Chahal Construction" }],
   },
-  twitter: { card: "summary_large_image", title: "Interior Home Renovation Saskatoon | Dil Chahal Constructions", description: "Full interior renovation — drywall, insulation & finishing in Saskatoon. Licensed contractor.", images: ["/images/reno1.jpeg"] },
+  twitter: { card: "summary_large_image", title: "Interior Home Renovation Saskatoon | Dil Chahal Construction", description: "Full interior renovation — drywall, insulation & finishing in Saskatoon. Licensed contractor.", images: ["/images/reno1.jpeg"] },
 };
 
 const breadcrumbJsonLd = {
@@ -41,8 +41,8 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Interior Home Renovation — Saskatoon, SK | Dil Chahal Constructions",
-  description: "Full interior home renovation project in Saskatoon, SK — drywall installation, insulation, mudding, taping, and texturing by Dil Chahal Constructions Ltd.",
+  name: "Interior Home Renovation — Saskatoon, SK | Dil Chahal Construction",
+  description: "Full interior home renovation project in Saskatoon, SK — drywall installation, insulation, mudding, taping, and texturing by Dil Chahal Construction Ltd.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
   inLanguage: "en-CA",
@@ -55,7 +55,7 @@ const articleJsonLd = {
   headline: "Interior Home Renovation — Saskatoon, SK",
   description: "Full interior home renovation including drywall installation, insulation upgrades, mudding, taping, texturing, and bulkhead ceiling work in Saskatoon, SK.",
   image: [
-    { "@type": "ImageObject", url: `${BASE_URL}/images/reno1.jpeg`, width: 1200, height: 900, caption: "Kitchen renovation with drywall and ceiling work completed by Dil Chahal Constructions in Saskatoon" },
+    { "@type": "ImageObject", url: `${BASE_URL}/images/reno1.jpeg`, width: 1200, height: 900, caption: "Kitchen renovation with drywall and ceiling work completed by Dil Chahal Construction in Saskatoon" },
     { "@type": "ImageObject", url: `${BASE_URL}/images/reno3.jpeg`, width: 1200, height: 900, caption: "Bathroom renovation with drywall and moisture-resistant board in Saskatoon, SK" },
   ],
   author: { "@id": `${BASE_URL}/#founder` },
@@ -74,7 +74,7 @@ const data: ProjectCaseStudyData = {
   breadcrumbLabel: "Interior Home Renovation",
   heroTitle: "Interior Home Renovation",
   currentPage: "Home Renovation",
-  featuredImage: { src: "/images/reno1.jpeg", alt: "Interior home renovation with custom kitchen and drywall work completed by Dil Chahal Constructions in Saskatoon, SK" },
+  featuredImage: { src: "/images/reno1.jpeg", alt: "Interior home renovation with custom kitchen and drywall work completed by Dil Chahal Construction in Saskatoon, SK" },
   projectDetails: [
     { label: "Project Type", value: "Residential Interior Renovation" },
     { label: "Location", value: "Saskatoon, SK" },

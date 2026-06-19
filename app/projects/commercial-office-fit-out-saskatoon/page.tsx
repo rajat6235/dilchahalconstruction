@@ -6,7 +6,7 @@ const SLUG = "projects/commercial-office-fit-out-saskatoon";
 const CANONICAL = `${BASE_URL}/${SLUG}/`;
 
 export const metadata: Metadata = {
-  title: "Commercial Office Fit-Out — Saskatoon, SK | Dil Chahal Constructions",
+  title: "Commercial Office Fit-Out — Saskatoon, SK | Dil Chahal Construction",
   description:
     "Commercial office fit-out project in Saskatoon, SK — full steel framing, drywall installation, and T-bar suspended ceiling system for a professional office space. Licensed contractor.",
   keywords: [
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Commercial Office Fit-Out — Saskatoon, SK | Dil Chahal Constructions",
+    title: "Commercial Office Fit-Out — Saskatoon, SK | Dil Chahal Construction",
     description: "Full commercial office fit-out in Saskatoon — steel framing, drywall, and T-bar ceiling system. Licensed contractor. View the completed project.",
     url: CANONICAL,
-    images: [{ url: "/images/work1.jpg", width: 1200, height: 630, alt: "Commercial office drywall and framing project in Saskatoon, SK by Dil Chahal Constructions" }],
+    images: [{ url: "/images/work1.jpg", width: 1200, height: 630, alt: "Commercial office drywall and framing project in Saskatoon, SK by Dil Chahal Construction" }],
   },
-  twitter: { card: "summary_large_image", title: "Commercial Office Fit-Out Saskatoon | Dil Chahal Constructions", description: "Steel framing, drywall, and T-bar ceiling for a commercial office in Saskatoon. Licensed contractor.", images: ["/images/work1.jpg"] },
+  twitter: { card: "summary_large_image", title: "Commercial Office Fit-Out Saskatoon | Dil Chahal Construction", description: "Steel framing, drywall, and T-bar ceiling for a commercial office in Saskatoon. Licensed contractor.", images: ["/images/work1.jpg"] },
 };
 
 const breadcrumbJsonLd = {
@@ -41,8 +41,8 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Commercial Office Fit-Out — Saskatoon, SK | Dil Chahal Constructions",
-  description: "Commercial office fit-out project in Saskatoon, SK — steel framing, drywall installation, and T-bar suspended ceiling system by Dil Chahal Constructions Ltd.",
+  name: "Commercial Office Fit-Out — Saskatoon, SK | Dil Chahal Construction",
+  description: "Commercial office fit-out project in Saskatoon, SK — steel framing, drywall installation, and T-bar suspended ceiling system by Dil Chahal Construction Ltd.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
   inLanguage: "en-CA",
@@ -75,7 +75,7 @@ const data: ProjectCaseStudyData = {
   breadcrumbLabel: "Commercial Office Fit-Out",
   heroTitle: "Commercial Office Fit-Out",
   currentPage: "Commercial Office",
-  featuredImage: { src: "/images/work1.jpg", alt: "Commercial office drywall and steel framing project in Saskatoon, SK by Dil Chahal Constructions" },
+  featuredImage: { src: "/images/work1.jpg", alt: "Commercial office drywall and steel framing project in Saskatoon, SK by Dil Chahal Construction" },
   projectDetails: [
     { label: "Project Type", value: "Commercial Tenant Improvement" },
     { label: "Location", value: "Saskatoon, SK" },

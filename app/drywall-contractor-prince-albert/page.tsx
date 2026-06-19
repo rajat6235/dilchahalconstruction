@@ -6,7 +6,7 @@ const SLUG = "drywall-contractor-prince-albert";
 const CANONICAL = `${BASE_URL}/${SLUG}/`;
 
 export const metadata: Metadata = {
-  title: "Drywall Contractor Prince Albert, SK | Dil Chahal Constructions Ltd.",
+  title: "Drywall Contractor Prince Albert, SK | Dil Chahal Construction Ltd.",
   description:
     "Licensed drywall contractor serving Prince Albert, SK — drywall installation, steel framing, insulation, residential & commercial renovations. Free quote!",
   keywords: [
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Drywall Contractor Serving Prince Albert, SK | Dil Chahal Constructions Ltd.",
+    title: "Drywall Contractor Serving Prince Albert, SK | Dil Chahal Construction Ltd.",
     description: "Licensed drywall contractor serving Prince Albert, SK — drywall installation, steel framing, insulation, and residential and commercial renovations. Free quote.",
     url: CANONICAL,
-    images: [{ url: "/images/drywall.jpg", width: 1200, height: 630, alt: "Drywall and construction services in Prince Albert, SK by Dil Chahal Constructions" }],
+    images: [{ url: "/images/drywall.jpg", width: 1200, height: 630, alt: "Drywall and construction services in Prince Albert, SK by Dil Chahal Construction" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Drywall Contractor Prince Albert SK | Dil Chahal Constructions",
+    title: "Drywall Contractor Prince Albert SK | Dil Chahal Construction",
     description: "Drywall installation, framing, insulation & renovations in Prince Albert, SK. Licensed Saskatchewan contractor. Free quote.",
     images: ["/images/drywall.jpg"],
   },
@@ -51,7 +51,7 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Drywall Contractor Serving Prince Albert, SK | Dil Chahal Constructions Ltd.",
+  name: "Drywall Contractor Serving Prince Albert, SK | Dil Chahal Construction Ltd.",
   description: "Licensed drywall and construction contractor serving Prince Albert, SK with drywall installation, steel framing, insulation, and full residential and commercial renovations.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
@@ -81,7 +81,7 @@ const faqJsonLd = {
       name: "Do you serve Prince Albert, SK for drywall and construction work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Dil Chahal Constructions serves Prince Albert, SK for drywall installation, drywall repair, steel framing, insulation, T-bar ceiling installation, and residential and commercial renovations. We travel from our Saskatoon base to Prince Albert — approximately 140 km north. Contact us for a free written quote for your Prince Albert project.",
+        text: "Yes. Dil Chahal Construction serves Prince Albert, SK for drywall installation, drywall repair, steel framing, insulation, T-bar ceiling installation, and residential and commercial renovations. We travel from our Saskatoon base to Prince Albert — approximately 140 km north. Contact us for a free written quote for your Prince Albert project.",
       },
     },
     {
@@ -118,7 +118,7 @@ const data: ServiceLandingData = {
   breadcrumbParent: { href: "/services", label: "Services" },
   relatedServicesLabel: "Our Services Available in Prince Albert",
   intro: [
-    "Dil Chahal Constructions extends its licensed construction and drywall services to Prince Albert, SK — one of northern Saskatchewan's most active urban centres and a hub for regional residential and commercial construction. Located approximately 140 km north of Saskatoon, Prince Albert supports a diverse construction market: residential growth in newer neighbourhoods, commercial and retail development, healthcare and government facility renovations, and resource-sector related commercial construction.",
+    "Dil Chahal Construction extends its licensed construction and drywall services to Prince Albert, SK — one of northern Saskatchewan's most active urban centres and a hub for regional residential and commercial construction. Located approximately 140 km north of Saskatoon, Prince Albert supports a diverse construction market: residential growth in newer neighbourhoods, commercial and retail development, healthcare and government facility renovations, and resource-sector related commercial construction.",
     "We serve Prince Albert clients with the same full range of services available in Saskatoon: drywall installation, steel framing, insulation, T-bar ceiling systems, bulkhead ceilings, and complete residential and commercial renovations. All work is backed by a written quote, completed to Saskatchewan Building Code requirements, and inspection-ready — no matter the distance from our Saskatoon base.",
   ],
   benefitsHeading: "Services Available in Prince Albert, SK",
@@ -190,7 +190,7 @@ const data: ServiceLandingData = {
     { href: "/drywall-contractor-regina", label: "Serving Regina, SK" },
   ],
   imageSrc: "/images/reno1.jpeg",
-  imageAlt: "Residential drywall and construction services serving Prince Albert, SK by Dil Chahal Constructions",
+  imageAlt: "Residential drywall and construction services serving Prince Albert, SK by Dil Chahal Construction",
   serviceJsonLd,
   faqJsonLd,
   breadcrumbJsonLd,

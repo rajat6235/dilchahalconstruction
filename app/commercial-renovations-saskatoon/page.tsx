@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Commercial Renovations in Saskatoon, SK | Dil Chahal Constructions Ltd.",
+    title: "Commercial Renovations in Saskatoon, SK | Dil Chahal Construction Ltd.",
     description: "Full-service commercial renovation contractor in Saskatoon, SK. Office fit-outs, retail build-outs, tenant improvements. Licensed & insured. Free quote.",
     url: CANONICAL,
-    images: [{ url: "/images/work1.jpg", width: 1200, height: 630, alt: "Commercial renovation project by Dil Chahal Constructions in Saskatoon, SK" }],
+    images: [{ url: "/images/work1.jpg", width: 1200, height: 630, alt: "Commercial renovation project by Dil Chahal Construction in Saskatoon, SK" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Commercial Renovations Saskatoon, SK | Dil Chahal Constructions",
+    title: "Commercial Renovations Saskatoon, SK | Dil Chahal Construction",
     description: "Office fit-outs, retail build-outs & tenant improvements in Saskatoon. Licensed commercial renovation contractor. Free quote.",
     images: ["/images/work1.jpg"],
   },
@@ -49,7 +49,7 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Commercial Renovations in Saskatoon, SK | Dil Chahal Constructions Ltd.",
+  name: "Commercial Renovations in Saskatoon, SK | Dil Chahal Construction Ltd.",
   description: "Full-service commercial renovation contractor for offices, retail, and industrial spaces in Saskatoon, SK.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
@@ -77,7 +77,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What types of commercial renovations does Dil Chahal Constructions handle in Saskatoon?",
+      name: "What types of commercial renovations does Dil Chahal Construction handle in Saskatoon?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "We handle a full range of commercial renovation projects in Saskatoon, SK — including office fit-outs and reconfigurations, retail store build-outs, restaurant and hospitality renovations, medical clinic fit-ups, warehouse interior work, and industrial facility upgrades. Our team manages all aspects of the interior construction phase including framing, drywall, ceilings, and finishing.",
@@ -115,7 +115,7 @@ const data: ServiceLandingData = {
   heroTitle: "Commercial Renovations in Saskatoon, SK",
   currentPage: "Commercial Renovations",
   intro: [
-    "Commercial renovation projects demand more than skilled trades — they require a contractor who understands scheduling around business operations, code compliance for commercial occupancies, and the coordination of multiple systems within a single project. Dil Chahal Constructions brings 7+ years of commercial construction experience to offices, retail spaces, medical facilities, and industrial buildings throughout Saskatoon, SK.",
+    "Commercial renovation projects demand more than skilled trades — they require a contractor who understands scheduling around business operations, code compliance for commercial occupancies, and the coordination of multiple systems within a single project. Dil Chahal Construction brings 7+ years of commercial construction experience to offices, retail spaces, medical facilities, and industrial buildings throughout Saskatoon, SK.",
     "From building out a new tenant space from a bare shell to reconfiguring an existing office floor plan, we manage the full interior construction scope: steel framing, drywall installation, T-bar ceilings, insulation, GlassRoc sheathing where required, and all finishing. Our team works with property managers, business owners, and general contractors to deliver commercial renovations on time, on budget, and to the standards required by Saskatchewan's commercial building code.",
   ],
   benefitsHeading: "The Advantages of Choosing Dil Chahal for Commercial Work",
@@ -185,7 +185,7 @@ const data: ServiceLandingData = {
     { href: "/glassroc-sheathing-saskatoon", label: "GlassRoc Sheathing" },
   ],
   imageSrc: "/images/work1.jpg",
-  imageAlt: "Commercial drywall and framing renovation project completed by Dil Chahal Constructions in Saskatoon, SK",
+  imageAlt: "Commercial drywall and framing renovation project completed by Dil Chahal Construction in Saskatoon, SK",
   serviceJsonLd,
   faqJsonLd,
   breadcrumbJsonLd,

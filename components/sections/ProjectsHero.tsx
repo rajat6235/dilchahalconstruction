@@ -62,7 +62,7 @@ export default function ProjectsHero() {
           <Link href="/" className="flex-shrink-0" style={{ maxWidth: "calc(100% - 56px)" }}>
             <Image
               src="/images/logo-header.png"
-              alt="Dil Chahal Constructions Ltd."
+              alt="Dil Chahal Construction Ltd."
               width={230}
               height={168}
               className="h-[70px] md:h-[168px] w-auto object-contain"

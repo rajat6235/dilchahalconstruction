@@ -214,7 +214,7 @@ export default function ProjectCaseStudyLayout({
               Start a Similar Project in Saskatoon?
             </h2>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "16px", color: "rgba(255,255,255,0.75)", lineHeight: "1.7", marginBottom: "36px" }}>
-              Contact Dil Chahal Constructions for a free, no-obligation written quote. Proudly serving Saskatoon, Regina, Prince Albert, and all of Saskatchewan.
+              Contact Dil Chahal Construction for a free, no-obligation written quote. Proudly serving Saskatoon, Regina, Prince Albert, and all of Saskatchewan.
             </p>
             <div className="flex flex-col sm:flex-row justify-center" style={{ gap: "16px" }}>
               <Link href="/contact-us" style={{ background: "#E00201", color: "#fff", fontFamily: "var(--font-roboto-sans)", fontWeight: 700, fontSize: "13px", letterSpacing: "1px", padding: "14px 36px", textDecoration: "none", display: "inline-block" }}>

@@ -8,7 +8,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Drywall & Construction Portfolio — Saskatoon, SK",
   description:
-    "Browse completed drywall installation, steel framing, T-bar ceiling, insulation & renovation projects by Dil Chahal Constructions in Saskatoon, SK and across Saskatchewan.",
+    "Browse completed drywall installation, steel framing, T-bar ceiling, insulation & renovation projects by Dil Chahal Construction in Saskatoon, SK and across Saskatchewan.",
   keywords: [
     "drywall projects saskatoon",
     "construction portfolio saskatoon",
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://dilchahalconstruction.com/projects/" },
   openGraph: {
-    title: "Drywall & Construction Portfolio — Saskatoon, SK | Dil Chahal Constructions Ltd.",
+    title: "Drywall & Construction Portfolio — Saskatoon, SK | Dil Chahal Construction Ltd.",
     description:
       "Browse completed drywall installation, steel framing, T-bar ceiling, insulation & renovation projects in Saskatoon, SK and across Saskatchewan.",
     url: "https://dilchahalconstruction.com/projects/",
-    images: [{ url: "/images/work1.jpg", width: 1200, height: 630, alt: "Drywall and construction project portfolio — Dil Chahal Constructions Saskatoon" }],
+    images: [{ url: "/images/work1.jpg", width: 1200, height: 630, alt: "Drywall and construction project portfolio — Dil Chahal Construction Saskatoon" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Drywall & Construction Portfolio — Saskatoon, SK | Dil Chahal Constructions",
+    title: "Drywall & Construction Portfolio — Saskatoon, SK | Dil Chahal Construction",
     description: "Browse completed drywall, steel framing, T-bar ceiling & renovation projects in Saskatoon and Saskatchewan.",
     images: ["/images/work1.jpg"],
   },
@@ -45,13 +45,13 @@ const rows: { src: string; alt: string; href?: string }[][] = [
     { src: "/images/work4.jpeg",  alt: "Interior T-bar ceiling grid installation for office space in Saskatoon, SK — view case study", href: "/projects/commercial-office-fit-out-saskatoon" },
   ],
   [
-    { src: "/images/reno1.jpeg",  alt: "Interior home renovation with kitchen drywall completed by Dil Chahal Constructions Saskatoon — view case study", href: "/projects/interior-home-renovation-saskatoon" },
+    { src: "/images/reno1.jpeg",  alt: "Interior home renovation with kitchen drywall completed by Dil Chahal Construction Saskatoon — view case study", href: "/projects/interior-home-renovation-saskatoon" },
     { src: "/images/reno2.jpeg",  alt: "Residential open-plan renovation and basement development in Saskatoon, Saskatchewan — view case study", href: "/projects/basement-development-saskatoon" },
-    { src: "/images/reno3.jpeg",  alt: "Bathroom renovation with moisture-resistant drywall by Dil Chahal Constructions Saskatoon — view case study", href: "/projects/interior-home-renovation-saskatoon" },
-    { src: "/images/work5.jpeg",  alt: "Interior drywall and renovation project in Saskatoon by Dil Chahal Constructions" },
+    { src: "/images/reno3.jpeg",  alt: "Bathroom renovation with moisture-resistant drywall by Dil Chahal Construction Saskatoon — view case study", href: "/projects/interior-home-renovation-saskatoon" },
+    { src: "/images/work5.jpeg",  alt: "Interior drywall and renovation project in Saskatoon by Dil Chahal Construction" },
   ],
   [
-    { src: "/images/work8.jpeg",  alt: "Commercial drywall installation completed by Dil Chahal Constructions Saskatoon" },
+    { src: "/images/work8.jpeg",  alt: "Commercial drywall installation completed by Dil Chahal Construction Saskatoon" },
     { src: "/images/work9.jpeg",  alt: "Drywall and steel framing work on commercial build in Saskatoon, SK — view case study", href: "/projects/steel-framing-residential-saskatoon" },
     { src: "/images/work10.jpeg", alt: "Steel stud framing structural work for residential construction in Saskatoon — view case study", href: "/projects/steel-framing-residential-saskatoon" },
     { src: "/images/work12.jpeg", alt: "Commercial interior drywall and ceiling construction in Saskatoon, Saskatchewan" },
@@ -71,7 +71,7 @@ const jsonLd = {
   "@type": "CollectionPage",
   "@id": `${BASE}/projects/#page`,
   name: "Drywall & Construction Project Portfolio — Saskatoon, SK",
-  description: "Completed drywall, steel framing, insulation, ceiling, and renovation projects by Dil Chahal Constructions Ltd. in Saskatoon, SK and across Saskatchewan.",
+  description: "Completed drywall, steel framing, insulation, ceiling, and renovation projects by Dil Chahal Construction Ltd. in Saskatoon, SK and across Saskatchewan.",
   url: `${BASE}/projects/`,
   isPartOf: { "@type": "WebSite", "@id": `${BASE}/#website` },
   breadcrumb: {

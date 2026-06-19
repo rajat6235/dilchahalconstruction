@@ -21,14 +21,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Drywall Repair in Saskatoon, SK | Holes, Cracks & Water Damage | Dil Chahal Constructions",
+    title: "Drywall Repair in Saskatoon, SK | Holes, Cracks & Water Damage | Dil Chahal Construction",
     description: "Professional drywall repair in Saskatoon, SK — holes, cracks, water damage, and seamless texture matching. Licensed contractor. Free quote.",
     url: CANONICAL,
-    images: [{ url: "/images/work8.jpeg", width: 1200, height: 630, alt: "Drywall repair work by Dil Chahal Constructions in Saskatoon, SK" }],
+    images: [{ url: "/images/work8.jpeg", width: 1200, height: 630, alt: "Drywall repair work by Dil Chahal Construction in Saskatoon, SK" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Drywall Repair Saskatoon, SK | Dil Chahal Constructions",
+    title: "Drywall Repair Saskatoon, SK | Dil Chahal Construction",
     description: "Holes, cracks, water damage — professional drywall repair with texture matching in Saskatoon. Free quote.",
     images: ["/images/work8.jpeg"],
   },
@@ -48,7 +48,7 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Drywall Repair in Saskatoon, SK | Dil Chahal Constructions Ltd.",
+  name: "Drywall Repair in Saskatoon, SK | Dil Chahal Construction Ltd.",
   description: "Expert drywall repair for holes, cracks, dents, and water damage in Saskatoon, SK. Seamless texture matching and paint-ready surfaces.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
@@ -76,7 +76,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What types of drywall damage can Dil Chahal Constructions repair in Saskatoon?",
+      name: "What types of drywall damage can Dil Chahal Construction repair in Saskatoon?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "We repair all types of drywall damage in Saskatoon, SK — including small nail holes and dents, large punched or cut holes, impact cracks, settling cracks, and water-damaged or mold-affected sections that need to be replaced. We also match existing textures for an invisible repair.",
@@ -114,7 +114,7 @@ const data: ServiceLandingData = {
   heroTitle: "Expert Drywall Repair in Saskatoon, SK",
   currentPage: "Drywall Repair",
   intro: [
-    "Drywall damage — from door knob holes and accidental impacts to settling cracks and water damage — happens in every home and commercial space. Dil Chahal Constructions provides fast, professional drywall repair throughout Saskatoon, SK, restoring walls and ceilings to a smooth, seamless condition that's ready for paint.",
+    "Drywall damage — from door knob holes and accidental impacts to settling cracks and water damage — happens in every home and commercial space. Dil Chahal Construction provides fast, professional drywall repair throughout Saskatoon, SK, restoring walls and ceilings to a smooth, seamless condition that's ready for paint.",
     "What sets our repairs apart is our commitment to invisible results. We carefully match your existing texture — orange peel, knockdown, smooth, or skip trowel — so the repaired area blends perfectly with the surrounding surface. Whether it's a small nail hole or a full panel replacement after water damage, the finished product looks like nothing ever happened.",
   ],
   benefitsHeading: "The Benefits of Professional Drywall Repair",
@@ -182,7 +182,7 @@ const data: ServiceLandingData = {
     { href: "/mudding-taping-saskatoon", label: "Mudding & Taping" },
   ],
   imageSrc: "/images/work8.jpeg",
-  imageAlt: "Drywall repair and patching work completed in a commercial interior in Saskatoon, SK by Dil Chahal Constructions",
+  imageAlt: "Drywall repair and patching work completed in a commercial interior in Saskatoon, SK by Dil Chahal Construction",
   serviceJsonLd,
   faqJsonLd,
   breadcrumbJsonLd,

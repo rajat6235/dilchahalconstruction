@@ -244,7 +244,7 @@ export default function DrywallCostSaskatoonPage() {
               ))}
             </div>
             <p style={{ ...BODY, marginTop: "20px", fontSize: "13px", color: "#888" }}>
-              Material prices fluctuate based on supply chain and seasonal demand. A written quote from Dil Chahal Constructions will reflect current material costs at the time of your project.
+              Material prices fluctuate based on supply chain and seasonal demand. A written quote from Dil Chahal Construction will reflect current material costs at the time of your project.
             </p>
           </div>
         </section>
@@ -303,7 +303,7 @@ export default function DrywallCostSaskatoonPage() {
             <div className="flex flex-col md:flex-row" style={{ gap: "48px" }}>
               <div className="flex-1">
                 <h2 style={{ ...HEADING, fontSize: "clamp(18px, 2.2vw, 24px)", marginBottom: "16px" }}>
-                  What&apos;s Included in a Drywall Quote from Dil Chahal Constructions?
+                  What&apos;s Included in a Drywall Quote from Dil Chahal Construction?
                 </h2>
                 <ul style={{ padding: 0, margin: 0, listStyle: "none" }}>
                   {[
@@ -372,7 +372,7 @@ export default function DrywallCostSaskatoonPage() {
                 },
                 {
                   q: "Do you offer free drywall quotes in Saskatoon?",
-                  a: "Yes. Dil Chahal Constructions provides free, no-obligation written quotes for all drywall and construction projects in Saskatoon and surrounding SK communities. Call (306) 717-1994 or use our contact form to get started.",
+                  a: "Yes. Dil Chahal Construction provides free, no-obligation written quotes for all drywall and construction projects in Saskatoon and surrounding SK communities. Call (306) 717-1994 or use our contact form to get started.",
                 },
               ].map((faq, i) => (
                 <details key={i} style={{ borderTop: "1px solid #e5e7eb" }}>
@@ -419,7 +419,7 @@ export default function DrywallCostSaskatoonPage() {
               Get an Accurate Drywall Quote in Saskatoon
             </h2>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "16px", color: "rgba(255,255,255,0.75)", lineHeight: "1.7", marginBottom: "36px" }}>
-              Online calculators only estimate. A written quote from Dil Chahal Constructions gives you exact material costs, labour rates, and a fixed timeline for your Saskatoon project — at no cost or obligation.
+              Online calculators only estimate. A written quote from Dil Chahal Construction gives you exact material costs, labour rates, and a fixed timeline for your Saskatoon project — at no cost or obligation.
             </p>
             <div className="flex flex-col sm:flex-row justify-center" style={{ gap: "16px" }}>
               <Link

@@ -6,7 +6,7 @@ const SLUG = "drywall-contractor-regina";
 const CANONICAL = `${BASE_URL}/${SLUG}/`;
 
 export const metadata: Metadata = {
-  title: "Drywall Contractor Regina, SK | Dil Chahal Constructions Ltd.",
+  title: "Drywall Contractor Regina, SK | Dil Chahal Construction Ltd.",
   description:
     "Licensed drywall contractor serving Regina, SK — commercial and residential drywall installation, steel framing, insulation, T-bar ceilings & renovations. Free quote!",
   keywords: [
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Drywall Contractor Serving Regina, SK | Dil Chahal Constructions Ltd.",
+    title: "Drywall Contractor Serving Regina, SK | Dil Chahal Construction Ltd.",
     description: "Licensed drywall and construction contractor serving Regina, SK — drywall installation, steel framing, insulation, T-bar ceilings, and commercial renovations. Free quote.",
     url: CANONICAL,
-    images: [{ url: "/images/drywall.jpg", width: 1200, height: 630, alt: "Drywall installation and construction services in Regina, SK by Dil Chahal Constructions" }],
+    images: [{ url: "/images/drywall.jpg", width: 1200, height: 630, alt: "Drywall installation and construction services in Regina, SK by Dil Chahal Construction" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Drywall Contractor Regina SK | Dil Chahal Constructions",
+    title: "Drywall Contractor Regina SK | Dil Chahal Construction",
     description: "Drywall installation, steel framing, insulation & renovations in Regina, SK. Licensed Saskatchewan contractor. Free quote.",
     images: ["/images/drywall.jpg"],
   },
@@ -52,7 +52,7 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Drywall Contractor Serving Regina, SK | Dil Chahal Constructions Ltd.",
+  name: "Drywall Contractor Serving Regina, SK | Dil Chahal Construction Ltd.",
   description: "Licensed drywall contractor and general contractor serving Regina, SK with drywall installation, steel framing, insulation, and commercial and residential renovations.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
@@ -82,7 +82,7 @@ const faqJsonLd = {
       name: "Do you serve Regina, SK for drywall and construction work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Dil Chahal Constructions serves Regina, SK for drywall installation, drywall repair, steel framing, insulation, T-bar ceiling installation, and commercial and residential renovations. We travel from our Saskatoon base to serve Regina clients. Contact us to discuss your project and get a free written quote.",
+        text: "Yes. Dil Chahal Construction serves Regina, SK for drywall installation, drywall repair, steel framing, insulation, T-bar ceiling installation, and commercial and residential renovations. We travel from our Saskatoon base to serve Regina clients. Contact us to discuss your project and get a free written quote.",
       },
     },
     {
@@ -95,10 +95,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Is Dil Chahal Constructions licensed to work in Regina, SK?",
+      name: "Is Dil Chahal Construction licensed to work in Regina, SK?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Dil Chahal Constructions Ltd. is a licensed general contractor in Saskatchewan — our licence covers work across the entire province, including Regina. We are fully insured and all work is completed to Saskatchewan Building Code standards and is inspection-ready.",
+        text: "Yes. Dil Chahal Construction Ltd. is a licensed general contractor in Saskatchewan — our licence covers work across the entire province, including Regina. We are fully insured and all work is completed to Saskatchewan Building Code standards and is inspection-ready.",
       },
     },
     {
@@ -119,7 +119,7 @@ const data: ServiceLandingData = {
   breadcrumbParent: { href: "/services", label: "Services" },
   relatedServicesLabel: "Our Services Available in Regina",
   intro: [
-    "Dil Chahal Constructions provides professional drywall installation, steel framing, insulation, ceiling systems, and full interior renovations to residential and commercial clients in Regina, SK. As Saskatchewan's capital city, Regina has a strong and active construction market — government buildings, healthcare facilities, retail developments, office fit-outs, and a steady demand for high-quality residential renovation work. We bring the same licensed, inspection-ready standard of work to Regina that Saskatoon clients have relied on for over 7 years.",
+    "Dil Chahal Construction provides professional drywall installation, steel framing, insulation, ceiling systems, and full interior renovations to residential and commercial clients in Regina, SK. As Saskatchewan's capital city, Regina has a strong and active construction market — government buildings, healthcare facilities, retail developments, office fit-outs, and a steady demand for high-quality residential renovation work. We bring the same licensed, inspection-ready standard of work to Regina that Saskatoon clients have relied on for over 7 years.",
     "Our team serves Regina for both standalone drywall projects and larger construction scopes — commercial tenant improvements, multi-room residential renovations, basement finishing, and new construction drywall on residential and commercial builds. All Regina projects are backed by a written quote, clear communication, Saskatchewan Building Code compliance, and the same commitment to quality we bring to every project across the province.",
   ],
   benefitsHeading: "Services We Provide in Regina, SK",
@@ -191,7 +191,7 @@ const data: ServiceLandingData = {
     { href: "/drywall-contractor-prince-albert", label: "Serving Prince Albert, SK" },
   ],
   imageSrc: "/images/work1.jpg",
-  imageAlt: "Commercial drywall and construction work by Dil Chahal Constructions serving Regina, Saskatchewan",
+  imageAlt: "Commercial drywall and construction work by Dil Chahal Construction serving Regina, Saskatchewan",
   serviceJsonLd,
   faqJsonLd,
   breadcrumbJsonLd,

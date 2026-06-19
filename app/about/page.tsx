@@ -11,7 +11,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "About Us — Trusted Drywall Contractor | Saskatoon, SK",
   description:
-    "Meet Dilbagh Singh Chahal and the expert team at Dil Chahal Constructions — Saskatoon's trusted drywall contractor with 7+ years delivering quality residential & commercial construction across Saskatchewan.",
+    "Meet Dilbagh Singh Chahal and the expert team at Dil Chahal Construction — Saskatoon's trusted drywall contractor with 7+ years delivering quality residential & commercial construction across Saskatchewan.",
   keywords: [
     "about dil chahal constructions",
     "saskatoon drywall contractor about",
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://dilchahalconstruction.com/about/" },
   openGraph: {
-    title: "About Us — Trusted Drywall Contractor in Saskatoon, SK | Dil Chahal Constructions Ltd.",
+    title: "About Us — Trusted Drywall Contractor in Saskatoon, SK | Dil Chahal Construction Ltd.",
     description:
-      "Meet Dilbagh Singh Chahal and the expert team at Dil Chahal Constructions — Saskatoon's trusted drywall contractor with 7+ years of quality construction across SK.",
+      "Meet Dilbagh Singh Chahal and the expert team at Dil Chahal Construction — Saskatoon's trusted drywall contractor with 7+ years of quality construction across SK.",
     url: "https://dilchahalconstruction.com/about/",
-    images: [{ url: "/images/founder.jpeg", width: 1200, height: 630, alt: "Dilbagh Singh Chahal, CEO & Founder of Dil Chahal Constructions Ltd., Saskatoon's trusted drywall contractor" }],
+    images: [{ url: "/images/founder.jpeg", width: 1200, height: 630, alt: "Dilbagh Singh Chahal, CEO & Founder of Dil Chahal Construction Ltd., Saskatoon's trusted drywall contractor" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us — Trusted Drywall Contractor Saskatoon | Dil Chahal Constructions",
+    title: "About Us — Trusted Drywall Contractor Saskatoon | Dil Chahal Construction",
     description: "Meet the team behind Saskatoon's top-rated drywall contractor. 7+ years delivering quality construction across SK.",
     images: ["/images/founder.jpeg"],
   },
@@ -43,9 +43,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   "@id": `${BASE}/about/#page`,
-  name: "About Dil Chahal Constructions Ltd. — Saskatoon's Trusted Drywall Contractor",
+  name: "About Dil Chahal Construction Ltd. — Saskatoon's Trusted Drywall Contractor",
   description:
-    "Dil Chahal Constructions Ltd. was founded by Dilbagh Singh Chahal in 2016. A licensed drywall contractor and general contractor with 7+ years of experience serving Saskatoon, SK and Saskatchewan.",
+    "Dil Chahal Construction Ltd. was founded by Dilbagh Singh Chahal in 2016. A licensed drywall contractor and general contractor with 7+ years of experience serving Saskatoon, SK and Saskatchewan.",
   url: `${BASE}/about/`,
   isPartOf: { "@type": "WebSite", "@id": `${BASE}/#website` },
   about: { "@id": `${BASE}/#business` },
@@ -82,7 +82,7 @@ export default function AboutPage() {
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
               <p style={{ fontFamily: "var(--font-body)", fontSize: "16px", lineHeight: "1.85", color: "#555" }}>
-                Dil Chahal Constructions Ltd. was founded in Saskatoon, Saskatchewan in 2016 by Dilbagh Singh Chahal — a tradesperson with hands-on experience in residential and commercial interior construction. The company was built to fill a clear gap in the Saskatoon market: a drywall and general contracting company that combines genuine trade expertise with the reliability and communication standards that residential and commercial clients expect from a professional contractor.
+                Dil Chahal Construction Ltd. was founded in Saskatoon, Saskatchewan in 2016 by Dilbagh Singh Chahal — a tradesperson with hands-on experience in residential and commercial interior construction. The company was built to fill a clear gap in the Saskatoon market: a drywall and general contracting company that combines genuine trade expertise with the reliability and communication standards that residential and commercial clients expect from a professional contractor.
               </p>
               <p style={{ fontFamily: "var(--font-body)", fontSize: "16px", lineHeight: "1.85", color: "#555" }}>
                 Over 7 years of consistent, inspection-ready work has established the company across Saskatoon and Saskatchewan. We serve homeowners, property developers, commercial tenants, and general contractors — handling everything from single-room drywall repairs to full commercial fit-outs with steel framing, GlassRoc sheathing, suspended ceiling systems, and complete interior finishing.

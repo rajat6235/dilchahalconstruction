@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import AnimateIn from "@/components/ui/AnimateIn";
 
 const slides = [
-  { src: "/images/reno1.jpeg", alt: "House renovation project — drywall and interior finishing completed by Dil Chahal Constructions in Saskatoon, SK" },
+  { src: "/images/reno1.jpeg", alt: "House renovation project — drywall and interior finishing completed by Dil Chahal Construction in Saskatoon, SK" },
   { src: "/images/reno2.jpeg", alt: "Residential renovation showcasing mudding, taping, and texturing work in Saskatoon" },
   { src: "/images/reno3.jpeg", alt: "Completed home renovation with drywall installation and ceiling work in Saskatoon, Saskatchewan" },
 ];

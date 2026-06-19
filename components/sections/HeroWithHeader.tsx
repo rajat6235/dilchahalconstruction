@@ -84,7 +84,7 @@ export default function HeroWithHeader() {
           <Link href="/" className="flex-shrink-0" style={{ maxWidth: "calc(100% - 56px)" }}>
             <Image
               src="/images/logo-header.png"
-              alt="Dil Chahal Constructions Ltd. — Drywall Contractor and General Contractor in Saskatoon, SK"
+              alt="Dil Chahal Construction Ltd. — Drywall Contractor and General Contractor in Saskatoon, SK"
               width={230}
               height={168}
               className="h-[70px] md:h-[168px] w-auto object-contain"
@@ -106,7 +106,7 @@ export default function HeroWithHeader() {
             <a
               href="tel:+13067171994"
               style={{ color: "inherit", textDecoration: "none" }}
-              aria-label="Call Dil Chahal Constructions at +1 306 717 1994"
+              aria-label="Call Dil Chahal Construction at +1 306 717 1994"
             >
               +1 (306) 717-1994
             </a>
@@ -192,7 +192,7 @@ export default function HeroWithHeader() {
             <a
               href="tel:+13067171994"
               style={{ color: "#E00201", fontFamily: "var(--font-body)", fontSize: "13px", textDecoration: "none" }}
-              aria-label="Call Dil Chahal Constructions at +1 306 717 1994"
+              aria-label="Call Dil Chahal Construction at +1 306 717 1994"
             >
               +1 (306) 717-1994
             </a>
@@ -276,7 +276,7 @@ export default function HeroWithHeader() {
             lineHeight: "67.2px",
           }}
         >
-          Dil Chahal Constructions Ltd.
+          Dil Chahal Construction Ltd.
           {/* Screen-reader supplement targets primary keyword without changing visible display */}
           <span className="sr-only"> — Drywall Contractor &amp; General Contractor in Saskatoon, SK</span>
         </h1>

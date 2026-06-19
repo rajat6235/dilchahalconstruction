@@ -54,7 +54,7 @@ export default function Preloader() {
       />
       <Image
         src="/images/logo.png"
-        alt="Dil Chahal Constructions"
+        alt="Dil Chahal Construction"
         width={56}
         height={56}
         style={{ width: "56px", height: "56px", objectFit: "contain" }}

@@ -8,7 +8,7 @@ const CANONICAL = `${BASE_URL}/${SLUG}/`;
 export const metadata: Metadata = {
   title: "Drywall Installation Saskatoon, SK | Expert Drywall Contractor",
   description:
-    "Professional drywall installation in Saskatoon, SK by Dil Chahal Constructions. Residential & commercial, new builds & renovations. Licensed & insured. Get a free quote today!",
+    "Professional drywall installation in Saskatoon, SK by Dil Chahal Construction. Residential & commercial, new builds & renovations. Licensed & insured. Get a free quote today!",
   keywords: [
     "drywall installation saskatoon",
     "drywall installer saskatoon",
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Professional Drywall Installation in Saskatoon, SK | Dil Chahal Constructions Ltd.",
+    title: "Professional Drywall Installation in Saskatoon, SK | Dil Chahal Construction Ltd.",
     description: "Licensed drywall installation contractor in Saskatoon, SK. Residential & commercial new builds and renovations. Free quote.",
     url: CANONICAL,
-    images: [{ url: "/images/drywall.jpg", width: 1200, height: 630, alt: "Professional drywall installation in Saskatoon, SK by Dil Chahal Constructions" }],
+    images: [{ url: "/images/drywall.jpg", width: 1200, height: 630, alt: "Professional drywall installation in Saskatoon, SK by Dil Chahal Construction" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Drywall Installation Saskatoon, SK | Dil Chahal Constructions",
+    title: "Drywall Installation Saskatoon, SK | Dil Chahal Construction",
     description: "Licensed drywall installation for homes & commercial buildings in Saskatoon. Free quote available.",
     images: ["/images/drywall.jpg"],
   },
@@ -48,7 +48,7 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Drywall Installation in Saskatoon, SK | Dil Chahal Constructions Ltd.",
+  name: "Drywall Installation in Saskatoon, SK | Dil Chahal Construction Ltd.",
   description: "Professional residential and commercial drywall installation services in Saskatoon, SK and surrounding Saskatchewan communities.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
@@ -91,7 +91,7 @@ const faqJsonLd = {
       name: "What does professional drywall installation include in Saskatoon?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Professional drywall installation by Dil Chahal Constructions includes measuring and cutting drywall sheets to fit, fastening panels to framing, taping joints, applying mud coats, sanding, and preparing surfaces for paint. We handle everything from single rooms to full-building commercial installations in Saskatoon, SK.",
+        text: "Professional drywall installation by Dil Chahal Construction includes measuring and cutting drywall sheets to fit, fastening panels to framing, taping joints, applying mud coats, sanding, and preparing surfaces for paint. We handle everything from single rooms to full-building commercial installations in Saskatoon, SK.",
       },
     },
     {
@@ -126,7 +126,7 @@ const data: ServiceLandingData = {
   heroTitle: "Drywall Installation in Saskatoon, SK",
   currentPage: "Drywall Installation",
   intro: [
-    "Dil Chahal Constructions Ltd. delivers professional drywall installation services throughout Saskatoon, SK and the surrounding Saskatchewan region. Whether you're building a new home, renovating an existing space, or completing a commercial fit-out, our licensed team installs drywall with precision — ensuring flat, even surfaces that hold paint beautifully and stand the test of time.",
+    "Dil Chahal Construction Ltd. delivers professional drywall installation services throughout Saskatoon, SK and the surrounding Saskatchewan region. Whether you're building a new home, renovating an existing space, or completing a commercial fit-out, our licensed team installs drywall with precision — ensuring flat, even surfaces that hold paint beautifully and stand the test of time.",
     "From single-room renovations to multi-floor commercial builds, we handle every phase of the installation: measurement, cutting, fastening, taping, and finishing. We work efficiently to minimize disruption and complete your project on schedule, with results that meet the highest standards of Saskatchewan's building code.",
   ],
   benefits: [
@@ -195,7 +195,7 @@ const data: ServiceLandingData = {
     { href: "/insulation-saskatoon", label: "Insulation" },
   ],
   imageSrc: "/images/drywall.jpg",
-  imageAlt: "Professional drywall installation in progress for a residential property in Saskatoon, SK by Dil Chahal Constructions",
+  imageAlt: "Professional drywall installation in progress for a residential property in Saskatoon, SK by Dil Chahal Construction",
   serviceJsonLd,
   faqJsonLd,
   breadcrumbJsonLd,

@@ -6,7 +6,7 @@ const SLUG = "projects/steel-framing-residential-saskatoon";
 const CANONICAL = `${BASE_URL}/${SLUG}/`;
 
 export const metadata: Metadata = {
-  title: "Steel Framing Project — Saskatoon, SK | Dil Chahal Constructions",
+  title: "Steel Framing Project — Saskatoon, SK | Dil Chahal Construction",
   description:
     "Residential steel stud framing and exterior sheathing project in Saskatoon, SK — precision framing for new residential construction. Licensed Saskatchewan contractor. View the completed project.",
   keywords: [
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Steel Framing Project — Saskatoon, SK | Dil Chahal Constructions",
+    title: "Steel Framing Project — Saskatoon, SK | Dil Chahal Construction",
     description: "Residential steel stud framing and exterior sheathing for new construction in Saskatoon, SK. Licensed contractor. View the completed project.",
     url: CANONICAL,
-    images: [{ url: "/images/work3.jpg", width: 1200, height: 630, alt: "Steel stud framing for residential construction project in Saskatoon, SK by Dil Chahal Constructions" }],
+    images: [{ url: "/images/work3.jpg", width: 1200, height: 630, alt: "Steel stud framing for residential construction project in Saskatoon, SK by Dil Chahal Construction" }],
   },
-  twitter: { card: "summary_large_image", title: "Steel Framing Project Saskatoon | Dil Chahal Constructions", description: "Residential steel stud framing for new construction in Saskatoon. Licensed contractor.", images: ["/images/work3.jpg"] },
+  twitter: { card: "summary_large_image", title: "Steel Framing Project Saskatoon | Dil Chahal Construction", description: "Residential steel stud framing for new construction in Saskatoon. Licensed contractor.", images: ["/images/work3.jpg"] },
 };
 
 const breadcrumbJsonLd = {
@@ -41,8 +41,8 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Steel Framing Project — Saskatoon, SK | Dil Chahal Constructions",
-  description: "Residential steel stud framing and exterior sheathing project in Saskatoon, SK by Dil Chahal Constructions Ltd.",
+  name: "Steel Framing Project — Saskatoon, SK | Dil Chahal Construction",
+  description: "Residential steel stud framing and exterior sheathing project in Saskatoon, SK by Dil Chahal Construction Ltd.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
   inLanguage: "en-CA",
@@ -74,7 +74,7 @@ const data: ProjectCaseStudyData = {
   breadcrumbLabel: "Steel Framing — Residential",
   heroTitle: "Steel Framing — Residential Project",
   currentPage: "Steel Framing",
-  featuredImage: { src: "/images/work3.jpg", alt: "Steel stud framing for residential construction project in Saskatoon, SK by Dil Chahal Constructions" },
+  featuredImage: { src: "/images/work3.jpg", alt: "Steel stud framing for residential construction project in Saskatoon, SK by Dil Chahal Construction" },
   projectDetails: [
     { label: "Project Type", value: "Residential New Construction Framing" },
     { label: "Location", value: "Saskatoon, SK" },

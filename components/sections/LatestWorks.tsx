@@ -3,15 +3,15 @@ import AnimateIn from "@/components/ui/AnimateIn";
 import AnimatedGalleryRow from "@/components/ui/AnimatedGalleryRow";
 
 const row1 = [
-  { src: "/images/mudding.jpeg", alt: "Mudding and taping drywall finish work by Dil Chahal Constructions in Saskatoon, SK" },
+  { src: "/images/mudding.jpeg", alt: "Mudding and taping drywall finish work by Dil Chahal Construction in Saskatoon, SK" },
   { src: "/images/work9.jpeg", alt: "Residential renovation project showcasing interior construction in Saskatoon" },
   { src: "/images/work10.jpeg", alt: "Commercial drywall and framing project completed in Saskatoon, Saskatchewan" },
   { src: "/images/work3.jpg", alt: "Steel framing and drywall work for a commercial renovation in Saskatoon" },
 ];
 const row2 = [
-  { src: "/images/work2.jpg", alt: "Completed drywall installation project by Dil Chahal Constructions in Saskatoon, SK" },
+  { src: "/images/work2.jpg", alt: "Completed drywall installation project by Dil Chahal Construction in Saskatoon, SK" },
   { src: "/images/work1.jpg", alt: "Insulation and drywall installation for a Saskatoon residential project" },
-  { src: "/images/bulkhead.jpeg", alt: "Custom bulkhead ceiling construction by Dil Chahal Constructions in Saskatoon" },
+  { src: "/images/bulkhead.jpeg", alt: "Custom bulkhead ceiling construction by Dil Chahal Construction in Saskatoon" },
   { src: "/images/work12.jpeg", alt: "House renovation project featuring drywall and interior finishing in Saskatoon" },
 ];
 

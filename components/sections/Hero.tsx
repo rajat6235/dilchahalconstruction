@@ -47,7 +47,7 @@ export default function Hero() {
               letterSpacing: "0.5px",
             }}
           >
-            Dil Chahal Constructions Ltd.
+            Dil Chahal Construction Ltd.
           </h1>
         </AnimateIn>
 

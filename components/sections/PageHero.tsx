@@ -51,7 +51,7 @@ export default function PageHero({ title, currentPage }: PageHeroProps) {
       <header className="relative z-20 w-full">
         <div className="w-full flex items-center justify-between py-3 px-4 md:py-4 md:px-[40px]" style={{ minHeight: "clamp(100px, 20vw, 198px)" }}>
           <Link href="/" className="flex-shrink-0" style={{ maxWidth: "calc(100% - 56px)" }}>
-            <Image src="/images/logo-header.png" alt="Dil Chahal Constructions Ltd." width={230} height={168}
+            <Image src="/images/logo-header.png" alt="Dil Chahal Construction Ltd." width={230} height={168}
               className="h-[70px] md:h-[168px] w-auto object-contain" loading="eager" />
           </Link>
           <p className="hidden md:block" style={{ color: "#E00201", fontFamily: "var(--font-body)", fontSize: "15px", fontWeight: 400 }}>

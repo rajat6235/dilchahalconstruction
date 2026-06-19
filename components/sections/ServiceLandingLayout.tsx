@@ -192,7 +192,7 @@ export default function ServiceLandingLayout({
             <div className="flex flex-col md:flex-row" style={{ gap: "48px" }}>
               <div className="flex-1">
                 <h2 style={{ fontFamily: "var(--font-roboto-sans)", fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 700, color: "#fff", marginBottom: "20px" }}>
-                  Why Choose Dil Chahal Constructions?
+                  Why Choose Dil Chahal Construction?
                 </h2>
                 <ul style={{ padding: 0, margin: 0, listStyle: "none" }}>
                   {WHY_ITEMS.map((item, i) => (
@@ -278,7 +278,7 @@ export default function ServiceLandingLayout({
               Ready to Start Your Project?
             </h2>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "16px", color: "rgba(255,255,255,0.75)", lineHeight: "1.7", marginBottom: "36px" }}>
-              Contact Dil Chahal Constructions for a free, no-obligation quote. Proudly serving Saskatoon, Warman, Martensville, and all of Saskatchewan.
+              Contact Dil Chahal Construction for a free, no-obligation quote. Proudly serving Saskatoon, Warman, Martensville, and all of Saskatchewan.
             </p>
             <div className="flex flex-col sm:flex-row justify-center" style={{ gap: "16px" }}>
               <Link

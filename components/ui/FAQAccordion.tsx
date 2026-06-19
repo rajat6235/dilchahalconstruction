@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "What drywall services do you offer in Saskatoon?",
     answer:
-      "Dil Chahal Constructions provides a full range of drywall services in Saskatoon, SK — including drywall installation, drywall repair, drywall finishing, mudding and taping, and texturing for both residential and commercial properties. We also offer GlassRoc sheathing, steel framing, T-bar ceiling systems, insulation, and bulkhead ceilings.",
+      "Dil Chahal Construction provides a full range of drywall services in Saskatoon, SK — including drywall installation, drywall repair, drywall finishing, mudding and taping, and texturing for both residential and commercial properties. We also offer GlassRoc sheathing, steel framing, T-bar ceiling systems, insulation, and bulkhead ceilings.",
   },
   {
     question: "Do you serve areas outside Saskatoon in Saskatchewan?",
@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "Are you a licensed and insured contractor in Saskatchewan?",
     answer:
-      "Yes, Dil Chahal Constructions Ltd. is a fully licensed and insured general contractor operating in Saskatchewan. We comply with all provincial building codes and safety regulations, giving our residential and commercial clients complete peace of mind.",
+      "Yes, Dil Chahal Construction Ltd. is a fully licensed and insured general contractor operating in Saskatchewan. We comply with all provincial building codes and safety regulations, giving our residential and commercial clients complete peace of mind.",
   },
   {
     question: "Do you offer free quotes for drywall and renovation projects?",

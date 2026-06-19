@@ -4,7 +4,7 @@ import AnimateIn from "@/components/ui/AnimateIn";
 const services = [
   {
     src: "/images/drywall.jpg",
-    alt: "Professional drywall installation service in Saskatoon, SK by Dil Chahal Constructions",
+    alt: "Professional drywall installation service in Saskatoon, SK by Dil Chahal Construction",
     title: "Drywall",
     description:
       "Quality drywall services providing strong and even surfaces for any space.",

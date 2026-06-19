@@ -6,7 +6,7 @@ const SLUG = "construction-company-saskatchewan";
 const CANONICAL = `${BASE_URL}/${SLUG}/`;
 
 export const metadata: Metadata = {
-  title: "Construction Company in Saskatchewan | Dil Chahal Constructions Ltd.",
+  title: "Construction Company in Saskatchewan | Dil Chahal Construction Ltd.",
   description:
     "Licensed general contractor and drywall specialist serving all of Saskatchewan — Saskatoon, Regina, Prince Albert, Warman & beyond. Drywall, framing, insulation, renovations. Free quote!",
   keywords: [
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Construction Company in Saskatchewan | Dil Chahal Constructions Ltd.",
+    title: "Construction Company in Saskatchewan | Dil Chahal Construction Ltd.",
     description: "Licensed general contractor serving Saskatchewan — drywall, steel framing, insulation, T-bar ceilings, and full renovations for residential and commercial projects. Free quote.",
     url: CANONICAL,
-    images: [{ url: "/images/hero-bg.jpeg", width: 1200, height: 630, alt: "Dil Chahal Constructions — licensed construction company serving all of Saskatchewan" }],
+    images: [{ url: "/images/hero-bg.jpeg", width: 1200, height: 630, alt: "Dil Chahal Construction — licensed construction company serving all of Saskatchewan" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Construction Company Saskatchewan | Dil Chahal Constructions",
+    title: "Construction Company Saskatchewan | Dil Chahal Construction",
     description: "Licensed general contractor serving Saskatoon, Regina, Prince Albert and all of SK. Drywall, framing, insulation & renovations. Free quote.",
     images: ["/images/hero-bg.jpeg"],
   },
@@ -52,7 +52,7 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Construction Company in Saskatchewan | Dil Chahal Constructions Ltd.",
+  name: "Construction Company in Saskatchewan | Dil Chahal Construction Ltd.",
   description: "Licensed general contractor and drywall specialist serving all of Saskatchewan — Saskatoon, Regina, Prince Albert, and surrounding SK communities.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
@@ -88,7 +88,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What areas of Saskatchewan does Dil Chahal Constructions serve?",
+      name: "What areas of Saskatchewan does Dil Chahal Construction serve?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "We are based in Saskatoon, SK and serve communities across Saskatchewan — including Regina, Prince Albert, Warman, Martensville, Moose Jaw, North Battleford, Lloydminster, Humboldt, Yorkton, and surrounding rural and urban centres. Travel costs may apply for projects outside the Saskatoon area. Contact us for a free quote specific to your location.",
@@ -104,10 +104,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Is Dil Chahal Constructions licensed and insured in Saskatchewan?",
+      name: "Is Dil Chahal Construction licensed and insured in Saskatchewan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Dil Chahal Constructions Ltd. is a licensed general contractor and is fully insured in Saskatchewan. All work is completed to Saskatchewan Building Code requirements, and we can assist with building permit applications for projects in Saskatoon and other Saskatchewan municipalities.",
+        text: "Yes. Dil Chahal Construction Ltd. is a licensed general contractor and is fully insured in Saskatchewan. All work is completed to Saskatchewan Building Code requirements, and we can assist with building permit applications for projects in Saskatoon and other Saskatchewan municipalities.",
       },
     },
     {
@@ -128,8 +128,8 @@ const data: ServiceLandingData = {
   breadcrumbParent: { href: "/services", label: "Services" },
   relatedServicesLabel: "Our Saskatchewan Services",
   intro: [
-    "Dil Chahal Constructions Ltd. is a licensed Saskatchewan general contractor providing drywall installation, steel framing, insulation, ceiling systems, and full interior renovations to residential and commercial clients across the province. Based in Saskatoon, we serve communities throughout Saskatchewan — including Regina, Prince Albert, Warman, Martensville, Moose Jaw, and beyond.",
-    "Over 7 years of delivering consistent, inspection-ready construction work has established Dil Chahal Constructions as a trusted partner for homeowners, property developers, commercial builders, and renovation contractors throughout SK. Every project — from a single-room drywall job to a complete commercial fit-out — is backed by a written quote, clear communication, Saskatchewan Building Code compliance, and a commitment to finishing on time.",
+    "Dil Chahal Construction Ltd. is a licensed Saskatchewan general contractor providing drywall installation, steel framing, insulation, ceiling systems, and full interior renovations to residential and commercial clients across the province. Based in Saskatoon, we serve communities throughout Saskatchewan — including Regina, Prince Albert, Warman, Martensville, Moose Jaw, and beyond.",
+    "Over 7 years of delivering consistent, inspection-ready construction work has established Dil Chahal Construction as a trusted partner for homeowners, property developers, commercial builders, and renovation contractors throughout SK. Every project — from a single-room drywall job to a complete commercial fit-out — is backed by a written quote, clear communication, Saskatchewan Building Code compliance, and a commitment to finishing on time.",
   ],
   benefitsHeading: "Complete Construction Services Across Saskatchewan",
   benefits: [
@@ -184,7 +184,7 @@ const data: ServiceLandingData = {
     },
     {
       question: "Are you licensed and insured in Saskatchewan?",
-      answer: "Yes. Dil Chahal Constructions Ltd. is a licensed general contractor fully insured in Saskatchewan. All work is completed to Saskatchewan Building Code requirements and we assist with permit applications where required.",
+      answer: "Yes. Dil Chahal Construction Ltd. is a licensed general contractor fully insured in Saskatchewan. All work is completed to Saskatchewan Building Code requirements and we assist with permit applications where required.",
     },
     {
       question: "Do you serve both residential and commercial clients across SK?",
@@ -200,7 +200,7 @@ const data: ServiceLandingData = {
     { href: "/drywall-contractor-prince-albert", label: "Serving Prince Albert, SK" },
   ],
   imageSrc: "/images/steel-frame.jpeg",
-  imageAlt: "Steel framing and construction work by Dil Chahal Constructions Ltd., a licensed Saskatchewan general contractor",
+  imageAlt: "Steel framing and construction work by Dil Chahal Construction Ltd., a licensed Saskatchewan general contractor",
   serviceJsonLd,
   faqJsonLd,
   breadcrumbJsonLd,

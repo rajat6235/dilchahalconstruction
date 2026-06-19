@@ -66,7 +66,7 @@ export default function Header() {
           <a href="#" className="flex-shrink-0">
             <Image
               src="/images/logo.png"
-              alt="Dil Chahal Constructions Ltd."
+              alt="Dil Chahal Construction Ltd."
               width={160}
               height={55}
               style={{ height: "55px", width: "auto" }}

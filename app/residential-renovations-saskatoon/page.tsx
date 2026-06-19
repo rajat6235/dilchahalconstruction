@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Residential Renovations in Saskatoon, SK | Dil Chahal Constructions Ltd.",
+    title: "Residential Renovations in Saskatoon, SK | Dil Chahal Construction Ltd.",
     description: "Expert home renovation contractor in Saskatoon, SK — kitchen, bathroom, basement & whole-home renovations. Licensed & insured. Free quote.",
     url: CANONICAL,
-    images: [{ url: "/images/reno1.jpeg", width: 1200, height: 630, alt: "Residential renovation project completed by Dil Chahal Constructions in Saskatoon, SK" }],
+    images: [{ url: "/images/reno1.jpeg", width: 1200, height: 630, alt: "Residential renovation project completed by Dil Chahal Construction in Saskatoon, SK" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Residential Renovations Saskatoon, SK | Dil Chahal Constructions",
+    title: "Residential Renovations Saskatoon, SK | Dil Chahal Construction",
     description: "Kitchen, bathroom, basement & whole-home renovations in Saskatoon. Licensed home renovation contractor. Free quote.",
     images: ["/images/reno1.jpeg"],
   },
@@ -49,7 +49,7 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Residential Renovations in Saskatoon, SK | Dil Chahal Constructions Ltd.",
+  name: "Residential Renovations in Saskatoon, SK | Dil Chahal Construction Ltd.",
   description: "Expert residential renovation services for homes in Saskatoon, SK — kitchen, bathroom, basement, and full interior renovations.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
@@ -77,7 +77,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What types of home renovations does Dil Chahal Constructions offer in Saskatoon?",
+      name: "What types of home renovations does Dil Chahal Construction offer in Saskatoon?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "We offer a full range of residential renovation services in Saskatoon, SK — including kitchen renovations (drywall, framing, ceiling), bathroom renovations, basement development and finishing, whole-home interior renovations, room additions, and any interior construction work involving framing, drywall, insulation, and ceiling systems.",
@@ -115,7 +115,7 @@ const data: ServiceLandingData = {
   heroTitle: "Residential Renovations in Saskatoon, SK",
   currentPage: "Residential Renovations",
   intro: [
-    "Your home is your most significant investment, and a well-executed renovation adds lasting value while transforming how you live in the space. Dil Chahal Constructions delivers residential renovation services throughout Saskatoon, SK — from single-room projects to whole-home interior overhauls. We specialize in the structural interior work: framing new walls, removing old ones, installing insulation, hanging and finishing drywall, and delivering ceilings that are smooth, level, and ready for paint.",
+    "Your home is your most significant investment, and a well-executed renovation adds lasting value while transforming how you live in the space. Dil Chahal Construction delivers residential renovation services throughout Saskatoon, SK — from single-room projects to whole-home interior overhauls. We specialize in the structural interior work: framing new walls, removing old ones, installing insulation, hanging and finishing drywall, and delivering ceilings that are smooth, level, and ready for paint.",
     "Every renovation is different, and we approach each Saskatoon project with the same commitment to quality: clean, precise work, respect for your home and family, and clear communication from start to finish. Whether you're opening up a floor plan, finishing a basement, or updating every room in a dated home, we bring the skills and experience to do it right.",
   ],
   benefitsHeading: "Why Saskatoon Homeowners Choose Dil Chahal",
@@ -185,7 +185,7 @@ const data: ServiceLandingData = {
     { href: "/commercial-renovations-saskatoon", label: "Commercial Renovations" },
   ],
   imageSrc: "/images/reno1.jpeg",
-  imageAlt: "Residential kitchen renovation completed by Dil Chahal Constructions in Saskatoon, SK",
+  imageAlt: "Residential kitchen renovation completed by Dil Chahal Construction in Saskatoon, SK",
   serviceJsonLd,
   faqJsonLd,
   breadcrumbJsonLd,

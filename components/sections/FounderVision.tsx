@@ -35,7 +35,7 @@ export default function FounderVision() {
               {/* Mobile: width:100% height:auto (no crop). Desktop: object-cover fills the capped container. */}
               <Image
                 src="/images/founder.jpeg"
-                alt="Dilbagh Singh Chahal, CEO and founder of Dil Chahal Constructions Ltd., drywall contractor and general contractor in Saskatoon, SK"
+                alt="Dilbagh Singh Chahal, CEO and founder of Dil Chahal Construction Ltd., drywall contractor and general contractor in Saskatoon, SK"
                 width={1080}
                 height={1362}
                 className="w-full h-auto lg:h-full lg:object-cover lg:object-top"
@@ -103,7 +103,7 @@ export default function FounderVision() {
                 textAlign: "justify",
               }}
             >
-              Dilbagh Singh Chahal founded Dil Chahal Constructions in 2016 with
+              Dilbagh Singh Chahal founded Dil Chahal Construction in 2016 with
               one goal: deliver residential and commercial interior construction
               in Saskatchewan that passes inspection, holds up over time, and
               earns the trust of every client. With over 7 years of hands-on
@@ -136,7 +136,7 @@ export default function FounderVision() {
                 textAlign: "justify",
               }}
             >
-              Dil Chahal Constructions is a licensed and fully insured general
+              Dil Chahal Construction is a licensed and fully insured general
               contractor serving Saskatoon, Regina, Prince Albert, and communities
               across Saskatchewan. Every project — from a small drywall repair to
               a complete commercial fit-out — is completed to Saskatchewan Building

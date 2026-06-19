@@ -6,7 +6,7 @@ const SLUG = "projects/basement-development-saskatoon";
 const CANONICAL = `${BASE_URL}/${SLUG}/`;
 
 export const metadata: Metadata = {
-  title: "Basement Development Project — Saskatoon, SK | Dil Chahal Constructions",
+  title: "Basement Development Project — Saskatoon, SK | Dil Chahal Construction",
   description:
     "Full residential basement development in Saskatoon, SK — steel framing, code-compliant insulation, drywall installation, and ceiling system. Licensed contractor. View the completed project.",
   keywords: [
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: "Basement Development Project — Saskatoon, SK | Dil Chahal Constructions",
+    title: "Basement Development Project — Saskatoon, SK | Dil Chahal Construction",
     description: "Full basement development project in Saskatoon — framing, insulation, drywall, and ceiling system. Licensed contractor. View the completed project.",
     url: CANONICAL,
-    images: [{ url: "/images/reno2.jpeg", width: 1200, height: 630, alt: "Completed residential basement development project in Saskatoon, SK by Dil Chahal Constructions" }],
+    images: [{ url: "/images/reno2.jpeg", width: 1200, height: 630, alt: "Completed residential basement development project in Saskatoon, SK by Dil Chahal Construction" }],
   },
-  twitter: { card: "summary_large_image", title: "Basement Development Saskatoon | Dil Chahal Constructions", description: "Framing, insulation, drywall, and ceiling for a full basement development in Saskatoon. Licensed contractor.", images: ["/images/reno2.jpeg"] },
+  twitter: { card: "summary_large_image", title: "Basement Development Saskatoon | Dil Chahal Construction", description: "Framing, insulation, drywall, and ceiling for a full basement development in Saskatoon. Licensed contractor.", images: ["/images/reno2.jpeg"] },
 };
 
 const breadcrumbJsonLd = {
@@ -41,8 +41,8 @@ const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": `${CANONICAL}#page`,
-  name: "Basement Development Project — Saskatoon, SK | Dil Chahal Constructions",
-  description: "Full residential basement development project in Saskatoon, SK — framing, insulation, drywall, and ceiling by Dil Chahal Constructions Ltd.",
+  name: "Basement Development Project — Saskatoon, SK | Dil Chahal Construction",
+  description: "Full residential basement development project in Saskatoon, SK — framing, insulation, drywall, and ceiling by Dil Chahal Construction Ltd.",
   url: CANONICAL,
   isPartOf: { "@type": "WebSite", "@id": `${BASE_URL}/#website` },
   inLanguage: "en-CA",
@@ -56,7 +56,7 @@ const articleJsonLd = {
   description: "Full residential basement development including steel stud framing, code-compliant insulation, drywall installation, and ceiling system in Saskatoon, SK.",
   image: [
     { "@type": "ImageObject", url: `${BASE_URL}/images/reno2.jpeg`, width: 1200, height: 900, caption: "Residential open-plan renovation and basement development in Saskatoon, SK" },
-    { "@type": "ImageObject", url: `${BASE_URL}/images/work5.jpeg`, width: 1200, height: 900, caption: "Interior drywall and renovation work by Dil Chahal Constructions in Saskatoon" },
+    { "@type": "ImageObject", url: `${BASE_URL}/images/work5.jpeg`, width: 1200, height: 900, caption: "Interior drywall and renovation work by Dil Chahal Construction in Saskatoon" },
   ],
   author: { "@id": `${BASE_URL}/#founder` },
   publisher: { "@id": `${BASE_URL}/#business` },
@@ -74,7 +74,7 @@ const data: ProjectCaseStudyData = {
   breadcrumbLabel: "Basement Development — Saskatoon",
   heroTitle: "Basement Development",
   currentPage: "Basement Project",
-  featuredImage: { src: "/images/reno2.jpeg", alt: "Completed residential basement renovation and development in Saskatoon, SK by Dil Chahal Constructions" },
+  featuredImage: { src: "/images/reno2.jpeg", alt: "Completed residential basement renovation and development in Saskatoon, SK by Dil Chahal Construction" },
   projectDetails: [
     { label: "Project Type", value: "Residential Basement Development" },
     { label: "Location", value: "Saskatoon, SK" },

@@ -13,7 +13,7 @@ const reviewsJsonLd = {
       datePublished: "2024-09-12",
       reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
       reviewBody:
-        "Dil Chahal Constructions finished our basement from bare concrete to paint-ready in under 4 weeks. The drywall finish is flawless and the work passed building inspection the first time. Professional, on schedule, and exactly on budget.",
+        "Dil Chahal Construction finished our basement from bare concrete to paint-ready in under 4 weeks. The drywall finish is flawless and the work passed building inspection the first time. Professional, on schedule, and exactly on budget.",
       itemReviewed: { "@id": `${BASE_URL}/#business` },
     },
     {
@@ -23,7 +23,7 @@ const reviewsJsonLd = {
       datePublished: "2024-07-03",
       reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
       reviewBody:
-        "We hired Dil Chahal Constructions for a full commercial office fit-out — steel framing, drywall, and T-bar ceiling throughout. The work was inspection-ready, the crew was professional and tidy, and the finished space looks excellent. Highly recommended for commercial projects.",
+        "We hired Dil Chahal Construction for a full commercial office fit-out — steel framing, drywall, and T-bar ceiling throughout. The work was inspection-ready, the crew was professional and tidy, and the finished space looks excellent. Highly recommended for commercial projects.",
       itemReviewed: { "@id": `${BASE_URL}/#business` },
     },
     {
@@ -33,7 +33,7 @@ const reviewsJsonLd = {
       datePublished: "2024-05-18",
       reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
       reviewBody:
-        "Used Dil Chahal Constructions for drywall and insulation throughout our new home build. Dilbagh and his team were knowledgeable, responsive, and delivered exceptional quality. The texturing matched our spec perfectly. Would not hesitate to use them again.",
+        "Used Dil Chahal Construction for drywall and insulation throughout our new home build. Dilbagh and his team were knowledgeable, responsive, and delivered exceptional quality. The texturing matched our spec perfectly. Would not hesitate to use them again.",
       itemReviewed: { "@id": `${BASE_URL}/#business` },
     },
   ],
