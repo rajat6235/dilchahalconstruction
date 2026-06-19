@@ -150,7 +150,7 @@ export default function Footer() {
               </p>
               <ul className="flex flex-col" style={{ gap: "8px" }}>
                 {serviceAreas.map((a) => (
-                  <li key={a.href}>
+                  <li key={a.label}>
                     <Link
                       href={a.href}
                       style={{

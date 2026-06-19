@@ -87,7 +87,7 @@ export default function PageHero({ title, currentPage }: PageHeroProps) {
               +1 (306) 717-1994
             </a>
           </div>
-          <Link href="/contact-us"
+          <Link href="/contact-us#contact"
             className="flex items-center text-white flex-shrink-0 hover:bg-[#E00201] transition-colors duration-300"
             style={{ background: "#8B0001", fontFamily: "var(--font-subheading)", fontSize: "13px", fontWeight: 700, letterSpacing: "1px", padding: "0 30px" }}>
             GET A QUOTE
@@ -104,7 +104,7 @@ export default function PageHero({ title, currentPage }: PageHeroProps) {
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact-us" className="block px-5 py-3 text-white text-[14px] font-bold text-center"
+            <Link href="/contact-us#contact" className="block px-5 py-3 text-white text-[14px] font-bold text-center"
               style={{ background: "#8B0001" }} onClick={() => setMenuOpen(false)}>
               GET A QUOTE
             </Link>

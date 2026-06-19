@@ -200,7 +200,7 @@ export default function ContactUsPage() {
                   </dl>
 
                   <a
-                    href="#quote"
+                    href="#contact"
                     className="inline-block hover:opacity-80 transition-opacity duration-200"
                     style={{
                       marginTop: "32px",
@@ -215,7 +215,7 @@ export default function ContactUsPage() {
                       display: "inline-block",
                     }}
                   >
-                    GET APPOINTMENT
+                    GET A FREE QUOTE
                   </a>
                 </div>
               </AnimateIn>

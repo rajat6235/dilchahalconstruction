@@ -200,7 +200,7 @@ export default function HeroWithHeader() {
 
           {/* GET A QUOTE — flush right, reduced size */}
           <Link
-            href="/contact-us"
+            href="/contact-us#contact"
             className="flex items-center text-white flex-shrink-0 hover:bg-[#E00201] transition-colors duration-300"
             style={{
               background: "#8B0001",
@@ -234,7 +234,7 @@ export default function HeroWithHeader() {
               </Link>
             ))}
             <Link
-              href="/contact-us"
+              href="/contact-us#contact"
               className="block px-5 py-3 text-white text-[14px] font-bold text-center"
               style={{ background: "#8B0001" }}
               onClick={() => setMenuOpen(false)}

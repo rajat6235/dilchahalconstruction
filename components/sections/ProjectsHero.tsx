@@ -122,7 +122,7 @@ export default function ProjectsHero() {
           </div>
 
           <Link
-            href="/contact-us"
+            href="/contact-us#contact"
             className="flex items-center text-white flex-shrink-0 hover:bg-[#E00201] transition-colors duration-300"
             style={{ background: "#8B0001", fontFamily: "var(--font-subheading)", fontSize: "13px", fontWeight: 700, letterSpacing: "1px", padding: "0 30px" }}
           >
@@ -145,7 +145,7 @@ export default function ProjectsHero() {
               </Link>
             ))}
             <Link
-              href="/contact-us"
+              href="/contact-us#contact"
               className="block px-5 py-3 text-white text-[14px] font-bold text-center"
               style={{ background: "#8B0001" }}
               onClick={() => setMenuOpen(false)}

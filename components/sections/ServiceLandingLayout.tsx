@@ -118,7 +118,7 @@ export default function ServiceLandingLayout({
                 </div>
                 <div style={{ marginTop: "28px", display: "flex", flexWrap: "wrap", gap: "12px" }}>
                   <Link
-                    href="/contact-us"
+                    href="/contact-us#contact"
                     style={{ background: "#E00201", color: "#fff", fontFamily: "var(--font-roboto-sans)", fontWeight: 700, fontSize: "13px", letterSpacing: "1px", padding: "12px 28px", textDecoration: "none", display: "inline-block" }}
                   >
                     GET A FREE QUOTE
@@ -215,7 +215,7 @@ export default function ServiceLandingLayout({
                   ))}
                 </ul>
                 <Link
-                  href="/contact-us"
+                  href="/contact-us#contact"
                   style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.35)", color: "#fff", fontFamily: "var(--font-roboto-sans)", fontSize: "12px", fontWeight: 700, letterSpacing: "1px", padding: "10px 22px", textDecoration: "none", display: "inline-block" }}
                 >
                   CHECK AVAILABILITY
@@ -282,7 +282,7 @@ export default function ServiceLandingLayout({
             </p>
             <div className="flex flex-col sm:flex-row justify-center" style={{ gap: "16px" }}>
               <Link
-                href="/contact-us"
+                href="/contact-us#contact"
                 style={{ background: "#E00201", color: "#fff", fontFamily: "var(--font-roboto-sans)", fontWeight: 700, fontSize: "13px", letterSpacing: "1px", padding: "14px 36px", textDecoration: "none", display: "inline-block" }}
               >
                 GET A FREE QUOTE
