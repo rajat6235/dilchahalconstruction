@@ -6,6 +6,7 @@ const csp = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com",
   "font-src 'self'",
+  "media-src 'self' https://dilchahalconstruction.com",
   "connect-src 'self'",
   "frame-src 'none'",
   "object-src 'none'",
