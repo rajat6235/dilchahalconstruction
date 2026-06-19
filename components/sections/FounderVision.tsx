@@ -103,11 +103,14 @@ export default function FounderVision() {
                 textAlign: "justify",
               }}
             >
-              Under the visionary leadership of Dilbagh Singh Chahal, our founder
-              and CEO, Dil Chahal Constructions aims to set new benchmarks in the
-              industry. Dil Chahal&apos;s forward-thinking approach and unwavering
-              commitment to quality have been the driving forces behind our
-              innovative solutions and exceptional service standards.
+              Dilbagh Singh Chahal founded Dil Chahal Constructions in 2016 with
+              one goal: deliver residential and commercial interior construction
+              in Saskatchewan that passes inspection, holds up over time, and
+              earns the trust of every client. With over 7 years of hands-on
+              experience across drywall installation, steel framing, insulation,
+              ceiling systems, and full interior renovations, Dilbagh leads every
+              project with a commitment to trade-level precision and transparent
+              communication from first quote to final walkthrough.
             </p>
 
             <h3
@@ -133,12 +136,13 @@ export default function FounderVision() {
                 textAlign: "justify",
               }}
             >
-              Choosing Dil Chahal Constructions means choosing reliability,
-              innovation, and unparalleled customer service. Our founder&apos;s
-              passion for excellence drives us to continuously improve and adapt
-              to our clients&apos; needs. With a proven track record of success
-              and a team of highly skilled professionals, we are your trusted
-              partner in Saskatchewan.
+              Dil Chahal Constructions is a licensed and fully insured general
+              contractor serving Saskatoon, Regina, Prince Albert, and communities
+              across Saskatchewan. Every project — from a small drywall repair to
+              a complete commercial fit-out — is completed to Saskatchewan Building
+              Code standards and is inspection-ready on schedule. We provide
+              written quotes before work begins, communicate clearly at every stage,
+              and do not leave a job site until the client is satisfied.
             </p>
 
             <Button

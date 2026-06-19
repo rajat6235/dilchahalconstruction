@@ -2,14 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-  { label: "Drywall Installation Saskatoon", href: "/services" },
-  { label: "GlassRoc Sheathing Saskatoon", href: "/services" },
-  { label: "Steel Framing Saskatoon", href: "/services" },
-  { label: "T-Bar Ceiling Saskatoon", href: "/services" },
-  { label: "Insulation Saskatoon", href: "/services" },
-  { label: "Bulkhead Ceiling Saskatoon", href: "/services" },
-  { label: "Mudding & Taping Saskatoon", href: "/services" },
-  { label: "Texturing Saskatoon", href: "/services" },
+  { label: "Drywall Installation", href: "/drywall-installation-saskatoon" },
+  { label: "Drywall Repair", href: "/drywall-repair-saskatoon" },
+  { label: "Steel Framing", href: "/steel-framing-saskatoon" },
+  { label: "T-Bar Ceiling Installation", href: "/t-bar-ceiling-installation-saskatoon" },
+  { label: "Insulation", href: "/insulation-saskatoon" },
+  { label: "GlassRoc Sheathing", href: "/glassroc-sheathing-saskatoon" },
+  { label: "Mudding & Taping", href: "/mudding-taping-saskatoon" },
+  { label: "Basement Renovations", href: "/basement-renovations-saskatoon" },
+];
+
+const serviceAreas = [
+  { label: "Saskatchewan", href: "/construction-company-saskatchewan" },
+  { label: "Regina, SK", href: "/drywall-contractor-regina" },
+  { label: "Prince Albert, SK", href: "/drywall-contractor-prince-albert" },
+  { label: "Warman, SK", href: "/services" },
+  { label: "Martensville, SK", href: "/services" },
 ];
 
 export default function Footer() {
@@ -85,7 +93,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 2 — Navigation links */}
+          {/* Col 2 — Navigation links + Service Areas */}
           <nav
             aria-label="Footer navigation"
             className="flex flex-col items-center text-center"
@@ -124,6 +132,43 @@ export default function Footer() {
                 About us
               </Link>
             </h3>
+
+            {/* Service Areas */}
+            <div style={{ marginTop: "20px" }}>
+              <p
+                style={{
+                  fontFamily: "var(--font-roboto-sans)",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  color: "rgba(255,255,255,0.55)",
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  marginBottom: "10px",
+                }}
+              >
+                Service Areas
+              </p>
+              <ul className="flex flex-col" style={{ gap: "8px" }}>
+                {serviceAreas.map((a) => (
+                  <li key={a.href}>
+                    <Link
+                      href={a.href}
+                      style={{
+                        fontFamily: "var(--font-roboto-sans)",
+                        fontSize: "14px",
+                        fontWeight: 400,
+                        color: "rgb(255,255,255)",
+                        lineHeight: "1.4",
+                        display: "block",
+                        textDecoration: "none",
+                      }}
+                    >
+                      {a.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </nav>
 
           {/* Col 3 — Contact Us */}

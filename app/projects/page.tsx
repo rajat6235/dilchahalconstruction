@@ -35,24 +35,25 @@ export const metadata: Metadata = {
   },
 };
 
-/* Image grid — 3 rows × 4 images, full viewport width, no gaps */
-const rows: { src: string; alt: string }[][] = [
+/* Image grid — 3 rows × 4 images, full viewport width, no gaps.
+   Featured case study images link to their project pages; others link to /contact-us for a quote. */
+const rows: { src: string; alt: string; href?: string }[][] = [
   [
-    { src: "/images/work1.jpg",   alt: "Drywall installation and framing project by Dil Chahal Constructions in Saskatoon, SK" },
-    { src: "/images/work2.jpg",   alt: "T-bar suspended ceiling installation for commercial property in Saskatoon" },
-    { src: "/images/work3.jpg",   alt: "Steel stud framing for exterior commercial structure in Saskatoon, Saskatchewan" },
-    { src: "/images/work4.jpeg",  alt: "Interior T-bar ceiling grid installation for office space in Saskatoon, SK" },
+    { src: "/images/work1.jpg",   alt: "Drywall installation and framing for commercial office fit-out in Saskatoon, SK — view case study", href: "/projects/commercial-office-fit-out-saskatoon" },
+    { src: "/images/work2.jpg",   alt: "T-bar suspended ceiling installation for commercial property in Saskatoon, SK — view case study", href: "/projects/commercial-office-fit-out-saskatoon" },
+    { src: "/images/work3.jpg",   alt: "Steel stud framing for residential construction in Saskatoon, Saskatchewan — view case study", href: "/projects/steel-framing-residential-saskatoon" },
+    { src: "/images/work4.jpeg",  alt: "Interior T-bar ceiling grid installation for office space in Saskatoon, SK — view case study", href: "/projects/commercial-office-fit-out-saskatoon" },
   ],
   [
-    { src: "/images/reno1.jpeg",  alt: "Kitchen renovation with custom cabinetry completed by Dil Chahal Constructions Saskatoon" },
-    { src: "/images/reno2.jpeg",  alt: "Residential open-plan renovation project in Saskatoon, Saskatchewan" },
-    { src: "/images/reno3.jpeg",  alt: "Bathroom renovation completed by Dil Chahal Constructions in Saskatoon, SK" },
+    { src: "/images/reno1.jpeg",  alt: "Interior home renovation with kitchen drywall completed by Dil Chahal Constructions Saskatoon — view case study", href: "/projects/interior-home-renovation-saskatoon" },
+    { src: "/images/reno2.jpeg",  alt: "Residential open-plan renovation and basement development in Saskatoon, Saskatchewan — view case study", href: "/projects/basement-development-saskatoon" },
+    { src: "/images/reno3.jpeg",  alt: "Bathroom renovation with moisture-resistant drywall by Dil Chahal Constructions Saskatoon — view case study", href: "/projects/interior-home-renovation-saskatoon" },
     { src: "/images/work5.jpeg",  alt: "Interior drywall and renovation project in Saskatoon by Dil Chahal Constructions" },
   ],
   [
     { src: "/images/work8.jpeg",  alt: "Commercial drywall installation completed by Dil Chahal Constructions Saskatoon" },
-    { src: "/images/work9.jpeg",  alt: "Drywall and steel framing work on commercial build in Saskatoon, SK" },
-    { src: "/images/work10.jpeg", alt: "Steel stud framing structural work for residential construction in Saskatoon" },
+    { src: "/images/work9.jpeg",  alt: "Drywall and steel framing work on commercial build in Saskatoon, SK — view case study", href: "/projects/steel-framing-residential-saskatoon" },
+    { src: "/images/work10.jpeg", alt: "Steel stud framing structural work for residential construction in Saskatoon — view case study", href: "/projects/steel-framing-residential-saskatoon" },
     { src: "/images/work12.jpeg", alt: "Commercial interior drywall and ceiling construction in Saskatoon, Saskatchewan" },
   ],
 ];
@@ -63,21 +64,29 @@ const videos = [
   "https://dilchahalconstruction.com/wp-content/uploads/2024/05/157356ce-9ab0-4fc8-a911-cf10ec5b8709.mov",
 ];
 
+const BASE = "https://dilchahalconstruction.com";
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "@id": "https://dilchahalconstruction.com/projects/#page",
-  name: "Projects – Dil Chahal Constructions Ltd.",
-  description: "Latest construction and renovation projects by Dil Chahal Constructions Ltd. in Saskatoon, SK.",
-  url: "https://dilchahalconstruction.com/projects/",
-  isPartOf: { "@type": "WebSite", "@id": "https://dilchahalconstruction.com/#website" },
+  "@id": `${BASE}/projects/#page`,
+  name: "Drywall & Construction Project Portfolio — Saskatoon, SK",
+  description: "Completed drywall, steel framing, insulation, ceiling, and renovation projects by Dil Chahal Constructions Ltd. in Saskatoon, SK and across Saskatchewan.",
+  url: `${BASE}/projects/`,
+  isPartOf: { "@type": "WebSite", "@id": `${BASE}/#website` },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://dilchahalconstruction.com/" },
-      { "@type": "ListItem", position: 2, name: "Projects", item: "https://dilchahalconstruction.com/projects/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: `${BASE}/` },
+      { "@type": "ListItem", position: 2, name: "Projects", item: `${BASE}/projects/` },
     ],
   },
+  hasPart: [
+    { "@type": "WebPage", name: "Commercial Office Fit-Out — Saskatoon, SK", url: `${BASE}/projects/commercial-office-fit-out-saskatoon/` },
+    { "@type": "WebPage", name: "Basement Development — Saskatoon, SK", url: `${BASE}/projects/basement-development-saskatoon/` },
+    { "@type": "WebPage", name: "Steel Framing — Residential Saskatoon, SK", url: `${BASE}/projects/steel-framing-residential-saskatoon/` },
+    { "@type": "WebPage", name: "Interior Home Renovation — Saskatoon, SK", url: `${BASE}/projects/interior-home-renovation-saskatoon/` },
+  ],
 };
 
 export default function ProjectsPage() {
@@ -149,19 +158,57 @@ export default function ProjectsPage() {
         <section className="bg-white" style={{ paddingBottom: "100px" }}>
           {rows.map((row, rowIdx) => (
             <div key={rowIdx} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-              {row.map((img) => (
-                <div key={img.src} className="relative" style={{ height: "280px" }}>
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover object-center"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                </div>
-              ))}
+              {row.map((img) => {
+                const inner = (
+                  <div className="relative w-full h-full" style={{ position: "absolute", inset: 0 }}>
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                    {img.href && (
+                      <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0)", transition: "background 0.2s" }} className="hover-darken" />
+                    )}
+                  </div>
+                );
+                return img.href ? (
+                  <Link key={img.src} href={img.href} aria-label={img.alt} style={{ display: "block", position: "relative", height: "280px", overflow: "hidden" }}>
+                    {inner}
+                    <span style={{ position: "absolute", bottom: "12px", left: "12px", background: "#E00201", color: "#fff", fontFamily: "var(--font-body)", fontSize: "11px", fontWeight: 700, letterSpacing: "1px", padding: "4px 10px", textTransform: "uppercase", zIndex: 10 }}>
+                      View Case Study
+                    </span>
+                  </Link>
+                ) : (
+                  <div key={img.src} className="relative" style={{ height: "280px" }}>
+                    {inner}
+                  </div>
+                );
+              })}
             </div>
           ))}
+
+          {/* ── Case Study Links ── */}
+          <div className="max-w-[1140px] mx-auto px-4" style={{ paddingTop: "48px", textAlign: "center" }}>
+            <h2 style={{ fontFamily: "var(--font-roboto-sans)", fontSize: "clamp(16px, 2vw, 20px)", fontWeight: 700, color: "#111", marginBottom: "20px" }}>
+              Project Case Studies
+            </h2>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px" }}>
+              <Link href="/projects/commercial-office-fit-out-saskatoon" style={{ fontFamily: "var(--font-body)", fontSize: "13px", color: "#E00201", border: "1px solid #E00201", padding: "8px 18px", textDecoration: "none" }}>
+                Commercial Office Fit-Out
+              </Link>
+              <Link href="/projects/basement-development-saskatoon" style={{ fontFamily: "var(--font-body)", fontSize: "13px", color: "#E00201", border: "1px solid #E00201", padding: "8px 18px", textDecoration: "none" }}>
+                Basement Development
+              </Link>
+              <Link href="/projects/steel-framing-residential-saskatoon" style={{ fontFamily: "var(--font-body)", fontSize: "13px", color: "#E00201", border: "1px solid #E00201", padding: "8px 18px", textDecoration: "none" }}>
+                Steel Framing — Residential
+              </Link>
+              <Link href="/projects/interior-home-renovation-saskatoon" style={{ fontFamily: "var(--font-body)", fontSize: "13px", color: "#E00201", border: "1px solid #E00201", padding: "8px 18px", textDecoration: "none" }}>
+                Interior Home Renovation
+              </Link>
+            </div>
+          </div>
 
           {/* ── Section 3: Videos ── */}
           {/* WP 1d3160d: max-width 1140px, padding 0 10px, two videos side-by-side 550×309px each */}

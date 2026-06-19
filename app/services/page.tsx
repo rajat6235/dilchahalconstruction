@@ -437,6 +437,67 @@ export default function ServicesPage() {
           </div>
         </section>
 
+        {/* ── Detailed Service Pages ── */}
+        <section style={{ backgroundColor: "#f4f4f4", paddingTop: "clamp(40px, 6vw, 70px)", paddingBottom: "clamp(40px, 6vw, 70px)" }}>
+          <div className="max-w-[1140px] mx-auto px-4">
+            <AnimateIn variant="fadeInDown">
+              <h2
+                style={{
+                  fontFamily: "var(--font-roboto-sans)",
+                  fontSize: "clamp(20px, 2.5vw, 28px)",
+                  fontWeight: 700,
+                  color: "#111",
+                  textAlign: "center",
+                  marginBottom: "12px",
+                }}
+              >
+                Explore Individual Service Pages
+              </h2>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "15px", color: "#666", textAlign: "center", marginBottom: "36px" }}>
+                Each service has its own dedicated page with detailed information, process breakdowns, FAQs, and service-specific content.
+              </p>
+            </AnimateIn>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{ gap: "12px" }}>
+              {([
+                { href: "/drywall-installation-saskatoon", label: "Drywall Installation Saskatoon" },
+                { href: "/drywall-repair-saskatoon", label: "Drywall Repair Saskatoon" },
+                { href: "/drywall-finishing-saskatoon", label: "Drywall Finishing Saskatoon" },
+                { href: "/mudding-taping-saskatoon", label: "Mudding & Taping Saskatoon" },
+                { href: "/texturing-saskatoon", label: "Texturing Saskatoon" },
+                { href: "/steel-framing-saskatoon", label: "Steel Framing Saskatoon" },
+                { href: "/insulation-saskatoon", label: "Insulation Contractor Saskatoon" },
+                { href: "/t-bar-ceiling-installation-saskatoon", label: "T-Bar Ceiling Installation Saskatoon" },
+                { href: "/bulkhead-ceiling-saskatoon", label: "Bulkhead Ceiling Saskatoon" },
+                { href: "/glassroc-sheathing-saskatoon", label: "GlassRoc Sheathing Saskatoon" },
+                { href: "/commercial-renovations-saskatoon", label: "Commercial Renovations Saskatoon" },
+                { href: "/residential-renovations-saskatoon", label: "Residential Renovations Saskatoon" },
+                { href: "/basement-renovations-saskatoon", label: "Basement Renovations Saskatoon" },
+              ] as Array<{ href: string; label: string }>).map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "14px 18px",
+                    background: "#fff",
+                    fontFamily: "var(--font-body)",
+                    fontSize: "14px",
+                    fontWeight: 600,
+                    color: "#333",
+                    textDecoration: "none",
+                    borderLeft: "3px solid #E00201",
+                  }}
+                >
+                  <span>{item.label}</span>
+                  <span style={{ color: "#E00201", fontSize: "18px" }}>&#8250;</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── House Renovations ── */}
         <HouseRenovations />
       </main>
