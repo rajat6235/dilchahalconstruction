@@ -62,7 +62,7 @@ const servicesJsonLd = {
       provider: { "@id": `${BASE_URL}/#business` },
       areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
       serviceType: "Drywall Installation",
-      url: `${BASE_URL}/#services`,
+      url: `${BASE_URL}/services/`,
     },
     {
       "@type": "Service",
@@ -73,7 +73,7 @@ const servicesJsonLd = {
       provider: { "@id": `${BASE_URL}/#business` },
       areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
       serviceType: "Steel Framing",
-      url: `${BASE_URL}/#services`,
+      url: `${BASE_URL}/services/`,
     },
     {
       "@type": "Service",
@@ -84,7 +84,18 @@ const servicesJsonLd = {
       provider: { "@id": `${BASE_URL}/#business` },
       areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
       serviceType: "T-Bar Ceiling Installation",
-      url: `${BASE_URL}/#services`,
+      url: `${BASE_URL}/services/`,
+    },
+    {
+      "@type": "Service",
+      "@id": `${BASE_URL}/#service-glasroc`,
+      name: "GlassRoc Sheathing Saskatoon",
+      description:
+        "GlasRoc sheathing installation in Saskatoon, SK — superior fire, moisture, and mold resistance for commercial and residential exterior walls.",
+      provider: { "@id": `${BASE_URL}/#business` },
+      areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
+      serviceType: "GlassRoc Sheathing",
+      url: `${BASE_URL}/services/`,
     },
     {
       "@type": "Service",
@@ -95,7 +106,40 @@ const servicesJsonLd = {
       provider: { "@id": `${BASE_URL}/#business` },
       areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
       serviceType: "Insulation",
-      url: `${BASE_URL}/#services`,
+      url: `${BASE_URL}/services/`,
+    },
+    {
+      "@type": "Service",
+      "@id": `${BASE_URL}/#service-bulkhead`,
+      name: "Bulkhead Ceiling Saskatoon",
+      description:
+        "Custom bulkhead ceiling construction in Saskatoon, SK — architectural definition and design for kitchens, hallways, and commercial interiors.",
+      provider: { "@id": `${BASE_URL}/#business` },
+      areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
+      serviceType: "Bulkhead Ceiling",
+      url: `${BASE_URL}/services/`,
+    },
+    {
+      "@type": "Service",
+      "@id": `${BASE_URL}/#service-mudding-taping`,
+      name: "Mudding and Taping Saskatoon",
+      description:
+        "Expert mudding and taping for flawless, paint-ready drywall finishes in Saskatoon, SK — residential and commercial applications.",
+      provider: { "@id": `${BASE_URL}/#business` },
+      areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
+      serviceType: "Mudding and Taping",
+      url: `${BASE_URL}/services/`,
+    },
+    {
+      "@type": "Service",
+      "@id": `${BASE_URL}/#service-texturing`,
+      name: "Texturing Saskatoon",
+      description:
+        "Decorative wall and ceiling texturing in Saskatoon, SK — orange peel, knockdown, skip trowel, and smooth finish options.",
+      provider: { "@id": `${BASE_URL}/#business` },
+      areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
+      serviceType: "Texturing",
+      url: `${BASE_URL}/services/`,
     },
     {
       "@type": "Service",
@@ -106,7 +150,7 @@ const servicesJsonLd = {
       provider: { "@id": `${BASE_URL}/#business` },
       areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
       serviceType: "Renovations",
-      url: `${BASE_URL}/#services`,
+      url: `${BASE_URL}/services/`,
     },
   ],
 };
@@ -117,26 +161,34 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What types of projects does Dil Chahal Constructions specialize in?",
+      name: "What drywall services does Dil Chahal Constructions offer in Saskatoon?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialize in residential, commercial, and industrial construction projects including drywall installation, drywall repair, steel framing, T-bar ceiling systems, insulation, mudding, taping, texturing, house renovations, and commercial renovations in Saskatoon, SK and surrounding areas.",
+        text: "Dil Chahal Constructions provides comprehensive drywall and construction services in Saskatoon, SK — including drywall installation, drywall repair, drywall finishing, steel framing, T-bar ceiling systems, GlassRoc sheathing, insulation, bulkhead ceilings, mudding, taping, texturing, and residential and commercial renovations.",
       },
     },
     {
       "@type": "Question",
-      name: "How does Dil Chahal Constructions ensure quality and safety on job sites?",
+      name: "Is Dil Chahal Constructions a licensed drywall contractor in Saskatchewan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We implement stringent quality control measures and adhere to the highest safety standards. From planning to completion, we maintain rigorous safety protocols and health practices to protect everyone involved.",
+        text: "Yes. Dil Chahal Constructions Ltd. is a fully licensed and insured general contractor in Saskatchewan. We comply with all provincial building codes and WorkSafe Saskatchewan regulations, serving both residential and commercial clients in Saskatoon and across SK.",
       },
     },
     {
       "@type": "Question",
-      name: "What is the typical project timeline for drywall and renovation work in Saskatoon?",
+      name: "Do you offer free drywall quotes in Saskatoon?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Project timelines vary based on size and complexity, but we prioritize timely completion with the highest level of quality and reliability. Contact us at +1 (306) 717-1994 for a project-specific estimate.",
+        text: "Yes. We offer free, no-obligation quotes for all drywall installation, renovation, and construction projects in Saskatoon and Saskatchewan. Call +1 (306) 717-1994, email contact@dilchahalconstruction.com, or fill out our online quote request form.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What areas of Saskatchewan does Dil Chahal Constructions serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We primarily serve Saskatoon, SK, but also extend our drywall and construction services to Warman, Martensville, Regina, Prince Albert, and surrounding Saskatchewan communities. Contact us to discuss your project location.",
       },
     },
   ],

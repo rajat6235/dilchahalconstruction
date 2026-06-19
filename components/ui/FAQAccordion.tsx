@@ -3,19 +3,34 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "1. What types of projects do you specialize in?",
+    question: "What drywall services do you offer in Saskatoon?",
     answer:
-      "We specialize in residential, commercial, and industrial construction projects.",
+      "Dil Chahal Constructions provides a full range of drywall services in Saskatoon, SK — including drywall installation, drywall repair, drywall finishing, mudding and taping, and texturing for both residential and commercial properties. We also offer GlassRoc sheathing, steel framing, T-bar ceiling systems, insulation, and bulkhead ceilings.",
   },
   {
-    question: "2. How do you ensure quality and safety?",
+    question: "Do you serve areas outside Saskatoon in Saskatchewan?",
     answer:
-      "We implement stringent quality control measures and adhere to the highest safety standards. From planning to completion, we maintain rigorous safety protocols and health practices to protect everyone involved.",
+      "Yes. Our primary service area is Saskatoon, but we also serve Warman, Martensville, Regina, Prince Albert, and surrounding Saskatchewan communities. Contact us at +1 (306) 717-1994 to discuss your project location.",
   },
   {
-    question: "3. What is your typical project timeline?",
+    question: "Are you a licensed and insured contractor in Saskatchewan?",
     answer:
-      "Project timelines vary based on size and complexity, but we prioritize timely completion with the highest level of quality and reliability.",
+      "Yes, Dil Chahal Constructions Ltd. is a fully licensed and insured general contractor operating in Saskatchewan. We comply with all provincial building codes and safety regulations, giving our residential and commercial clients complete peace of mind.",
+  },
+  {
+    question: "Do you offer free quotes for drywall and renovation projects?",
+    answer:
+      "Absolutely. We provide free, no-obligation quotes for all drywall installation, renovation, and construction projects in Saskatoon and Saskatchewan. Call +1 (306) 717-1994, email contact@dilchahalconstruction.com, or fill out the quote form on this page.",
+  },
+  {
+    question: "Do you handle both residential and commercial drywall projects?",
+    answer:
+      "Yes. We work across all project types — from single-family home drywall and basement renovations to large-scale commercial office build-outs, retail spaces, and industrial facilities throughout Saskatoon, SK.",
+  },
+  {
+    question: "How long does a typical drywall installation project take?",
+    answer:
+      "Project timelines depend on scope and complexity. A standard residential room typically takes 1–3 days. Larger commercial or multi-room projects may take 1–4 weeks. We provide a detailed timeline with every quote so you know exactly what to expect.",
   },
 ];
 

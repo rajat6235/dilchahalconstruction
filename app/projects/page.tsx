@@ -1,41 +1,59 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ProjectsHero from "@/components/sections/ProjectsHero";
 import VideoPlayer from "@/components/ui/VideoPlayer";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Drywall & Construction Portfolio — Saskatoon, SK",
   description:
-    "Explore Dil Chahal Constructions Ltd. latest projects in Saskatoon, SK — drywall installation, steel framing, T-bar ceilings, house renovations, and commercial construction.",
+    "Browse completed drywall installation, steel framing, T-bar ceiling, insulation & renovation projects by Dil Chahal Constructions in Saskatoon, SK and across Saskatchewan.",
+  keywords: [
+    "drywall projects saskatoon",
+    "construction portfolio saskatoon",
+    "drywall renovation saskatoon",
+    "commercial drywall saskatoon portfolio",
+    "residential drywall portfolio saskatoon",
+    "house renovation projects saskatoon",
+    "drywall company projects sk",
+    "construction projects saskatoon sk",
+  ],
   alternates: { canonical: "https://dilchahalconstruction.com/projects/" },
   openGraph: {
-    title: "Projects | Dil Chahal Constructions Ltd.",
-    description: "Browse our latest construction and renovation projects in Saskatoon, SK.",
+    title: "Drywall & Construction Portfolio — Saskatoon, SK | Dil Chahal Constructions Ltd.",
+    description:
+      "Browse completed drywall installation, steel framing, T-bar ceiling, insulation & renovation projects in Saskatoon, SK and across Saskatchewan.",
     url: "https://dilchahalconstruction.com/projects/",
-    images: [{ url: "/images/work1.jpg", width: 1200, height: 630, alt: "Dil Chahal Constructions – Latest Projects" }],
+    images: [{ url: "/images/work1.jpg", width: 1200, height: 630, alt: "Drywall and construction project portfolio — Dil Chahal Constructions Saskatoon" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Drywall & Construction Portfolio — Saskatoon, SK | Dil Chahal Constructions",
+    description: "Browse completed drywall, steel framing, T-bar ceiling & renovation projects in Saskatoon and Saskatchewan.",
+    images: ["/images/work1.jpg"],
   },
 };
 
 /* Image grid — 3 rows × 4 images, full viewport width, no gaps */
 const rows: { src: string; alt: string }[][] = [
   [
-    { src: "/images/work1.jpg",   alt: "Drywall framing construction project in Saskatoon" },
-    { src: "/images/work2.jpg",   alt: "T-bar ceiling installation for commercial project" },
-    { src: "/images/work3.jpg",   alt: "Steel frame exterior structure construction" },
-    { src: "/images/work4.jpeg",  alt: "Interior T-bar ceiling grid installation" },
+    { src: "/images/work1.jpg",   alt: "Drywall installation and framing project by Dil Chahal Constructions in Saskatoon, SK" },
+    { src: "/images/work2.jpg",   alt: "T-bar suspended ceiling installation for commercial property in Saskatoon" },
+    { src: "/images/work3.jpg",   alt: "Steel stud framing for exterior commercial structure in Saskatoon, Saskatchewan" },
+    { src: "/images/work4.jpeg",  alt: "Interior T-bar ceiling grid installation for office space in Saskatoon, SK" },
   ],
   [
-    { src: "/images/reno1.jpeg",  alt: "Kitchen renovation with custom cabinetry in Saskatoon" },
-    { src: "/images/reno2.jpeg",  alt: "Residential renovation open living space" },
-    { src: "/images/reno3.jpeg",  alt: "Bathroom renovation completed by Dil Chahal Constructions" },
-    { src: "/images/work5.jpeg",  alt: "Interior renovation project in Saskatoon" },
+    { src: "/images/reno1.jpeg",  alt: "Kitchen renovation with custom cabinetry completed by Dil Chahal Constructions Saskatoon" },
+    { src: "/images/reno2.jpeg",  alt: "Residential open-plan renovation project in Saskatoon, Saskatchewan" },
+    { src: "/images/reno3.jpeg",  alt: "Bathroom renovation completed by Dil Chahal Constructions in Saskatoon, SK" },
+    { src: "/images/work5.jpeg",  alt: "Interior drywall and renovation project in Saskatoon by Dil Chahal Constructions" },
   ],
   [
-    { src: "/images/work8.jpeg",  alt: "Commercial drywall installation project" },
-    { src: "/images/work9.jpeg",  alt: "Drywall and framing work on commercial build" },
-    { src: "/images/work10.jpeg", alt: "Steel framing structural construction" },
-    { src: "/images/work12.jpeg", alt: "Commercial interior construction Saskatoon" },
+    { src: "/images/work8.jpeg",  alt: "Commercial drywall installation completed by Dil Chahal Constructions Saskatoon" },
+    { src: "/images/work9.jpeg",  alt: "Drywall and steel framing work on commercial build in Saskatoon, SK" },
+    { src: "/images/work10.jpeg", alt: "Steel stud framing structural work for residential construction in Saskatoon" },
+    { src: "/images/work12.jpeg", alt: "Commercial interior drywall and ceiling construction in Saskatoon, Saskatchewan" },
   ],
 ];
 
@@ -87,7 +105,7 @@ export default function ProjectsPage() {
                 marginBottom: "20px",
               }}
             >
-              Our Projects
+              Our Construction Projects
             </h3>
 
             {/* WP fdd3d01: H2 "Latest Works" — Roboto 40px weight 600 #242424 centered */}
@@ -102,8 +120,27 @@ export default function ProjectsPage() {
                 textAlign: "center",
               }}
             >
-              Latest Works
+              Drywall &amp; Renovation Portfolio
             </h2>
+
+            <div className="flex flex-wrap gap-4 justify-center" style={{ marginTop: "24px" }}>
+              <Link
+                href="/services"
+                aria-label="View all drywall and construction services"
+                className="text-sm font-medium hover:underline"
+                style={{ color: "#E00201", fontFamily: "var(--font-body)" }}
+              >
+                Our Services →
+              </Link>
+              <Link
+                href="/contact-us"
+                aria-label="Get a free drywall or renovation quote"
+                className="text-sm font-medium hover:underline"
+                style={{ color: "#E00201", fontFamily: "var(--font-body)" }}
+              >
+                Get a Free Quote →
+              </Link>
+            </div>
           </div>
         </section>
 

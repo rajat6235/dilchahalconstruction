@@ -6,14 +6,31 @@ import Footer from "@/components/layout/Footer";
 import MapWrapper from "@/components/ui/MapWrapper";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us — Free Drywall Quote | Saskatoon, SK",
   description:
-    "Contact Dil Chahal Constructions Ltd. in Saskatoon, SK. Call +1 (306) 717-1994 or email contact@dilchahalconstruction.com. Located at Unit 107, 1222 Alberta Ave, Saskatoon, SK S7K 1R4.",
+    "Get a free drywall or renovation quote in Saskatoon, SK. Call +1 (306) 717-1994 or email contact@dilchahalconstruction.com. Serving Saskatoon, Warman, Martensville & all of Saskatchewan.",
+  keywords: [
+    "contact dil chahal constructions",
+    "free drywall quote saskatoon",
+    "drywall quote saskatoon",
+    "drywall estimate saskatoon",
+    "hire drywall contractor saskatoon",
+    "drywall contractor contact saskatoon sk",
+    "general contractor quote saskatoon",
+  ],
   alternates: { canonical: "https://dilchahalconstruction.com/contact-us/" },
   openGraph: {
-    title: "Contact Us | Dil Chahal Constructions Ltd.",
-    description: "Get in touch with Dil Chahal Constructions Ltd. for drywall and general contracting services in Saskatoon, SK.",
+    title: "Contact Us — Free Drywall Quote in Saskatoon, SK | Dil Chahal Constructions Ltd.",
+    description:
+      "Get a free drywall or renovation quote in Saskatoon, SK. Call +1 (306) 717-1994. Serving Saskatoon, Warman, Martensville & all of Saskatchewan.",
     url: "https://dilchahalconstruction.com/contact-us/",
+    images: [{ url: "/images/hero-bg.jpeg", width: 1200, height: 630, alt: "Contact Dil Chahal Constructions Ltd. — Drywall Contractor in Saskatoon, SK" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us — Free Drywall Quote Saskatoon | Dil Chahal Constructions",
+    description: "Call +1 (306) 717-1994 or fill in our online form for a free drywall quote in Saskatoon, SK.",
+    images: ["/images/hero-bg.jpeg"],
   },
 };
 
@@ -21,15 +38,66 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "@id": "https://dilchahalconstruction.com/contact-us/#page",
-  name: "Contact Us – Dil Chahal Constructions Ltd.",
+  name: "Contact Dil Chahal Constructions Ltd. — Free Drywall Quote Saskatoon, SK",
+  description:
+    "Contact Dil Chahal Constructions for a free drywall installation, renovation, or construction quote in Saskatoon, SK. Call, email, or fill in the online form.",
   url: "https://dilchahalconstruction.com/contact-us/",
   isPartOf: { "@type": "WebSite", "@id": "https://dilchahalconstruction.com/#website" },
+  about: { "@id": "https://dilchahalconstruction.com/#business" },
+  inLanguage: "en-CA",
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://dilchahalconstruction.com" },
+      { "@type": "ListItem", position: 2, name: "Contact Us", item: "https://dilchahalconstruction.com/contact-us/" },
+    ],
+  },
+};
+
+const contactFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I get a free drywall quote in Saskatoon?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Contact Dil Chahal Constructions by calling +1 (306) 717-1994, emailing contact@dilchahalconstruction.com, or filling in the online quote request form on this page. We respond quickly and provide free, no-obligation estimates for all drywall and construction projects in Saskatoon, SK.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where is Dil Chahal Constructions located in Saskatoon?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our Saskatoon office is located at Unit 107, 1222 Alberta Ave, Saskatoon, SK S7K 1R4. We serve clients throughout Saskatoon, Warman, Martensville, and surrounding Saskatchewan communities.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What areas does Dil Chahal Constructions serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We primarily serve Saskatoon, SK, and also extend our drywall and construction services to Warman, Martensville, Regina, Prince Albert, and other communities across Saskatchewan. Contact us to confirm coverage for your location.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How quickly can Dil Chahal Constructions start a drywall project in Saskatoon?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Project start times depend on current scheduling and project scope. We encourage you to contact us as early as possible for faster scheduling. Call +1 (306) 717-1994 or submit the online form and we'll confirm availability for your Saskatoon project.",
+      },
+    },
+  ],
 };
 
 export default function ContactUsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactFaqJsonLd) }} />
 
       <PageHero title="Contact Us" currentPage="Contact Us" />
 
@@ -52,7 +120,7 @@ export default function ContactUsPage() {
                     marginBottom: "12px",
                   }}
                 >
-                  Our Branch
+                  Our Saskatoon Branch
                 </h3>
                 <h2
                   style={{
@@ -63,7 +131,7 @@ export default function ContactUsPage() {
                     lineHeight: "52px",
                   }}
                 >
-                  Contact Details
+                  Contact Dil Chahal Constructions
                 </h2>
               </div>
             </AnimateIn>
