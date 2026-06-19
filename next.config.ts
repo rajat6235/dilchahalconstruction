@@ -1,13 +1,8 @@
 import type { NextConfig } from "next";
 
-const isDev = process.env.NODE_ENV === "development";
-
 const csp = [
   "default-src 'self'",
-  // SRI (experimental.sri) adds integrity attributes to all Next.js scripts at build
-  // time, so 'unsafe-inline' is not needed. 'unsafe-eval' is only needed in dev
-  // (React uses eval for enhanced error stack reconstruction).
-  `script-src 'self'${isDev ? " 'unsafe-inline' 'unsafe-eval'" : ""}`,
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com",
   "font-src 'self'",
@@ -52,17 +47,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   images: {
-    // AVIF provides ~40-50% better compression than WebP for photographic content.
-    // Browser receives best supported format via Accept header negotiation.
     formats: ["image/avif", "image/webp"],
-    // Static marketing site images don't change — 31 days vs default 4 hours
-    // eliminates repeat-visit revalidation round-trips.
     minimumCacheTTL: 2678400,
-  },
-  experimental: {
-    sri: {
-      algorithm: "sha256",
-    },
   },
   async headers() {
     return [
