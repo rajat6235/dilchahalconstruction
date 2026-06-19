@@ -142,7 +142,7 @@ export default function ClientTestimonials() {
               Satisfied with our work? Leave us a review on Google.
             </p>
             <a
-              href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review"
+              href="https://share.google/IPRPEsKN5rl26cugO"
               target="_blank"
               rel="noopener noreferrer"
               style={{

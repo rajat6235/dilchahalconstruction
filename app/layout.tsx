@@ -231,7 +231,7 @@ const localBusinessJsonLd = {
     },
   ],
   foundingDate: "2016",
-  sameAs: [],
+  sameAs: ["https://share.google/IPRPEsKN5rl26cugO"],
 };
 
 const founderJsonLd = {
@@ -371,7 +371,7 @@ const organizationJsonLd = {
     "Commercial Construction",
     "Residential Construction",
   ],
-  sameAs: [],
+  sameAs: ["https://share.google/IPRPEsKN5rl26cugO"],
 };
 
 const websiteJsonLd = {

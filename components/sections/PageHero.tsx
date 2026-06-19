@@ -60,7 +60,7 @@ export default function PageHero({ title, currentPage }: PageHeroProps) {
           </p>
           <div className="hidden md:flex items-center gap-4">
             <a href="#" aria-label="Facebook" className="hover:opacity-80 transition-opacity duration-200"><FacebookIcon /></a>
-            <a href="#" aria-label="Google" className="hover:opacity-80 transition-opacity duration-200"><GoogleIcon /></a>
+            <a href="https://share.google/IPRPEsKN5rl26cugO" aria-label="Google Business Profile" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity duration-200"><GoogleIcon /></a>
             <a href="#" aria-label="Instagram" className="hover:opacity-80 transition-opacity duration-200"><InstagramIcon /></a>
           </div>
           <button className="md:hidden text-white p-2" onClick={() => setMenuOpen(!menuOpen)}

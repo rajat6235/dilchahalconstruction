@@ -117,7 +117,7 @@ export default function HeroWithHeader() {
             <a href="#" aria-label="Facebook" className="hover:opacity-80 transition-opacity duration-200">
               <FacebookIcon />
             </a>
-            <a href="#" aria-label="Google" className="hover:opacity-80 transition-opacity duration-200">
+            <a href="https://share.google/IPRPEsKN5rl26cugO" aria-label="Google Business Profile" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity duration-200">
               <GoogleIcon />
             </a>
             <a href="#" aria-label="Instagram" className="hover:opacity-80 transition-opacity duration-200">
