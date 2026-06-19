@@ -131,7 +131,7 @@ export default function ContactUsPage() {
                   </dl>
 
                   <a
-                    href="#contact"
+                    href="#quote"
                     className="inline-block hover:opacity-80 transition-opacity duration-200"
                     style={{
                       marginTop: "32px",

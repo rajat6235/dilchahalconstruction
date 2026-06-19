@@ -111,19 +111,15 @@ export default function ProjectsPage() {
         {/* WP 2a2118d / 46faa25 / 24533ce: full-width, no gap, white bg, pb-100px */}
         <section className="bg-white" style={{ paddingBottom: "100px" }}>
           {rows.map((row, rowIdx) => (
-            <div
-              key={rowIdx}
-              className="flex flex-col sm:flex-row"
-              style={{ gap: "0" }}
-            >
+            <div key={rowIdx} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
               {row.map((img) => (
-                <div key={img.src} className="flex-1 relative" style={{ height: "340px" }}>
+                <div key={img.src} className="relative" style={{ height: "280px" }}>
                   <Image
                     src={img.src}
                     alt={img.alt}
                     fill
                     className="object-cover object-center"
-                    sizes="(max-width: 640px) 100vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
               ))}

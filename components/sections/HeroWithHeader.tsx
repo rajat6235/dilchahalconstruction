@@ -1,14 +1,15 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "Projects", href: "#latest-works" },
-  { label: "Services", href: "#services" },
-  { label: "About us", href: "#about" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Services", href: "/services" },
+  { label: "About us", href: "/about" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 /* Social icons — exact SVG paths from WordPress/Astra, all bright red */
@@ -80,7 +81,7 @@ export default function HeroWithHeader() {
           style={{ padding: "16px 40px", minHeight: "198px" }}
         >
           {/* Logo — exact WP size: 230×168px */}
-          <a href="#" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0">
             <Image
               src="/images/logo-header.png"
               alt="Dil Chahal Constructions Ltd. — Drywall Contractor and General Contractor in Saskatoon, SK"
@@ -90,7 +91,7 @@ export default function HeroWithHeader() {
               className="object-contain"
               loading="eager"
             />
-          </a>
+          </Link>
 
           {/* Phone — center */}
           <p
@@ -171,7 +172,7 @@ export default function HeroWithHeader() {
             style={{ paddingLeft: "40px" }}
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-white hover:text-[#E00201] transition-colors duration-200 whitespace-nowrap"
@@ -183,7 +184,7 @@ export default function HeroWithHeader() {
                 }}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -199,8 +200,8 @@ export default function HeroWithHeader() {
           </div>
 
           {/* GET A QUOTE — flush right, reduced size */}
-          <a
-            href="#contact"
+          <Link
+            href="/contact-us"
             className="flex items-center text-white flex-shrink-0 hover:bg-[#E00201] transition-colors duration-300"
             style={{
               background: "#8B0001",
@@ -212,7 +213,7 @@ export default function HeroWithHeader() {
             }}
           >
             GET A QUOTE
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile dropdown */}
@@ -223,24 +224,24 @@ export default function HeroWithHeader() {
             style={{ background: "rgba(0,0,0,0.92)", borderTop: "1px solid rgba(255,255,255,0.06)" }}
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="block px-5 py-3 text-white text-[14px] hover:text-[#E00201] border-b transition-colors duration-200"
-                style={{ fontFamily: "var(--font-nav)", borderColor: "rgba(255,255,255,0.05)" }}
+                style={{ fontFamily: "var(--font-body)", borderColor: "rgba(255,255,255,0.05)" }}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              href="/contact-us"
               className="block px-5 py-3 text-white text-[14px] font-bold text-center"
               style={{ background: "#8B0001" }}
               onClick={() => setMenuOpen(false)}
             >
               GET A QUOTE
-            </a>
+            </Link>
           </div>
         )}
       </header>
@@ -304,12 +305,12 @@ export default function HeroWithHeader() {
         <div className="flex flex-wrap gap-4">
           <Button
             variant="primary"
-            href="#services"
+            href="/services"
             className="!bg-[#737373] !border-[#737373] hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
           >
             Our Services
           </Button>
-          <Button variant="outline" href="#contact">
+          <Button variant="outline" href="/contact-us">
             Contact Us
           </Button>
         </div>

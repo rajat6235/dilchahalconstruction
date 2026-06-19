@@ -39,7 +39,7 @@ export default function LocationCard() {
         <AnimateIn variant="zoomIn" style={{ display: "flex", justifyContent: "center", paddingTop: "50px" }}>
           <Button
             variant="primary"
-            href="#contact"
+            href="/contact-us"
             className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
           >
             View Our Office

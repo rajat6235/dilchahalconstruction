@@ -61,7 +61,7 @@ export default function InnovateSpace() {
 
           <Button
             variant="dark"
-            href="#contact"
+            href="/contact-us"
             className="!bg-[#737373] !border-[#737373] hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
           >
             Work With Us

@@ -69,10 +69,10 @@ export default function Hero() {
         {/* WP 59f1388: fadeInUp — button group */}
         <AnimateIn variant="fadeInUp" style={{ display: "inline-block" }}>
           <div className="flex flex-wrap gap-4">
-            <Button variant="primary" href="#services">
+            <Button variant="primary" href="/services">
               Our Services
             </Button>
-            <Button variant="outline" href="#contact">
+            <Button variant="outline" href="/contact-us">
               Contact Us
             </Button>
           </div>

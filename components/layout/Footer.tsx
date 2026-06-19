@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
-  { label: "Drywall Installation Saskatoon", href: "#services" },
-  { label: "GlassRoc Sheathing Saskatoon", href: "#services" },
-  { label: "Steel Framing Saskatoon", href: "#services" },
-  { label: "T-Bar Ceiling Saskatoon", href: "#services" },
-  { label: "Insulation Saskatoon", href: "#services" },
-  { label: "Bulkhead Ceiling Saskatoon", href: "#services" },
-  { label: "Mudding & Taping Saskatoon", href: "#services" },
-  { label: "Texturing Saskatoon", href: "#services" },
+  { label: "Drywall Installation Saskatoon", href: "/services" },
+  { label: "GlassRoc Sheathing Saskatoon", href: "/services" },
+  { label: "Steel Framing Saskatoon", href: "/services" },
+  { label: "T-Bar Ceiling Saskatoon", href: "/services" },
+  { label: "Insulation Saskatoon", href: "/services" },
+  { label: "Bulkhead Ceiling Saskatoon", href: "/services" },
+  { label: "Mudding & Taping Saskatoon", href: "/services" },
+  { label: "Texturing Saskatoon", href: "/services" },
 ];
 
 export default function Footer() {
@@ -66,7 +67,7 @@ export default function Footer() {
             <ul className="flex flex-col" style={{ gap: "20px" }}>
               {services.map((s) => (
                 <li key={s.label}>
-                  <a
+                  <Link
                     href={s.href}
                     style={{
                       fontFamily: "var(--font-roboto-sans)",
@@ -78,7 +79,7 @@ export default function Footer() {
                     }}
                   >
                     {s.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -100,12 +101,12 @@ export default function Footer() {
                 lineHeight: "41.6px",
               }}
             >
-              <a
-                href="#latest-works"
+              <Link
+                href="/projects"
                 style={{ color: "rgb(255,255,255)", display: "block" }}
               >
                 Projects
-              </a>
+              </Link>
             </h3>
             <h3
               style={{
@@ -116,12 +117,12 @@ export default function Footer() {
                 lineHeight: "41.6px",
               }}
             >
-              <a
-                href="#about"
+              <Link
+                href="/about"
                 style={{ color: "rgb(255,255,255)", display: "block" }}
               >
                 About us
-              </a>
+              </Link>
             </h3>
           </nav>
 

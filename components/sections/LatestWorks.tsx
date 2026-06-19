@@ -47,7 +47,7 @@ export default function LatestWorks() {
           <AnimateIn variant="fadeInRight" className="w-1/2 flex justify-end items-center">
             <Button
               variant="primary"
-              href="#"
+              href="/projects"
               className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
             >
               View Projects

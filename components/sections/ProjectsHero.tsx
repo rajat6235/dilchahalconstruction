@@ -6,9 +6,9 @@ import Link from "next/link";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
-  { label: "Services", href: "/#services" },
-  { label: "About us", href: "/#about" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Services", href: "/services" },
+  { label: "About us", href: "/about" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 function FacebookIcon() {
@@ -123,7 +123,7 @@ export default function ProjectsHero() {
           </div>
 
           <Link
-            href="/#contact"
+            href="/contact-us"
             className="flex items-center text-white flex-shrink-0 hover:bg-[#E00201] transition-colors duration-300"
             style={{ background: "#8B0001", fontFamily: "var(--font-subheading)", fontSize: "13px", fontWeight: 700, letterSpacing: "1px", padding: "0 30px" }}
           >
@@ -146,7 +146,7 @@ export default function ProjectsHero() {
               </Link>
             ))}
             <Link
-              href="/#contact"
+              href="/contact-us"
               className="block px-5 py-3 text-white text-[14px] font-bold text-center"
               style={{ background: "#8B0001" }}
               onClick={() => setMenuOpen(false)}
