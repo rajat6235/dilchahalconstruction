@@ -35,7 +35,7 @@ export default function ContactUsPage() {
       <main>
         {/* ── Contact Details section ── */}
         {/* WP: white bg, "Our Branch" H3 red + "Contact Details" H2, address card + map col */}
-        <section className="bg-white" style={{ paddingTop: "100px", paddingBottom: "80px" }}>
+        <section className="bg-white" style={{ paddingTop: "clamp(40px, 8vw, 100px)", paddingBottom: "clamp(40px, 6vw, 80px)" }}>
           <div className="max-w-[1140px] mx-auto px-4">
 
             {/* Section heading */}

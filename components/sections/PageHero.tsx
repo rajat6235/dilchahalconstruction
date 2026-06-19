@@ -42,17 +42,17 @@ export default function PageHero({ title, currentPage }: PageHeroProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <section className="relative w-full" style={{ minHeight: "466px" }}>
+    <section className="relative w-full overflow-x-hidden" style={{ minHeight: "466px" }}>
       <div className="absolute inset-0 overflow-hidden">
         <Image src="/images/hero-bg.jpeg" alt="" fill priority className="object-cover object-center" sizes="100vw" />
       </div>
       <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.72)" }} />
 
       <header className="relative z-20 w-full">
-        <div className="w-full flex items-center justify-between" style={{ padding: "16px 40px", minHeight: "198px" }}>
-          <Link href="/" className="flex-shrink-0">
+        <div className="w-full flex items-center justify-between py-3 px-4 md:py-4 md:px-[40px]" style={{ minHeight: "clamp(100px, 20vw, 198px)" }}>
+          <Link href="/" className="flex-shrink-0" style={{ maxWidth: "calc(100% - 56px)" }}>
             <Image src="/images/logo-header.png" alt="Dil Chahal Constructions Ltd." width={230} height={168}
-              style={{ height: "168px", width: "auto" }} className="object-contain" loading="eager" />
+              className="h-[70px] md:h-[168px] w-auto object-contain" loading="eager" />
           </Link>
           <p className="hidden md:block" style={{ color: "#E00201", fontFamily: "var(--font-body)", fontSize: "15px", fontWeight: 400 }}>
             Make a call:{" "}
@@ -112,15 +112,17 @@ export default function PageHero({ title, currentPage }: PageHeroProps) {
         )}
       </header>
 
-      <div className="relative z-10 flex items-center justify-center" style={{ minHeight: "208px", padding: "24px 20px" }}>
+      <div className="relative z-10 flex items-center justify-center" style={{ minHeight: "208px", padding: "24px 16px" }}>
         <h1 style={{
           fontFamily: "var(--font-roboto-sans)",
-          fontSize: "clamp(48px, 7vw, 90px)",
+          fontSize: "clamp(36px, 7vw, 90px)",
           fontWeight: 600,
           color: "rgb(255,255,255)",
           lineHeight: "1.4",
           textAlign: "center",
           textTransform: "uppercase",
+          maxWidth: "100%",
+          overflowWrap: "break-word",
         }}>
           {title}
         </h1>

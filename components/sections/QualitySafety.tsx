@@ -48,8 +48,8 @@ export default function QualitySafety() {
       {/* Left column — WP e9f5c4a: fadeInLeft */}
       <AnimateIn
         variant="fadeInLeft"
-        className="relative flex-1 flex items-start"
-        style={{ minHeight: "688px", padding: "80px 52px" }}
+        className="relative flex-1 flex items-start p-6 md:p-[52px] lg:p-[80px_52px]"
+        style={{ minHeight: "clamp(340px, 50vw, 688px)" }}
       >
         <Image
           src="/images/image-1-min.jpg"
@@ -113,8 +113,8 @@ export default function QualitySafety() {
       {/* Right column — WP b42b0cf: fadeInRight */}
       <AnimateIn
         variant="fadeInRight"
-        className="relative flex-1 flex items-start"
-        style={{ minHeight: "688px", padding: "80px 52px" }}
+        className="relative flex-1 flex items-start p-6 md:p-[52px] lg:p-[80px_52px]"
+        style={{ minHeight: "clamp(340px, 50vw, 688px)" }}
       >
         <Image
           src="/images/image-2-min.jpg"

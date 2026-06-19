@@ -50,7 +50,7 @@ export default function HeroWithHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <section className="relative w-full">
+    <section className="relative w-full overflow-x-hidden">
       {/* Background image — next/image with priority for LCP */}
       <div className="absolute inset-0 overflow-hidden">
         <Image
@@ -77,18 +77,17 @@ export default function HeroWithHeader() {
 
         {/* Primary header: logo left | phone center | socials right — WP: 198px min-height */}
         <div
-          className="w-full flex items-center justify-between"
-          style={{ padding: "16px 40px", minHeight: "198px" }}
+          className="w-full flex items-center justify-between py-3 px-4 md:py-4 md:px-[40px]"
+          style={{ minHeight: "clamp(100px, 20vw, 198px)" }}
         >
           {/* Logo — exact WP size: 230×168px */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0" style={{ maxWidth: "calc(100% - 56px)" }}>
             <Image
               src="/images/logo-header.png"
               alt="Dil Chahal Constructions Ltd. — Drywall Contractor and General Contractor in Saskatoon, SK"
               width={230}
               height={168}
-              style={{ height: "168px", width: "auto" }}
-              className="object-contain"
+              className="h-[70px] md:h-[168px] w-auto object-contain"
               loading="eager"
             />
           </Link>

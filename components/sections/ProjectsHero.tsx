@@ -40,7 +40,7 @@ export default function ProjectsHero() {
 
   return (
     /* WP 1b6161c: bg about-us-min.jpg, height 466px total, dark overlay */
-    <section className="relative w-full" style={{ minHeight: "466px" }}>
+    <section className="relative w-full overflow-x-hidden" style={{ minHeight: "466px" }}>
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden">
         <Image
@@ -58,15 +58,14 @@ export default function ProjectsHero() {
       {/* ─── HEADER ─── */}
       <header className="relative z-20 w-full">
         {/* Primary header: logo | phone | socials — min-height 198px */}
-        <div className="w-full flex items-center justify-between" style={{ padding: "16px 40px", minHeight: "198px" }}>
-          <Link href="/" className="flex-shrink-0">
+        <div className="w-full flex items-center justify-between py-3 px-4 md:py-4 md:px-[40px]" style={{ minHeight: "clamp(100px, 20vw, 198px)" }}>
+          <Link href="/" className="flex-shrink-0" style={{ maxWidth: "calc(100% - 56px)" }}>
             <Image
               src="/images/logo-header.png"
               alt="Dil Chahal Constructions Ltd."
               width={230}
               height={168}
-              style={{ height: "168px", width: "auto" }}
-              className="object-contain"
+              className="h-[70px] md:h-[168px] w-auto object-contain"
               loading="eager"
             />
           </Link>
@@ -159,17 +158,19 @@ export default function ProjectsHero() {
 
       {/* ─── HERO CONTENT ─── */}
       {/* WP: H1 90px Roboto 600 white uppercase centered — remaining height after header ≈ 208px */}
-      <div className="relative z-10 flex items-center justify-center" style={{ minHeight: "208px", padding: "24px 20px" }}>
+      <div className="relative z-10 flex items-center justify-center" style={{ minHeight: "208px", padding: "24px 16px" }}>
         <h1
           style={{
             fontFamily: "var(--font-roboto-sans)",
-            fontSize: "clamp(48px, 7vw, 90px)",
+            fontSize: "clamp(36px, 7vw, 90px)",
             fontWeight: 600,
             color: "rgb(255,255,255)",
             lineHeight: "1.4",
             letterSpacing: "normal",
             textAlign: "center",
             textTransform: "uppercase",
+            maxWidth: "100%",
+            overflowWrap: "break-word",
           }}
         >
           Projects

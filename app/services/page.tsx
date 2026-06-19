@@ -89,7 +89,7 @@ export default function ServicesPage() {
       <main>
         {/* ── Heading: "Comprehensive Solutions / Quality Services" ── */}
         {/* WP: white bg, 100px top padding, heading H4 + H2 centered, "View All" link */}
-        <section className="bg-white" style={{ paddingTop: "100px", paddingBottom: "60px" }}>
+        <section className="bg-white" style={{ paddingTop: "clamp(40px, 8vw, 100px)", paddingBottom: "clamp(30px, 5vw, 60px)" }}>
           <div className="max-w-[1140px] mx-auto px-4 text-center">
             <AnimateIn variant="fadeInDown">
               <h3
@@ -129,7 +129,7 @@ export default function ServicesPage() {
 
         {/* ── Service Cards: 2 rows × 4 ── */}
         {/* WP: max-width 1140px, 4 columns, no gap, image + H3 + para */}
-        <section className="bg-white" style={{ paddingBottom: "60px" }}>
+        <section className="bg-white" style={{ paddingBottom: "clamp(30px, 5vw, 60px)" }}>
           <div className="max-w-[1140px] mx-auto px-4">
             <AnimateIn variant="fadeInUp">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "0" }}>

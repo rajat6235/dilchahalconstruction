@@ -134,16 +134,12 @@ export default function ProjectsPage() {
           >
             <div className="flex flex-col md:flex-row" style={{ gap: "20px" }}>
               {videos.map((src, i) => (
-                <VideoPlayer
-                  key={i}
-                  src={src}
-                  style={{
-                    width: "100%",
-                    aspectRatio: "16/9",
-                    display: "block",
-                    backgroundColor: "#000",
-                  }}
-                />
+                <div key={i} className="flex-1 overflow-hidden" style={{ aspectRatio: "16/9", backgroundColor: "#000" }}>
+                  <VideoPlayer
+                    src={src}
+                    style={{ width: "100%", height: "100%", display: "block" }}
+                  />
+                </div>
               ))}
             </div>
           </div>

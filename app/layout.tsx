@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Merriweather, Montserrat, Open_Sans, Lato, Roboto } from "next/font/google";
 import "./globals.css";
 import Preloader from "@/components/ui/Preloader";
+import RouteLoader from "@/components/ui/RouteLoader";
 
 const merriweather = Merriweather({
   weight: ["700"],
@@ -348,6 +349,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceJsonLd) }}
         />
         <Preloader />
+        <RouteLoader />
         {children}
       </body>
     </html>

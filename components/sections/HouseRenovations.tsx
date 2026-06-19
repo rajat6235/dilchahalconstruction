@@ -197,9 +197,7 @@ export default function HouseRenovations() {
       {/* Section 2: WP 96e9b97 — bg #FFFFFF, margin-top:100px desktop, mb:30px */}
       <section
         className="bg-[#f5f5f5]"
-        style={{
-          paddingTop: "100px",
-        }}
+        style={{ paddingTop: "clamp(40px, 8vw, 100px)" }}
       >
         <div className="max-w-[1140px] mx-auto px-4">
           <div className="flex flex-col md:flex-row" style={{ gap: "0px" }}>
@@ -215,8 +213,7 @@ export default function HouseRenovations() {
             {/* WP c4b0a9a — remaining 45% — fadeInRight */}
             <AnimateIn
               variant="fadeInRight"
-              className="flex-1 flex flex-col justify-center"
-              style={{ padding: "40px 0 40px 20px" }}
+              className="flex-1 flex flex-col justify-center pl-0 md:pl-5 pt-8 md:pt-10 pb-10"
             >
               {/* WP 594bb2f: H2 "Seamless Home Transformations" — Merriweather 34px/700/#E00201 */}
               <h2
