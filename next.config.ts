@@ -9,7 +9,7 @@ const csp = [
   // (React uses eval for enhanced error stack reconstruction).
   `script-src 'self'${isDev ? " 'unsafe-inline' 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob:",
+  "img-src 'self' data: blob: https://*.tile.openstreetmap.org https://*.basemaps.cartocdn.com",
   "font-src 'self'",
   "connect-src 'self'",
   "frame-src 'none'",

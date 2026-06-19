@@ -3,6 +3,7 @@ import AnimateIn from "@/components/ui/AnimateIn";
 import PageHero from "@/components/sections/PageHero";
 import QuoteAndFAQ from "@/components/sections/QuoteAndFAQ";
 import Footer from "@/components/layout/Footer";
+import MapWrapper from "@/components/ui/MapWrapper";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -151,20 +152,9 @@ export default function ContactUsPage() {
                 </div>
               </AnimateIn>
 
-              {/* Right: Google Maps embed */}
+              {/* Right: Leaflet/OpenStreetMap — click opens Google Maps */}
               <AnimateIn variant="fadeInRight" className="flex-1">
-                <div className="w-full h-full" style={{ minHeight: "400px" }}>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.4!2d-106.6700!3d52.1332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f6d9f9b0d955%3A0x0!2sUnit%20107%2C%201222%20Alberta%20Ave%2C%20Saskatoon%2C%20SK%20S7K%201R4!5e0!3m2!1sen!2sca!4v1700000000000"
-                    width="100%"
-                    height="400"
-                    style={{ border: 0, display: "block" }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Dil Chahal Constructions Ltd. — Unit 107, 1222 Alberta Ave, Saskatoon, SK"
-                  />
-                </div>
+                <MapWrapper />
               </AnimateIn>
             </div>
           </div>
