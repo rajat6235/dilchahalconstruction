@@ -233,11 +233,22 @@ export async function POST(req: NextRequest) {
   }
 
   const { fields } = validation;
-  const submittedAt = new Date().toLocaleString("en-CA", {
-    timeZone: "America/Regina",
-    dateStyle: "long",
-    timeStyle: "short",
-  });
+  const now = new Date();
+  const submittedAt =
+    now.toLocaleDateString("en-CA", {
+      timeZone: "America/Regina",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }) +
+    " at " +
+    now.toLocaleTimeString("en-CA", {
+      timeZone: "America/Regina",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    }) +
+    " CST (Saskatchewan)";
 
   // ── 5. Send via Resend ──
   //
