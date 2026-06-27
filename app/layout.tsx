@@ -3,6 +3,7 @@ import { Merriweather, Montserrat, Open_Sans, Lato, Roboto } from "next/font/goo
 import "./globals.css";
 import Preloader from "@/components/ui/Preloader";
 import RouteLoader from "@/components/ui/RouteLoader";
+import Navbar from "@/components/layout/Navbar";
 
 const merriweather = Merriweather({
   weight: ["700"],
@@ -426,6 +427,7 @@ export default function RootLayout({
         />
         <Preloader />
         <RouteLoader />
+        <Navbar />
         {children}
 
       </body>

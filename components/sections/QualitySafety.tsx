@@ -1,169 +1,161 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
-import Button from "@/components/ui/Button";
+import Link from "next/link";
 import AnimateIn from "@/components/ui/AnimateIn";
 
-function IconRecycle() {
+function CheckIcon() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
-      <path d="M184.561 261.903c3.232 13.997-12.123 24.635-24.068 17.168l-40.736-25.455-50.867 81.402C55.606 356.273 70.96 384 96.012 384H148c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12H96.115c-75.334 0-121.302-83.048-81.408-146.88l50.822-81.388-40.725-25.448c-12.081-7.547-8.966-25.961 4.879-29.158l110.237-25.45c8.611-1.988 17.201 3.381 19.189 11.99l25.452 110.237zm98.561-182.915l41.289 66.076-40.74 25.457c-12.051 7.528-9 25.953 4.879 29.158l110.237 25.45c8.672 1.999 17.215-3.438 19.189-11.99l25.45-110.237c3.197-13.844-11.99-24.719-24.068-17.168l-40.687 25.424-41.263-66.082c-37.521-60.033-125.209-60.171-162.816 0l-17.963 28.766c-3.51 5.62-1.8 13.021 3.82 16.533l33.919 21.195c5.62 3.512 13.024 1.803 16.536-3.817l17.961-28.743c12.712-20.341 41.973-19.676 54.257-.022zM497.288 301.12l-27.515-44.065c-3.511-5.623-10.916-7.334-16.538-3.821l-33.861 21.159c-5.62 3.512-7.33 10.915-3.818 16.536l27.564 44.112c13.257 21.211-2.057 48.96-27.136 48.96H320V336.02c0-14.213-17.242-21.383-27.313-11.313l-80 79.981c-6.249 6.248-6.249 16.379 0 22.627l80 79.989C302.689 517.308 320 510.3 320 495.989V448h95.88c75.274 0 121.335-82.997 81.408-146.88z" />
-    </svg>
-  );
-}
-
-function IconClock() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
-      <path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z" />
-    </svg>
-  );
-}
-
-function IconDesktop() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
-      <path d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z" />
-    </svg>
-  );
-}
-
-function IconPencilRuler() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
-      <path d="M109.46 244.04l134.58-134.56-44.12-44.12-61.68 61.68a7.919 7.919 0 0 1-11.21 0l-11.21-11.21c-3.1-3.1-3.1-8.12 0-11.21l61.68-61.68-33.64-33.65C131.47-3.1 111.39-3.1 99 9.29L9.29 99c-12.38 12.39-12.39 32.47 0 44.86l100.17 100.18zm388.47-116.8c18.76-18.76 18.75-49.17 0-67.93l-45.25-45.25c-18.76-18.76-49.18-18.76-67.95 0l-46.02 46.01 113.2 113.2 46.02-46.03zM316.08 82.71l-297 296.96L.32 487.11c-2.53 14.49 10.09 27.11 24.59 24.56l107.45-18.84L429.28 195.9 316.08 82.71zm186.63 285.43l-33.64-33.64-61.68 61.68c-3.1 3.1-8.12 3.1-11.21 0l-11.21-11.21c-3.09-3.1-3.09-8.12 0-11.21l61.68-61.68-44.14-44.14L267.93 402.5l100.21 100.2c12.39 12.39 32.47 12.39 44.86 0l89.71-89.7c12.39-12.39 12.39-32.47 0-44.86z" />
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="flex-shrink-0">
+      <circle cx="8" cy="8" r="7.25" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M5 8l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
 
 const features: { icon: ReactNode; label: string }[] = [
-  { icon: <IconRecycle />, label: "Sustainablility" },
-  { icon: <IconClock />, label: "Project On Time" },
-  { icon: <IconDesktop />, label: "Modern Technology" },
-  { icon: <IconPencilRuler />, label: "Latest Designs" },
+  { icon: <CheckIcon />, label: "Sustainability & green practices" },
+  { icon: <CheckIcon />, label: "On-time project delivery" },
+  { icon: <CheckIcon />, label: "Modern tools & technology" },
+  { icon: <CheckIcon />, label: "Current design standards" },
 ];
 
 export default function QualitySafety() {
   return (
-    <section className="w-full flex flex-col md:flex-row" style={{ minHeight: "688px" }}>
-      {/* Left column — WP e9f5c4a: fadeInLeft */}
+    <section
+      className="w-full flex flex-col md:flex-row"
+      style={{ minHeight: "620px" }}
+      aria-label="Quality and Safety"
+    >
+      {/* Left column — Quality & Safety */}
       <AnimateIn
         variant="fadeInLeft"
-        className="relative flex-1 flex items-start p-6 md:p-[52px] lg:p-[80px_52px]"
-        style={{ minHeight: "clamp(340px, 50vw, 688px)" }}
+        className="relative flex-1 flex items-end p-8 md:p-14 lg:p-20"
+        style={{ minHeight: "clamp(360px, 50vw, 620px)" }}
       >
         <Image
           src="/images/image-1-min.jpg"
-          alt=""
+          alt="Dil Chahal Construction team following rigorous safety protocols on a job site in Saskatoon, SK"
           fill
           className="object-cover object-center"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="relative z-10" style={{ maxWidth: "500px" }}>
+        {/* Gradient overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%)",
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10" style={{ maxWidth: "480px" }}>
           <p
-            className="mb-4"
+            className="mb-3"
             style={{
               fontFamily: "var(--font-subheading)",
-              fontSize: "24px",
-              fontWeight: 300,
+              fontSize: "10.5px",
+              fontWeight: 700,
               color: "#E00201",
-              lineHeight: "28.8px",
-              letterSpacing: "normal",
+              letterSpacing: "3px",
+              textTransform: "uppercase",
             }}
           >
             Quality and Safety
           </p>
           <h2
-            className="leading-tight mb-5"
+            className="text-white mb-5"
             style={{
-              fontFamily: "var(--font-heading)",
-              fontSize: "clamp(28px, 3.5vw, 48px)",
+              fontFamily: "var(--font-subheading)",
+              fontSize: "clamp(24px, 3vw, 38px)",
               fontWeight: 700,
-              color: "#BEB9B9",
-              letterSpacing: "0.5px",
-              lineHeight: "62.4px",
+              letterSpacing: "-0.2px",
+              lineHeight: "1.2",
             }}
           >
-            Committed to Safe and Healthy Construction Practices
+            Committed to Safe &amp; Healthy Construction
           </h2>
           <p
-            className="mb-8"
+            className="mb-7"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "16px",
-              fontWeight: 500,
-              color: "rgb(255,255,255)",
-              lineHeight: "24.75px",
+              fontSize: "14.5px",
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.70)",
+              lineHeight: "1.8",
             }}
           >
-            Our commitment to safety is unwavering. From planning to execution,
-            we implement rigorous safety protocols and health practices to protect
-            everyone involved.
+            From planning to execution, we implement rigorous safety protocols and health practices to protect everyone involved in every project.
           </p>
-          <Button
-            variant="primary"
+          <Link
             href="/contact-us"
-            className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
+            className="inline-flex items-center gap-2.5 bg-[#E00201] text-white text-[12px] font-[700] tracking-[0.5px] px-6 py-[12px] rounded-[2px] hover:bg-[#c50000] transition-all duration-300 hover:scale-[1.02] active:scale-[0.97]"
+            style={{ fontFamily: "var(--font-subheading)" }}
           >
             Get In Touch
-          </Button>
+          </Link>
         </div>
       </AnimateIn>
 
-      {/* Right column — WP b42b0cf: fadeInRight */}
+      {/* Right column — Construction Standards */}
       <AnimateIn
         variant="fadeInRight"
-        className="relative flex-1 flex items-start p-6 md:p-[52px] lg:p-[80px_52px]"
-        style={{ minHeight: "clamp(340px, 50vw, 688px)" }}
+        className="relative flex-1 flex items-end p-8 md:p-14 lg:p-20"
+        style={{ minHeight: "clamp(360px, 50vw, 620px)" }}
       >
         <Image
           src="/images/image-2-min.jpg"
-          alt=""
+          alt="Dil Chahal Construction delivering superior construction standards on a commercial project"
           fill
           className="object-cover object-center"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
-        <div className="absolute inset-0 bg-[#8B0001]/75" />
-        <div className="relative z-10" style={{ maxWidth: "500px" }}>
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(0deg, rgba(139,0,1,0.93) 0%, rgba(139,0,1,0.60) 55%, rgba(139,0,1,0.20) 100%)",
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative z-10" style={{ maxWidth: "480px" }}>
           <h3
-            className="leading-tight mb-4"
+            className="text-white mb-5"
             style={{
               fontFamily: "var(--font-subheading)",
-              fontSize: "26px",
+              fontSize: "clamp(20px, 2.2vw, 28px)",
               fontWeight: 700,
-              color: "rgb(255,255,255)",
-              letterSpacing: "0.2px",
-              lineHeight: "33.8px",
+              letterSpacing: "-0.1px",
+              lineHeight: "1.3",
             }}
           >
             Dedicated to Superior Construction Standards
           </h3>
           <p
-            className="mb-8"
+            className="mb-7"
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "16px",
-              fontWeight: 500,
-              color: "rgb(255,255,255)",
-              lineHeight: "24.75px",
+              fontSize: "14.5px",
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.72)",
+              lineHeight: "1.8",
             }}
           >
-            Quality is at the core of our construction philosophy. From planning
-            to completion, we maintain stringent quality control measures to
-            ensure that every structure we build stands the test of time.
+            Quality is at the core of our philosophy. We maintain stringent quality control from planning to completion so every structure stands the test of time.
           </p>
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-3.5" aria-label="Key quality commitments">
             {features.map((f) => (
               <li
-                key={f.label}
+                key={f.label as string}
                 className="flex items-center gap-3 text-white"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "16px",
+                  fontSize: "14px",
                   fontWeight: 500,
                 }}
               >
-                <span className="flex-shrink-0 flex items-center justify-center w-[20px]">{f.icon}</span>
+                <span className="text-white/80">{f.icon}</span>
                 {f.label}
               </li>
             ))}

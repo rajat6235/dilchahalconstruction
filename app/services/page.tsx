@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/sections/PageHero";
+import ServiceCard from "@/components/ui/ServiceCard";
 import HouseRenovations from "@/components/sections/HouseRenovations";
-import AnimateIn from "@/components/ui/AnimateIn";
 import Footer from "@/components/layout/Footer";
 
 const BASE_URL = "https://dilchahalconstruction.com";
@@ -62,59 +61,81 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── Services data ─────────────────────────────────────── */
 const services = [
   {
     img: "/images/drywall.jpg",
-    alt: "Professional drywall installation for residential and commercial properties in Saskatoon, Saskatchewan — Dil Chahal Construction",
+    alt: "Professional drywall installation for residential and commercial properties in Saskatoon, Saskatchewan",
     title: "Drywall Installation",
-    desc: "Professional drywall installation and finishing for residential and commercial spaces in Saskatoon, SK — precision work, strong and even surfaces built to last.",
+    desc: "Precision drywall installation for residential and commercial spaces — strong, even surfaces built to Saskatchewan code.",
+    href: "/drywall-installation-saskatoon",
   },
   {
     img: "/images/glasroc.jpeg",
-    alt: "GlassRoc sheathing installation for superior fire and moisture resistance on exterior walls in Saskatoon, SK",
+    alt: "GlassRoc sheathing installation for superior fire and moisture resistance in Saskatoon, SK",
     title: "GlassRoc Sheathing",
-    desc: "Protect your building with GlasRoc Sheathing — superior fire, moisture, and mold resistance for durable exterior walls and roofs throughout Saskatoon and Saskatchewan.",
+    desc: "Superior fire, moisture, and mold-resistant exterior wall sheathing for durable commercial and residential builds.",
+    href: "/glassroc-sheathing-saskatoon",
   },
   {
     img: "/images/steel-frame.jpeg",
-    alt: "Steel stud framing for residential and commercial construction projects in Saskatoon, Saskatchewan",
+    alt: "Steel stud framing for residential and commercial construction in Saskatoon",
     title: "Steel Framing",
-    desc: "Precision steel stud framing for walls and partitions in Saskatoon, SK — durable, code-compliant structural support for residential and commercial construction projects.",
+    desc: "Durable steel stud framing for walls and partitions — code-compliant structural support for any project scale.",
+    href: "/steel-framing-saskatoon",
   },
   {
     img: "/images/t-bar.jpeg",
-    alt: "T-bar suspended ceiling installation for commercial and office spaces in Saskatoon, Saskatchewan",
+    alt: "T-bar suspended ceiling installation for commercial and office spaces in Saskatoon",
     title: "T-Bar Ceiling",
-    desc: "Professional T-bar suspended ceiling installation for commercial and office spaces in Saskatoon — clean, modern, and acoustically effective ceiling systems.",
+    desc: "Professional T-bar suspended ceiling systems for commercial and office spaces — clean, modern, and acoustically effective.",
+    href: "/t-bar-ceiling-installation-saskatoon",
   },
   {
     img: "/images/insulation.jpeg",
-    alt: "Energy-efficient insulation installation for homes and commercial buildings in Saskatoon, Saskatchewan",
+    alt: "Energy-efficient insulation installation for homes and buildings in Saskatoon",
     title: "Insulation",
-    desc: "Energy-efficient insulation services for homes and commercial properties in Saskatoon, SK — lower energy bills, improved comfort, and code-compliant installation.",
+    desc: "Energy-efficient insulation services for homes and commercial properties — lower bills, improved comfort, code-compliant.",
+    href: "/insulation-saskatoon",
   },
   {
     img: "/images/bulkhead.jpeg",
-    alt: "Custom bulkhead ceiling construction for residential kitchens and commercial spaces in Saskatoon",
+    alt: "Custom bulkhead ceiling construction for residential and commercial spaces in Saskatoon",
     title: "Bulkhead Ceiling",
-    desc: "Custom bulkhead ceiling construction in Saskatoon — architectural detail and definition for residential kitchens, hallways, and commercial spaces.",
+    desc: "Custom bulkhead construction adding architectural dimension to residential kitchens, hallways, and commercial spaces.",
+    href: "/bulkhead-ceiling-saskatoon",
   },
   {
     img: "/images/mudding.jpeg",
-    alt: "Expert mudding and taping for smooth drywall finishing in Saskatoon, SK — residential and commercial",
+    alt: "Expert mudding and taping for smooth drywall finishing in Saskatoon",
     title: "Mudding & Taping",
-    desc: "Expert mudding and taping for flawless drywall seams — residential and commercial projects in Saskatoon, SK, ensuring a perfectly paint-ready surface every time.",
+    desc: "Expert mudding and taping for seamless, paint-ready drywall finishes — residential and commercial in Saskatoon, SK.",
+    href: "/mudding-taping-saskatoon",
   },
   {
     img: "/images/texture.jpeg",
-    alt: "Decorative wall and ceiling texturing services in Saskatoon SK — orange peel knockdown and smooth finishes",
+    alt: "Decorative wall and ceiling texturing services in Saskatoon — orange peel, knockdown, smooth finishes",
     title: "Texture & Finishing",
-    desc: "Decorative wall and ceiling texturing in Saskatoon, SK — orange peel, knockdown, skip trowel, and smooth finish options to enhance any interior space.",
+    desc: "Orange peel, knockdown, skip trowel, and smooth finish options to elevate any interior space.",
+    href: "/texturing-saskatoon",
   },
 ];
 
-/* ── JSON-LD Schemas ───────────────────────────────────── */
+const serviceLinks = [
+  { href: "/drywall-installation-saskatoon", label: "Drywall Installation Saskatoon" },
+  { href: "/drywall-repair-saskatoon", label: "Drywall Repair Saskatoon" },
+  { href: "/drywall-finishing-saskatoon", label: "Drywall Finishing Saskatoon" },
+  { href: "/mudding-taping-saskatoon", label: "Mudding & Taping Saskatoon" },
+  { href: "/texturing-saskatoon", label: "Texturing Saskatoon" },
+  { href: "/steel-framing-saskatoon", label: "Steel Framing Saskatoon" },
+  { href: "/insulation-saskatoon", label: "Insulation Contractor Saskatoon" },
+  { href: "/t-bar-ceiling-installation-saskatoon", label: "T-Bar Ceiling Installation Saskatoon" },
+  { href: "/bulkhead-ceiling-saskatoon", label: "Bulkhead Ceiling Saskatoon" },
+  { href: "/glassroc-sheathing-saskatoon", label: "GlassRoc Sheathing Saskatoon" },
+  { href: "/commercial-renovations-saskatoon", label: "Commercial Renovations Saskatoon" },
+  { href: "/residential-renovations-saskatoon", label: "Residential Renovations Saskatoon" },
+  { href: "/basement-renovations-saskatoon", label: "Basement Renovations Saskatoon" },
+];
+
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -147,114 +168,14 @@ const serviceCatalogJsonLd = {
   description: "Complete list of drywall and construction services offered by Dil Chahal Construction Ltd. in Saskatoon, SK.",
   numberOfItems: 8,
   itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      item: {
-        "@type": "Service",
-        name: "Drywall Installation Saskatoon",
-        description: "Professional drywall installation and finishing for residential and commercial properties in Saskatoon, SK and surrounding Saskatchewan communities.",
-        provider: { "@id": `${BASE_URL}/#business` },
-        serviceType: "Drywall Installation",
-        areaServed: [
-          { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
-          { "@type": "City", name: "Warman", addressRegion: "SK", addressCountry: "CA" },
-          { "@type": "City", name: "Martensville", addressRegion: "SK", addressCountry: "CA" },
-        ],
-        url: `${BASE_URL}/services/`,
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      item: {
-        "@type": "Service",
-        name: "Steel Framing Saskatoon",
-        description: "Commercial and residential steel stud framing in Saskatoon, SK — durable, code-compliant structural support for walls, partitions, and interior construction.",
-        provider: { "@id": `${BASE_URL}/#business` },
-        serviceType: "Steel Framing",
-        areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
-        url: `${BASE_URL}/services/`,
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      item: {
-        "@type": "Service",
-        name: "T-Bar Ceiling Installation Saskatoon",
-        description: "Expert T-bar (drop/suspended) ceiling installation for commercial offices, retail, and industrial spaces in Saskatoon, SK.",
-        provider: { "@id": `${BASE_URL}/#business` },
-        serviceType: "T-Bar Ceiling Installation",
-        areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
-        url: `${BASE_URL}/services/`,
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 4,
-      item: {
-        "@type": "Service",
-        name: "GlassRoc Sheathing Saskatoon",
-        description: "GlasRoc sheathing installation in Saskatoon, SK — fire, moisture, and mold resistant exterior wall and roof sheathing for commercial and residential construction.",
-        provider: { "@id": `${BASE_URL}/#business` },
-        serviceType: "GlassRoc Sheathing",
-        areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
-        url: `${BASE_URL}/services/`,
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 5,
-      item: {
-        "@type": "Service",
-        name: "Insulation Services Saskatoon",
-        description: "Energy-efficient insulation installation for homes and commercial buildings in Saskatoon, SK — batt, blown-in, and rigid insulation options available.",
-        provider: { "@id": `${BASE_URL}/#business` },
-        serviceType: "Insulation",
-        areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
-        url: `${BASE_URL}/services/`,
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 6,
-      item: {
-        "@type": "Service",
-        name: "Bulkhead Ceiling Saskatoon",
-        description: "Custom bulkhead ceiling design and installation in Saskatoon, SK — adds architectural dimension to residential and commercial interiors.",
-        provider: { "@id": `${BASE_URL}/#business` },
-        serviceType: "Bulkhead Ceiling",
-        areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
-        url: `${BASE_URL}/services/`,
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 7,
-      item: {
-        "@type": "Service",
-        name: "Mudding and Taping Saskatoon",
-        description: "Professional mudding and taping for seamless, paint-ready drywall finishes in Saskatoon, SK — residential and commercial applications.",
-        provider: { "@id": `${BASE_URL}/#business` },
-        serviceType: "Mudding and Taping",
-        areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
-        url: `${BASE_URL}/services/`,
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 8,
-      item: {
-        "@type": "Service",
-        name: "Texturing Saskatoon",
-        description: "Decorative wall and ceiling texturing in Saskatoon, SK — orange peel, knockdown, skip trowel, and smooth finish techniques.",
-        provider: { "@id": `${BASE_URL}/#business` },
-        serviceType: "Texturing",
-        areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" },
-        url: `${BASE_URL}/services/`,
-      },
-    },
+    { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "Drywall Installation Saskatoon", provider: { "@id": `${BASE_URL}/#business` }, serviceType: "Drywall Installation", areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" }, url: `${BASE_URL}/services/` } },
+    { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "Steel Framing Saskatoon", provider: { "@id": `${BASE_URL}/#business` }, serviceType: "Steel Framing", areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" }, url: `${BASE_URL}/services/` } },
+    { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "T-Bar Ceiling Installation Saskatoon", provider: { "@id": `${BASE_URL}/#business` }, serviceType: "T-Bar Ceiling Installation", areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" }, url: `${BASE_URL}/services/` } },
+    { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "GlassRoc Sheathing Saskatoon", provider: { "@id": `${BASE_URL}/#business` }, serviceType: "GlassRoc Sheathing", areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" }, url: `${BASE_URL}/services/` } },
+    { "@type": "ListItem", position: 5, item: { "@type": "Service", name: "Insulation Services Saskatoon", provider: { "@id": `${BASE_URL}/#business` }, serviceType: "Insulation", areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" }, url: `${BASE_URL}/services/` } },
+    { "@type": "ListItem", position: 6, item: { "@type": "Service", name: "Bulkhead Ceiling Saskatoon", provider: { "@id": `${BASE_URL}/#business` }, serviceType: "Bulkhead Ceiling", areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" }, url: `${BASE_URL}/services/` } },
+    { "@type": "ListItem", position: 7, item: { "@type": "Service", name: "Mudding and Taping Saskatoon", provider: { "@id": `${BASE_URL}/#business` }, serviceType: "Mudding and Taping", areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" }, url: `${BASE_URL}/services/` } },
+    { "@type": "ListItem", position: 8, item: { "@type": "Service", name: "Texturing Saskatoon", provider: { "@id": `${BASE_URL}/#business` }, serviceType: "Texturing", areaServed: { "@type": "City", name: "Saskatoon", addressRegion: "SK", addressCountry: "CA" }, url: `${BASE_URL}/services/` } },
   ],
 };
 
@@ -262,54 +183,11 @@ const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    {
-      "@type": "Question",
-      name: "What drywall services does Dil Chahal Construction offer in Saskatoon?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Dil Chahal Construction provides comprehensive drywall services in Saskatoon, SK — including drywall installation, drywall repair, drywall finishing, mudding and taping, and texturing. We also offer GlassRoc sheathing, steel framing, T-bar ceiling systems, insulation, and bulkhead ceilings for both residential and commercial properties.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer steel framing and T-bar ceiling installation in Saskatoon?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We specialize in steel stud framing and T-bar suspended ceiling installation for residential and commercial buildings throughout Saskatoon and Saskatchewan. Our licensed team ensures precise, code-compliant installations.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide commercial drywall services in Saskatoon?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. We handle commercial drywall installation, steel framing, T-bar ceiling systems, GlassRoc sheathing, and insulation for offices, retail spaces, warehouses, and industrial buildings in Saskatoon, SK.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What areas of Saskatchewan does Dil Chahal Construction serve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our primary service area is Saskatoon, SK. We also serve Warman, Martensville, Regina, Prince Albert, and surrounding Saskatchewan communities. Contact us to discuss your specific project location.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are you a licensed and insured drywall contractor in Saskatchewan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Dil Chahal Construction Ltd. is a fully licensed and insured general contractor in Saskatchewan. We comply with all provincial building codes and WorkSafe Saskatchewan regulations, providing our clients with complete confidence.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I get a free drywall quote in Saskatoon?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Request a free quote by calling +1 (306) 717-1994, emailing contact@dilchahalconstruction.com, or using the quote request form on our website. We respond promptly and offer competitive, transparent pricing for all drywall and construction projects in Saskatoon.",
-      },
-    },
+    { "@type": "Question", name: "What drywall services does Dil Chahal Construction offer in Saskatoon?", acceptedAnswer: { "@type": "Answer", text: "Dil Chahal Construction provides comprehensive drywall services in Saskatoon, SK — including drywall installation, drywall repair, drywall finishing, mudding and taping, and texturing. We also offer GlassRoc sheathing, steel framing, T-bar ceiling systems, insulation, and bulkhead ceilings for both residential and commercial properties." } },
+    { "@type": "Question", name: "Do you offer steel framing and T-bar ceiling installation in Saskatoon?", acceptedAnswer: { "@type": "Answer", text: "Yes. We specialize in steel stud framing and T-bar suspended ceiling installation for residential and commercial buildings throughout Saskatoon and Saskatchewan. Our licensed team ensures precise, code-compliant installations." } },
+    { "@type": "Question", name: "Do you provide commercial drywall services in Saskatoon?", acceptedAnswer: { "@type": "Answer", text: "Absolutely. We handle commercial drywall installation, steel framing, T-bar ceiling systems, GlassRoc sheathing, and insulation for offices, retail spaces, warehouses, and industrial buildings in Saskatoon, SK." } },
+    { "@type": "Question", name: "Are you a licensed and insured drywall contractor in Saskatchewan?", acceptedAnswer: { "@type": "Answer", text: "Yes. Dil Chahal Construction Ltd. is a fully licensed and insured general contractor in Saskatchewan. We comply with all provincial building codes and WorkSafe Saskatchewan regulations." } },
+    { "@type": "Question", name: "How do I get a free drywall quote in Saskatoon?", acceptedAnswer: { "@type": "Answer", text: "Request a free quote by calling +1 (306) 717-1994, emailing contact@dilchahalconstruction.com, or using the quote request form on our website. We respond promptly with competitive, transparent pricing." } },
   ],
 };
 
@@ -321,185 +199,225 @@ export default function ServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceCatalogJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <PageHero title="Services" currentPage="Services" />
+      <PageHero
+        title="Services"
+        currentPage="Services"
+        subtitle="From drywall to full renovations — every service delivered to Saskatchewan Building Code standards."
+      />
 
       <main>
-        {/* ── Heading ── */}
-        <section className="bg-white" style={{ paddingTop: "clamp(40px, 8vw, 100px)", paddingBottom: "clamp(30px, 5vw, 60px)" }}>
-          <div className="max-w-[1140px] mx-auto px-4 text-center">
-            <AnimateIn variant="fadeInDown">
-              <h2
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: "24px",
-                  fontWeight: 300,
-                  color: "rgb(0,0,0)",
-                  lineHeight: "31.2px",
-                  marginBottom: "12px",
-                }}
-              >
-                Expert Drywall & Construction Solutions in Saskatoon, SK
-              </h2>
-              <h3
-                style={{
-                  fontFamily: "var(--font-roboto-sans)",
-                  fontSize: "clamp(32px, 4vw, 48px)",
-                  fontWeight: 700,
-                  color: "rgb(0,0,0)",
-                  lineHeight: "1.2",
-                  marginBottom: "20px",
-                }}
-              >
-                Quality Drywall & Construction Services
-              </h3>
-              <Link
-                href="/projects"
-                aria-label="View all drywall and construction projects"
-                className="hover:text-[#E00201] transition-colors duration-200"
-                style={{ fontFamily: "var(--font-body)", fontSize: "15px", color: "#E00201", fontWeight: 500 }}
-              >
-                View Our Projects →
-              </Link>
-            </AnimateIn>
+
+        {/* ── Section intro ── */}
+        <section
+          style={{
+            backgroundColor: "#fff",
+            paddingTop: "clamp(56px, 8vw, 96px)",
+            paddingBottom: "clamp(48px, 6vw, 72px)",
+          }}
+        >
+          <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+              <div>
+                <p
+                  className="mb-3"
+                  style={{
+                    fontFamily: "var(--font-subheading)",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                    color: "#E00201",
+                    letterSpacing: "3px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Comprehensive Solutions
+                </p>
+                <h2
+                  style={{
+                    fontFamily: "var(--font-subheading)",
+                    fontSize: "clamp(28px, 3.8vw, 48px)",
+                    fontWeight: 700,
+                    color: "#0a0a0a",
+                    letterSpacing: "-0.3px",
+                    lineHeight: "1.15",
+                    maxWidth: "520px",
+                  }}
+                >
+                  Quality Drywall &amp; Construction Services
+                </h2>
+              </div>
+              <div className="lg:text-right lg:max-w-[320px]">
+                <p
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "15px",
+                    color: "#6B7280",
+                    lineHeight: "1.75",
+                    marginBottom: "16px",
+                  }}
+                >
+                  Expert residential &amp; commercial work across Saskatchewan — licensed, insured, and inspection-ready.
+                </p>
+                <div className="flex flex-wrap gap-4 lg:justify-end">
+                  <Link
+                    href="/projects"
+                    className="text-[#E00201] font-[600] text-[13px] hover:underline"
+                    style={{ fontFamily: "var(--font-body)" }}
+                  >
+                    View Our Projects →
+                  </Link>
+                  <Link
+                    href="/contact-us"
+                    className="text-[#E00201] font-[600] text-[13px] hover:underline"
+                    style={{ fontFamily: "var(--font-body)" }}
+                  >
+                    Get a Free Quote →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* ── Service cards ── */}
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-7 gap-y-12"
+              aria-label="Drywall and construction services in Saskatoon, SK"
+            >
+              {services.map((svc, i) => (
+                <ServiceCard
+                  key={svc.title}
+                  src={svc.img}
+                  alt={svc.alt}
+                  title={svc.title}
+                  description={svc.desc}
+                  href={svc.href}
+                  priority={i < 4}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* ── Service Cards ── */}
+        {/* ── CTA strip ── */}
         <section
-          className="bg-white"
-          style={{ paddingBottom: "clamp(30px, 5vw, 60px)" }}
-          aria-label="Drywall and construction services offered in Saskatoon, SK"
+          style={{
+            background: "linear-gradient(135deg, #8B0001 0%, #c50000 50%, #8B0001 100%)",
+            paddingTop: "clamp(40px, 6vw, 64px)",
+            paddingBottom: "clamp(40px, 6vw, 64px)",
+          }}
         >
-          <div className="max-w-[1140px] mx-auto px-4">
-            <AnimateIn variant="fadeInUp">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "0" }}>
-                {services.map((svc) => (
-                  <article key={svc.title} className="flex flex-col">
-                    <div className="relative w-full" style={{ aspectRatio: "3/2" }}>
-                      <Image
-                        src={svc.img}
-                        alt={svc.alt}
-                        fill
-                        className="object-cover object-center"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div style={{ padding: "20px 16px 28px" }}>
-                      <h3
-                        style={{
-                          fontFamily: "var(--font-roboto-sans)",
-                          fontSize: "26px",
-                          fontWeight: 700,
-                          color: "rgb(0,0,0)",
-                          lineHeight: "33.8px",
-                          marginBottom: "10px",
-                        }}
-                      >
-                        {svc.title}
-                      </h3>
-                      <p
-                        style={{
-                          fontFamily: "var(--font-body)",
-                          fontSize: "16px",
-                          fontWeight: 400,
-                          color: "rgb(0,0,0)",
-                          lineHeight: "24.75px",
-                        }}
-                      >
-                        {svc.desc}
-                      </p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </AnimateIn>
-          </div>
-
-          {/* Internal link to About + Contact */}
-          <div className="max-w-[1140px] mx-auto px-4 mt-10 flex flex-wrap gap-4 justify-center">
-            <Link
-              href="/about"
-              aria-label="Learn about our experienced drywall contractor team"
-              className="text-sm font-medium hover:underline"
-              style={{ color: "#E00201", fontFamily: "var(--font-body)" }}
-            >
-              About Our Team →
-            </Link>
+          <div className="max-w-[1200px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <p
+                className="mb-2"
+                style={{
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "10.5px",
+                  fontWeight: 700,
+                  color: "rgba(255,255,255,0.55)",
+                  letterSpacing: "3px",
+                  textTransform: "uppercase",
+                }}
+              >
+                No Obligation
+              </p>
+              <h2
+                className="text-white"
+                style={{
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "clamp(22px, 2.8vw, 34px)",
+                  fontWeight: 700,
+                  letterSpacing: "-0.2px",
+                  lineHeight: "1.2",
+                }}
+              >
+                Ready to Start Your Project?
+              </h2>
+            </div>
             <Link
               href="/contact-us"
-              aria-label="Get a free drywall quote in Saskatoon"
-              className="text-sm font-medium hover:underline"
-              style={{ color: "#E00201", fontFamily: "var(--font-body)" }}
+              className="flex-shrink-0 inline-flex items-center gap-2.5 bg-white text-[#E00201] font-[700] px-7 py-[14px] rounded-[2px] hover:bg-[#f0f0f0] transition-all duration-300 active:scale-[0.97]"
+              style={{ fontFamily: "var(--font-subheading)", fontSize: "13px", letterSpacing: "0.4px" }}
             >
-              Get a Free Quote →
+              Get a Free Quote
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </Link>
           </div>
         </section>
 
-        {/* ── Detailed Service Pages ── */}
-        <section style={{ backgroundColor: "#f4f4f4", paddingTop: "clamp(40px, 6vw, 70px)", paddingBottom: "clamp(40px, 6vw, 70px)" }}>
-          <div className="max-w-[1140px] mx-auto px-4">
-            <AnimateIn variant="fadeInDown">
+        {/* ── Service landing pages directory ── */}
+        <section
+          style={{
+            backgroundColor: "#F9FAFB",
+            paddingTop: "clamp(56px, 8vw, 96px)",
+            paddingBottom: "clamp(56px, 8vw, 96px)",
+          }}
+        >
+          <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+            <div className="text-center mb-12">
+              <p
+                className="mb-3"
+                style={{
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  color: "#E00201",
+                  letterSpacing: "3px",
+                  textTransform: "uppercase",
+                }}
+              >
+                Detailed Pages
+              </p>
               <h2
                 style={{
-                  fontFamily: "var(--font-roboto-sans)",
-                  fontSize: "clamp(20px, 2.5vw, 28px)",
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "clamp(24px, 3vw, 36px)",
                   fontWeight: 700,
-                  color: "#111",
-                  textAlign: "center",
+                  color: "#0a0a0a",
+                  letterSpacing: "-0.2px",
+                  lineHeight: "1.2",
                   marginBottom: "12px",
                 }}
               >
-                Explore Individual Service Pages
+                Explore Individual Services
               </h2>
-              <p style={{ fontFamily: "var(--font-body)", fontSize: "15px", color: "#666", textAlign: "center", marginBottom: "36px" }}>
-                Each service has its own dedicated page with detailed information, process breakdowns, FAQs, and service-specific content.
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "15px", color: "#6B7280", maxWidth: "480px", margin: "0 auto" }}>
+                Each service has its own page with process breakdowns, FAQs, and local detail.
               </p>
-            </AnimateIn>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" style={{ gap: "12px" }}>
-              {([
-                { href: "/drywall-installation-saskatoon", label: "Drywall Installation Saskatoon" },
-                { href: "/drywall-repair-saskatoon", label: "Drywall Repair Saskatoon" },
-                { href: "/drywall-finishing-saskatoon", label: "Drywall Finishing Saskatoon" },
-                { href: "/mudding-taping-saskatoon", label: "Mudding & Taping Saskatoon" },
-                { href: "/texturing-saskatoon", label: "Texturing Saskatoon" },
-                { href: "/steel-framing-saskatoon", label: "Steel Framing Saskatoon" },
-                { href: "/insulation-saskatoon", label: "Insulation Contractor Saskatoon" },
-                { href: "/t-bar-ceiling-installation-saskatoon", label: "T-Bar Ceiling Installation Saskatoon" },
-                { href: "/bulkhead-ceiling-saskatoon", label: "Bulkhead Ceiling Saskatoon" },
-                { href: "/glassroc-sheathing-saskatoon", label: "GlassRoc Sheathing Saskatoon" },
-                { href: "/commercial-renovations-saskatoon", label: "Commercial Renovations Saskatoon" },
-                { href: "/residential-renovations-saskatoon", label: "Residential Renovations Saskatoon" },
-                { href: "/basement-renovations-saskatoon", label: "Basement Renovations Saskatoon" },
-              ] as Array<{ href: string; label: string }>).map((item) => (
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {serviceLinks.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    padding: "14px 18px",
-                    background: "#fff",
-                    fontFamily: "var(--font-body)",
-                    fontSize: "14px",
-                    fontWeight: 600,
-                    color: "#333",
-                    textDecoration: "none",
-                    borderLeft: "3px solid #E00201",
-                  }}
+                  className="group flex items-center justify-between bg-white border border-[#E5E7EB] hover:border-[#E00201] hover:shadow-sm transition-all duration-250 rounded-[2px] px-5 py-4"
                 >
-                  <span>{item.label}</span>
-                  <span style={{ color: "#E00201", fontSize: "18px" }}>&#8250;</span>
+                  <span
+                    className="text-[#111827] group-hover:text-[#E00201] transition-colors duration-200 font-[600]"
+                    style={{ fontFamily: "var(--font-body)", fontSize: "14px" }}
+                  >
+                    {item.label}
+                  </span>
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    className="text-[#D1D5DB] group-hover:text-[#E00201] transition-colors duration-200 flex-shrink-0 ml-3"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 7.5h9M9 4l3.5 3.5L9 11" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </Link>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── House Renovations ── */}
+        {/* ── House Renovations carousel ── */}
         <HouseRenovations />
+
       </main>
 
       <Footer />

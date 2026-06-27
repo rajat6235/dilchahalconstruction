@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const faqs = [
   {
@@ -34,61 +34,99 @@ const faqs = [
   },
 ];
 
+function AccordionItem({
+  question,
+  answer,
+  index,
+  isOpen,
+  onToggle,
+}: {
+  question: string;
+  answer: string;
+  index: number;
+  isOpen: boolean;
+  onToggle: () => void;
+}) {
+  const bodyRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (bodyRef.current) {
+      setHeight(isOpen ? bodyRef.current.scrollHeight : 0);
+    }
+  }, [isOpen]);
+
+  return (
+    <div className="border-b border-[#E5E7EB] last:border-0">
+      <button
+        id={`faq-btn-${index}`}
+        onClick={onToggle}
+        className="w-full flex items-center justify-between text-left py-5 gap-4 group"
+        aria-expanded={isOpen}
+        aria-controls={`faq-panel-${index}`}
+      >
+        <span
+          className={`text-[15px] font-[600] transition-colors duration-200 ${
+            isOpen ? "text-[#E00201]" : "text-[#111827] group-hover:text-[#E00201]"
+          }`}
+          style={{ fontFamily: "var(--font-subheading)" }}
+        >
+          {question}
+        </span>
+        <span
+          className={`flex-shrink-0 w-6 h-6 rounded-full border border-current flex items-center justify-center transition-all duration-300 ${
+            isOpen ? "bg-[#E00201] border-[#E00201] text-white rotate-45" : "text-[#9CA3AF] group-hover:border-[#E00201] group-hover:text-[#E00201]"
+          }`}
+          aria-hidden="true"
+        >
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+            <path d="M5.5 1v9M1 5.5h9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+        </span>
+      </button>
+
+      <div
+        id={`faq-panel-${index}`}
+        role="region"
+        aria-labelledby={`faq-btn-${index}`}
+        style={{
+          overflow: "hidden",
+          height: `${height}px`,
+          transition: "height 0.32s cubic-bezier(0.22, 1, 0.36, 1)",
+        }}
+      >
+        <div ref={bodyRef} className="pb-5">
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "14.5px",
+              fontWeight: 400,
+              color: "#6B7280",
+              lineHeight: "1.82",
+            }}
+          >
+            {answer}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function FAQAccordion() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <div className="flex flex-col" style={{ gap: "0px" }}>
+    <div className="flex flex-col">
       {faqs.map((item, i) => (
-        <div key={i} style={{ borderTop: i === 0 ? "1px solid #d5d5d5" : "none" }}>
-          <button
-            id={`faq-btn-${i}`}
-            className="w-full flex items-center justify-between text-left cursor-pointer"
-            style={{
-              backgroundColor: "rgb(245,245,245)",
-              color: "rgb(75,79,88)",
-              fontSize: "15px",
-              fontWeight: 700,
-              fontFamily: "var(--font-body)",
-              padding: "20px",
-              borderBottom: "1px solid #d5d5d5",
-            }}
-            onClick={() => setOpen(open === i ? null : i)}
-            aria-expanded={open === i}
-            aria-controls={`faq-panel-${i}`}
-          >
-            <span>{item.question}</span>
-            <span className="ml-4 text-[20px] leading-none flex-shrink-0" style={{ color: "rgb(75,79,88)" }} aria-hidden="true">
-              {open === i ? "−" : "+"}
-            </span>
-          </button>
-
-          <div
-            id={`faq-panel-${i}`}
-            role="region"
-            aria-labelledby={`faq-btn-${i}`}
-            hidden={open !== i}
-            style={{
-              backgroundColor: "rgb(245,245,245)",
-              padding: open === i ? "0px 20px 20px 20px" : undefined,
-              borderBottom: open === i ? "1px solid #d5d5d5" : undefined,
-            }}
-          >
-            {open === i && (
-              <p
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: "16px",
-                  fontWeight: 500,
-                  color: "#7A7A7A",
-                  lineHeight: "24.75px",
-                }}
-              >
-                {item.answer}
-              </p>
-            )}
-          </div>
-        </div>
+        <AccordionItem
+          key={i}
+          index={i}
+          question={item.question}
+          answer={item.answer}
+          isOpen={open === i}
+          onToggle={() => setOpen(open === i ? null : i)}
+        />
       ))}
     </div>
   );

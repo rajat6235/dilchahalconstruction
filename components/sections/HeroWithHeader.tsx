@@ -1,319 +1,173 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Projects", href: "/projects" },
-  { label: "Services", href: "/services" },
-  { label: "About us", href: "/about" },
-  { label: "Contact Us", href: "/contact-us" },
+const trustItems = [
+  { label: "In Business Since", value: "2016" },
+  { label: "SK Province Licensed", value: "Licensed" },
+  { label: "Every Project Quote", value: "Free" },
+  { label: "Work Standard", value: "100% Inspected" },
 ];
 
-/* Social icons — exact SVG paths from WordPress/Astra, all bright red */
-function FacebookIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 448 512" aria-hidden="true">
-      <path
-        fill="#E00201"
-        d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
-      />
-    </svg>
-  );
-}
-
-function GoogleIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 24 28" aria-hidden="true">
-      <path
-        fill="#E00201"
-        d="M12 12.281h11.328c.109.609.187 1.203.187 2C23.515 21.125 18.921 26 11.999 26c-6.641 0-12-5.359-12-12s5.359-12 12-12c3.234 0 5.953 1.188 8.047 3.141L16.78 8.282c-.891-.859-2.453-1.859-4.781-1.859-4.094 0-7.438 3.391-7.438 7.578s3.344 7.578 7.438 7.578c4.75 0 6.531-3.406 6.813-5.172h-6.813v-4.125z"
-      />
-    </svg>
-  );
-}
-
-function InstagramIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 448 512" aria-hidden="true">
-      <path
-        fill="#E00201"
-        d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"
-      />
-    </svg>
-  );
-}
-
 export default function HeroWithHeader() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <section className="relative w-full overflow-x-hidden">
-      {/* Background image — next/image with priority for LCP */}
-      <div className="absolute inset-0 overflow-hidden">
-        <Image
-          src="/images/hero-bg.jpeg"
-          alt=""
-          fill
-          preload
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-      </div>
+    <>
+      <style>{`
+        @keyframes heroFadeUp {
+          from { opacity: 0; transform: translateY(22px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .hero-anim {
+          animation: heroFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .hero-anim-1 { animation-delay: 0.08s; }
+        .hero-anim-2 { animation-delay: 0.18s; }
+        .hero-anim-3 { animation-delay: 0.30s; }
+        .hero-anim-4 { animation-delay: 0.42s; }
+      `}</style>
 
-      {/* Overlay — darker to match WordPress reference */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(0,0,0,0.93) 0%, rgba(0,0,0,0.91) 42%, rgba(0,0,0,0.82) 65%, rgba(0,0,0,0.68) 100%)",
-        }}
-      />
-
-      {/* ─── HEADER ─── */}
-      <header className="relative z-20 w-full">
-
-        {/* Primary header: logo left | phone center | socials right — WP: 198px min-height */}
-        <div
-          className="w-full flex items-center justify-between py-3 px-4 md:py-4 md:px-[40px]"
-          style={{ minHeight: "clamp(100px, 20vw, 198px)" }}
-        >
-          {/* Logo — exact WP size: 230×168px */}
-          <Link href="/" className="flex-shrink-0" style={{ maxWidth: "calc(100% - 56px)" }}>
-            <Image
-              src="/images/logo-header.png"
-              alt="Dil Chahal Construction Ltd. — Drywall Contractor and General Contractor in Saskatoon, SK"
-              width={230}
-              height={168}
-              className="h-[70px] md:h-[168px] w-auto object-contain"
-              loading="eager"
-            />
-          </Link>
-
-          {/* Phone — center */}
-          <p
-            className="hidden md:block"
-            style={{
-              color: "#E00201",
-              fontFamily: "var(--font-body)",
-              fontSize: "15px",
-              fontWeight: 400,
-            }}
-          >
-            Make a call:{" "}
-            <a
-              href="tel:+13067171994"
-              style={{ color: "inherit", textDecoration: "none" }}
-              aria-label="Call Dil Chahal Construction at +1 306 717 1994"
-            >
-              +1 (306) 717-1994
-            </a>
-          </p>
-
-          {/* Social icons — bright red, small */}
-          <div className="hidden md:flex items-center gap-4">
-            <a href="#" aria-label="Facebook" className="hover:opacity-80 transition-opacity duration-200">
-              <FacebookIcon />
-            </a>
-            <a href="https://share.google/IPRPEsKN5rl26cugO" aria-label="Google Business Profile" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity duration-200">
-              <GoogleIcon />
-            </a>
-            <a href="#" aria-label="Instagram" className="hover:opacity-80 transition-opacity duration-200">
-              <InstagramIcon />
-            </a>
-          </div>
-
-          {/* Mobile hamburger */}
-          <button
-            className="md:hidden text-white p-2"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-nav"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              aria-hidden="true"
-            >
-              {menuOpen ? (
-                <path d="M18 6L6 18M6 6l12 12" />
-              ) : (
-                <>
-                  <line x1="3" y1="6" x2="21" y2="6" />
-                  <line x1="3" y1="12" x2="21" y2="12" />
-                  <line x1="3" y1="18" x2="21" y2="18" />
-                </>
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Below header: nav left | GET A QUOTE right — WP: 60px height */}
-        <nav
-          aria-label="Primary navigation"
-          className="w-full flex items-stretch"
-          style={{
-            minHeight: "60px",
-            borderTop: "1px solid rgba(255,255,255,0.08)",
-            borderBottom: "1px solid rgba(255,255,255,0.18)",
-          }}
-        >
-          {/* Nav links — WP: Open Sans 15px weight 500, padding 0px 15px */}
-          <div
-            className="hidden md:flex items-center flex-1"
-            style={{ paddingLeft: "40px" }}
-          >
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-white hover:text-[#E00201] transition-colors duration-200 whitespace-nowrap"
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: "15px",
-                  fontWeight: 500,
-                  padding: "0px 15px",
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile phone */}
-          <div className="md:hidden flex items-center px-4 flex-1">
-            <a
-              href="tel:+13067171994"
-              style={{ color: "#E00201", fontFamily: "var(--font-body)", fontSize: "13px", textDecoration: "none" }}
-              aria-label="Call Dil Chahal Construction at +1 306 717 1994"
-            >
-              +1 (306) 717-1994
-            </a>
-          </div>
-
-          {/* GET A QUOTE — flush right, reduced size */}
-          <Link
-            href="/contact-us#contact"
-            className="flex items-center text-white flex-shrink-0 hover:bg-[#E00201] transition-colors duration-300"
-            style={{
-              background: "#8B0001",
-              fontFamily: "var(--font-subheading)",
-              fontSize: "13px",
-              fontWeight: 700,
-              letterSpacing: "1px",
-              padding: "0 30px",
-            }}
-          >
-            GET A QUOTE
-          </Link>
-        </nav>
-
-        {/* Mobile dropdown */}
-        {menuOpen && (
-          <div
-            id="mobile-nav"
-            className="md:hidden w-full"
-            style={{ background: "rgba(0,0,0,0.92)", borderTop: "1px solid rgba(255,255,255,0.06)" }}
-          >
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="block px-5 py-3 text-white text-[14px] hover:text-[#E00201] border-b transition-colors duration-200"
-                style={{ fontFamily: "var(--font-body)", borderColor: "rgba(255,255,255,0.05)" }}
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <Link
-              href="/contact-us#contact"
-              className="block px-5 py-3 text-white text-[14px] font-bold text-center"
-              style={{ background: "#8B0001" }}
-              onClick={() => setMenuOpen(false)}
-            >
-              GET A QUOTE
-            </Link>
-          </div>
-        )}
-      </header>
-
-      {/* ─── HERO CONTENT ─── */}
-      <div
-        className="relative z-10 max-w-[1140px] mx-auto px-4"
-        style={{ paddingTop: "40px", paddingBottom: "160px" }}
+      <section
+        className="relative w-full overflow-hidden"
+        style={{ minHeight: "100svh" }}
+        aria-label="Hero — Dil Chahal Construction"
       >
-        {/* Decorative subtitle — not a heading; h3 before h1 breaks hierarchy */}
-        <p
-          className="mb-3"
-          style={{
-            fontFamily: "var(--font-subheading)",
-            fontSize: "clamp(20px, 4.5vw, 36px)",
-            fontWeight: 500,
-            color: "#BEB9B9",
-            lineHeight: "46.8px",
-            letterSpacing: "0.5px",
-          }}
-        >
-          Welcome to
-        </p>
-
-        {/* h1 — WP: Roboto 48px weight 600 #E00201 uppercase lineHeight 67.2px */}
-        <h1
-          className="uppercase mb-6"
-          style={{
-            fontFamily: "var(--font-roboto-sans)",
-            fontWeight: 600,
-            color: "#E00201",
-            fontSize: "clamp(22px, 4.2vw, 48px)",
-            lineHeight: "67.2px",
-          }}
-        >
-          Dil Chahal Construction Ltd.
-          {/* Screen-reader supplement targets primary keyword without changing visible display */}
-          <span className="sr-only"> — Drywall Contractor &amp; General Contractor in Saskatoon, SK</span>
-        </h1>
-
-        {/* Body text — WP: Open Sans 16px weight 400 white, capped width */}
-        <p
-          className="mb-8"
-          style={{
-            fontFamily: "var(--font-body)",
-            fontSize: "16px",
-            fontWeight: 400,
-            color: "rgba(255,255,255,0.88)",
-            lineHeight: "1.65",
-            maxWidth: "650px",
-          }}
-        >
-          Dil Chahal Construction Ltd. proudly serves Saskatoon and surrounding
-          areas with expert drywall services, including installation, steel
-          framing, T-bar ceilings, house renovations, insulation, mudding,
-          tapping, and texturing. We handle residential and commercial projects
-          with expertise and attention to detail. Fully insured and experienced,
-          we are committed to quality workmanship and reliable service.
-        </p>
-
-        <div className="flex flex-wrap gap-4">
-          <Button
-            variant="primary"
-            href="/services"
-            className="!bg-[#737373] !border-[#737373] hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a]"
-          >
-            Our Services
-          </Button>
-          <Button variant="outline" href="/contact-us">
-            Contact Us
-          </Button>
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-bg.jpeg"
+            alt=""
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
         </div>
-      </div>
-    </section>
+
+        {/* Gradient overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(110deg, rgba(0,0,0,0.91) 0%, rgba(0,0,0,0.80) 48%, rgba(0,0,0,0.58) 100%)",
+          }}
+          aria-hidden="true"
+        />
+
+        {/* Main content — pb clears the absolute trust bar (2-row on mobile ≈ 110px) */}
+        <div
+          className="relative z-10 flex items-center pb-[148px] md:pb-[100px]"
+          style={{
+            minHeight: "100svh",
+            paddingTop: "clamp(110px, 15vw, 148px)",
+          }}
+        >
+          <div className="max-w-[1200px] mx-auto px-4 md:px-8 w-full">
+
+            {/* Eyebrow */}
+            <div className="flex items-start gap-3 mb-5 hero-anim hero-anim-1">
+              <span className="h-[1px] w-8 bg-[#E00201] flex-shrink-0 mt-[6px]" aria-hidden="true" />
+              <p
+                className="text-[#E00201] text-[10px] font-[700] uppercase"
+                style={{ fontFamily: "var(--font-subheading)", letterSpacing: "2.5px", lineHeight: "1.5" }}
+              >
+                Saskatchewan&apos;s Premier Contractor
+              </p>
+            </div>
+
+            {/* H1 */}
+            <h1
+              className="text-white font-[700] mb-6 leading-[1.08] hero-anim hero-anim-2"
+              style={{
+                fontFamily: "var(--font-subheading)",
+                fontSize: "clamp(36px, 6.2vw, 80px)",
+                maxWidth: "840px",
+                letterSpacing: "-0.5px",
+              }}
+            >
+              Expert Drywall &amp;{" "}
+              <span className="text-[#E00201]">Construction</span>
+              <br className="hidden sm:block" />
+              {" "}in Saskatoon, SK
+            </h1>
+
+            {/* Body copy */}
+            <p
+              className="mb-10 hero-anim hero-anim-3"
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "clamp(15px, 1.6vw, 17px)",
+                color: "rgba(255,255,255,0.70)",
+                maxWidth: "560px",
+                lineHeight: "1.82",
+              }}
+            >
+              Dil Chahal Construction delivers premium drywall installation, steel framing, insulation, and full interior renovations across Saskatchewan. Licensed, insured, and inspection-ready.
+            </p>
+
+            {/* CTA buttons */}
+            <div className="flex flex-wrap gap-4 hero-anim hero-anim-4">
+              <Link
+                href="/services"
+                className="group inline-flex items-center gap-2.5 bg-[#E00201] text-white font-[700] tracking-[0.4px] px-7 py-[14px] rounded-[2px] hover:bg-[#c50000] transition-all duration-300 active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E00201] focus-visible:outline-offset-2"
+                style={{ fontFamily: "var(--font-subheading)", fontSize: "13px" }}
+              >
+                Our Services
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  className="transition-transform duration-300 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center gap-2.5 text-white font-[600] tracking-[0.4px] px-7 py-[14px] border border-white/30 rounded-[2px] hover:border-white/70 hover:bg-white/[0.08] transition-all duration-300 active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+                style={{ fontFamily: "var(--font-subheading)", fontSize: "13px" }}
+              >
+                Get a Free Quote
+              </Link>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Bottom trust bar */}
+        <div
+          className="absolute bottom-0 left-0 right-0 border-t border-white/10"
+          style={{ background: "rgba(0,0,0,0.60)", backdropFilter: "blur(10px)" }}
+        >
+          <div className="max-w-[1200px] mx-auto px-4 md:px-8 py-3 md:py-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+              {trustItems.map((t, i) => (
+                <div key={i} className="text-center px-2 py-2 md:py-1">
+                  <p
+                    className="text-[#E00201] font-[700] uppercase mb-0.5"
+                    style={{ fontFamily: "var(--font-subheading)", fontSize: "8.5px", letterSpacing: "1px" }}
+                  >
+                    {t.label}
+                  </p>
+                  <p
+                    className="text-white font-[700]"
+                    style={{ fontFamily: "var(--font-subheading)", fontSize: "12px" }}
+                  >
+                    {t.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

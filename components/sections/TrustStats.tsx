@@ -9,40 +9,37 @@ export default function TrustStats() {
   return (
     <section
       aria-label="Company credentials and trust signals"
-      style={{ backgroundColor: "#111", paddingTop: "32px", paddingBottom: "32px" }}
+      style={{ backgroundColor: "#0a0a0a", paddingTop: "36px", paddingBottom: "36px" }}
     >
-      <div className="max-w-[1140px] mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: "0" }}>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/8">
           {stats.map((stat, i) => (
             <div
               key={i}
-              style={{
-                textAlign: "center",
-                padding: "20px 12px",
-                borderRight: i < stats.length - 1 ? "1px solid rgba(255,255,255,0.1)" : "none",
-              }}
+              className="text-center px-6 py-2"
             >
               <p
                 style={{
-                  fontFamily: "var(--font-roboto-sans)",
-                  fontSize: "11px",
-                  fontWeight: 400,
-                  color: "rgba(255,255,255,0.5)",
-                  letterSpacing: "1.5px",
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  color: "rgba(255,255,255,0.40)",
+                  letterSpacing: "2px",
                   textTransform: "uppercase",
-                  marginBottom: "4px",
+                  marginBottom: "6px",
                 }}
               >
                 {stat.label}
               </p>
               <p
                 style={{
-                  fontFamily: "var(--font-roboto-sans)",
-                  fontSize: "clamp(28px, 3.5vw, 40px)",
-                  fontWeight: 700,
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "clamp(26px, 3.2vw, 38px)",
+                  fontWeight: 800,
                   color: "#E00201",
-                  lineHeight: "1.1",
+                  lineHeight: "1",
                   marginBottom: "6px",
+                  letterSpacing: "-0.5px",
                 }}
               >
                 {stat.value}
@@ -50,9 +47,9 @@ export default function TrustStats() {
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "12px",
-                  color: "rgba(255,255,255,0.65)",
-                  lineHeight: "1.5",
+                  fontSize: "11.5px",
+                  color: "rgba(255,255,255,0.45)",
+                  lineHeight: "1.55",
                   margin: 0,
                 }}
               >

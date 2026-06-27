@@ -1,5 +1,4 @@
-/* Replace placeholder testimonials below with real client quotes before launch.
-   The Review schema will automatically apply to whatever testimonials are shown here. */
+/* Replace placeholder testimonials with real client quotes before launch. */
 
 const BASE_URL = "https://dilchahalconstruction.com";
 
@@ -39,8 +38,6 @@ const reviewsJsonLd = {
   ],
 };
 
-const stars = "★★★★★";
-
 export default function ClientTestimonials() {
   return (
     <>
@@ -50,68 +47,80 @@ export default function ClientTestimonials() {
       />
       <section
         aria-label="Client testimonials"
-        style={{ backgroundColor: "#f4f4f4", paddingTop: "clamp(48px, 7vw, 80px)", paddingBottom: "clamp(48px, 7vw, 80px)" }}
+        style={{
+          backgroundColor: "#F9FAFB",
+          paddingTop: "clamp(56px, 8vw, 96px)",
+          paddingBottom: "clamp(56px, 8vw, 96px)",
+        }}
       >
-        <div className="max-w-[1140px] mx-auto px-4">
-          <div style={{ textAlign: "center", marginBottom: "48px" }}>
+        <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+
+          {/* Header */}
+          <div className="text-center mb-14">
             <p
+              className="mb-3"
               style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "13px",
-                fontWeight: 500,
+                fontFamily: "var(--font-subheading)",
+                fontSize: "11px",
+                fontWeight: 700,
                 color: "#E00201",
-                letterSpacing: "2px",
+                letterSpacing: "3px",
                 textTransform: "uppercase",
-                marginBottom: "12px",
               }}
             >
               Client Reviews
             </p>
             <h2
               style={{
-                fontFamily: "var(--font-roboto-sans)",
+                fontFamily: "var(--font-subheading)",
                 fontSize: "clamp(26px, 3.2vw, 40px)",
                 fontWeight: 700,
-                color: "#111",
-                marginBottom: "0",
+                color: "#0a0a0a",
+                letterSpacing: "-0.3px",
+                lineHeight: "1.2",
               }}
             >
               What Our Clients Say
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "24px" }}>
+          {/* Testimonial cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reviewsJsonLd["@graph"].map((review, i) => (
               <figure
                 key={i}
+                className="flex flex-col card-hover"
                 style={{
                   background: "#fff",
                   padding: "32px 28px",
                   margin: 0,
                   borderTop: "3px solid #E00201",
-                  display: "flex",
-                  flexDirection: "column",
+                  borderRadius: "2px",
                   gap: "16px",
                 }}
               >
+                {/* Stars */}
                 <p
                   aria-label="5 out of 5 stars"
                   style={{
-                    fontFamily: "var(--font-roboto-sans)",
-                    fontSize: "18px",
+                    fontFamily: "var(--font-subheading)",
+                    fontSize: "16px",
                     color: "#E00201",
                     margin: 0,
-                    letterSpacing: "2px",
+                    letterSpacing: "3px",
                   }}
+                  role="img"
                 >
-                  {stars}
+                  ★★★★★
                 </p>
+
+                {/* Quote */}
                 <blockquote
                   style={{
                     fontFamily: "var(--font-body)",
                     fontSize: "14px",
                     lineHeight: "1.85",
-                    color: "#555",
+                    color: "#4B5563",
                     margin: 0,
                     fontStyle: "italic",
                     flex: 1,
@@ -119,15 +128,18 @@ export default function ClientTestimonials() {
                 >
                   &ldquo;{review.reviewBody}&rdquo;
                 </blockquote>
+
+                {/* Author */}
                 <figcaption
                   style={{
-                    fontFamily: "var(--font-roboto-sans)",
-                    fontSize: "13px",
+                    fontFamily: "var(--font-subheading)",
+                    fontSize: "12.5px",
                     fontWeight: 700,
-                    color: "#333",
-                    borderTop: "1px solid #eee",
-                    paddingTop: "12px",
+                    color: "#111827",
+                    borderTop: "1px solid #F3F4F6",
+                    paddingTop: "14px",
                     margin: 0,
+                    letterSpacing: "0.2px",
                   }}
                 >
                   {review.author.name}
@@ -136,30 +148,28 @@ export default function ClientTestimonials() {
             ))}
           </div>
 
-          {/* Google Reviews CTA */}
-          <div style={{ textAlign: "center", marginTop: "40px" }}>
-            <p style={{ fontFamily: "var(--font-body)", fontSize: "14px", color: "#777", marginBottom: "16px" }}>
-              Satisfied with our work? Leave us a review on Google.
+          {/* Google CTA */}
+          <div className="text-center mt-12">
+            <p
+              className="mb-5"
+              style={{ fontFamily: "var(--font-body)", fontSize: "13.5px", color: "#9CA3AF" }}
+            >
+              Satisfied with our work? We&apos;d love a review on Google.
             </p>
             <a
               href="https://share.google/IPRPEsKN5rl26cugO"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                display: "inline-block",
-                border: "1px solid #E00201",
-                color: "#E00201",
-                fontFamily: "var(--font-roboto-sans)",
-                fontWeight: 700,
-                fontSize: "12px",
-                letterSpacing: "1px",
-                padding: "10px 24px",
-                textDecoration: "none",
-              }}
+              className="inline-flex items-center gap-2.5 border border-[#E00201] text-[#E00201] hover:bg-[#E00201] hover:text-white transition-all duration-300 text-[11.5px] font-[700] tracking-[1.5px] uppercase px-6 py-3 rounded-[2px]"
+              style={{ fontFamily: "var(--font-subheading)" }}
             >
-              LEAVE A GOOGLE REVIEW
+              Leave a Google Review
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                <path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </a>
           </div>
+
         </div>
       </section>
     </>

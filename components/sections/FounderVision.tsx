@@ -1,157 +1,195 @@
-import Button from "@/components/ui/Button";
 import Image from "next/image";
+import Link from "next/link";
 import AnimateIn from "@/components/ui/AnimateIn";
+
+const reasons = [
+  { icon: "✓", text: "Licensed & fully insured in Saskatchewan" },
+  { icon: "✓", text: "Written quotes — no hidden fees, ever" },
+  { icon: "✓", text: "Inspection-ready on every project" },
+  { icon: "✓", text: "Clear communication from quote to completion" },
+];
 
 export default function FounderVision() {
   return (
-    // WP: fa48280 — bg white, 30px side padding
-    <section className="bg-white" style={{ padding: "0 30px" }}>
-      {/* WP: e-con-inner — max-width 1024px, 60px top/bottom padding */}
-      <div className="mx-auto" style={{ maxWidth: "1024px", padding: "60px 0" }}>
-        {/* WP: column-gap 20px between cols */}
-        <div className="flex flex-col lg:flex-row" style={{ gap: "20px" }}>
+    <section className="bg-white" style={{ padding: "clamp(24px, 5vw, 60px) 0 clamp(56px, 8vw, 96px)" }}>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
 
-          {/* Left col — photo, 50% at lg+ — WP: zoomIn */}
-          <AnimateIn variant="zoomIn" className="w-full lg:w-1/2 flex flex-col pt-0 md:pt-[50px] lg:pt-0">
-            {/*
-              Desktop (lg+): overflow-hidden + max-h caps height to ~542px matching WP,
-              image uses object-cover to fill without distorting.
-              Mobile: natural height (no max-h), no crop.
-            */}
+          {/* Left: founder photo */}
+          <AnimateIn variant="zoomIn" className="w-full lg:w-[44%] flex-shrink-0">
             <div
-              className="relative overflow-hidden lg:max-h-[542px]"
-              style={{ margin: "10px" }}
+              className="relative overflow-hidden"
+              style={{ maxHeight: "580px", borderRadius: "2px" }}
             >
-              {/* Gradient at bottom for name/CEO legibility */}
+              {/* Gradient overlay at bottom */}
               <div
                 className="absolute bottom-0 left-0 right-0 z-10"
                 style={{
-                  height: "35%",
-                  background:
-                    "linear-gradient(0deg, rgba(33,45,69,0.63) 0%, transparent 100%)",
+                  height: "40%",
+                  background: "linear-gradient(0deg, rgba(10,10,10,0.75) 0%, transparent 100%)",
                   pointerEvents: "none",
                 }}
+                aria-hidden="true"
               />
-              {/* Mobile: width:100% height:auto (no crop). Desktop: object-cover fills the capped container. */}
               <Image
                 src="/images/founder.jpeg"
-                alt="Dilbagh Singh Chahal, CEO and founder of Dil Chahal Construction Ltd., drywall contractor and general contractor in Saskatoon, SK"
+                alt="Dilbagh Singh Chahal, CEO and founder of Dil Chahal Construction Ltd. — drywall contractor and general contractor in Saskatoon, SK"
                 width={1080}
                 height={1362}
-                className="w-full h-auto lg:h-full lg:object-cover lg:object-top"
+                className="w-full h-auto lg:max-h-[580px] lg:object-cover lg:object-top"
                 style={{ display: "block" }}
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 44vw"
               />
-              {/* Name / title overlay at bottom-left */}
-              <div
-                className="absolute z-20"
-                style={{ bottom: "30px", left: "30px" }}
-              >
-                <h3
+              {/* Name overlay */}
+              <div className="absolute z-20 bottom-6 left-6">
+                <p
+                  className="text-white font-[700]"
                   style={{
-                    fontFamily: "var(--font-roboto-sans)",
-                    fontSize: "24px",
-                    fontWeight: 600,
-                    color: "rgb(255,255,255)",
-                    lineHeight: "31.2px",
-                    marginBottom: "0px",
+                    fontFamily: "var(--font-subheading)",
+                    fontSize: "18px",
+                    letterSpacing: "0.1px",
+                    marginBottom: "2px",
                   }}
                 >
                   Dilbagh Singh Chahal
-                </h3>
+                </p>
                 <p
+                  className="text-white/60 font-[400]"
                   style={{
-                    fontFamily: "var(--font-roboto-sans)",
-                    fontSize: "15px",
-                    fontWeight: 400,
-                    color: "rgb(255,255,255)",
-                    lineHeight: "24.75px",
+                    fontFamily: "var(--font-body)",
+                    fontSize: "13px",
                   }}
                 >
-                  CEO
+                  CEO &amp; Founder
                 </p>
               </div>
             </div>
           </AnimateIn>
 
-          {/* Right col — text, 50% at lg+ — WP: fadeInRight */}
+          {/* Right: text */}
           <AnimateIn
             variant="fadeInRight"
-            className="w-full lg:w-1/2 pt-8 lg:pt-0 flex flex-col"
-            style={{ gap: "20px" }}
+            className="flex-1 flex flex-col"
+            style={{ gap: "24px" }}
           >
-            <h2
-              style={{
-                fontFamily: "var(--font-heading)",
-                fontSize: "clamp(28px, 3.2vw, 40px)",
-                fontWeight: 700,
-                color: "#E00201",
-                letterSpacing: "0.5px",
-                lineHeight: "52px",
-              }}
-            >
-              Founder&apos;s Vision
-            </h2>
+            {/* Section label */}
+            <div>
+              <p
+                className="mb-3"
+                style={{
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  color: "#E00201",
+                  letterSpacing: "3px",
+                  textTransform: "uppercase",
+                }}
+              >
+                Our Story
+              </p>
+              <h2
+                style={{
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "clamp(24px, 2.8vw, 36px)",
+                  fontWeight: 700,
+                  color: "#E00201",
+                  letterSpacing: "-0.2px",
+                  lineHeight: "1.2",
+                }}
+              >
+                Founder&apos;s Vision
+              </h2>
+            </div>
 
             <p
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "16px",
-                fontWeight: 500,
-                color: "#7A7A7A",
-                lineHeight: "24.75px",
-                textAlign: "justify",
+                fontSize: "15px",
+                fontWeight: 400,
+                color: "#4B5563",
+                lineHeight: "1.85",
               }}
             >
-              Dilbagh Singh Chahal founded Dil Chahal Construction in 2016 with
-              one goal: deliver residential and commercial interior construction
-              in Saskatchewan that passes inspection, holds up over time, and
-              earns the trust of every client. With over 7 years of hands-on
-              experience across drywall installation, steel framing, insulation,
-              ceiling systems, and full interior renovations, Dilbagh leads every
-              project with a commitment to trade-level precision and transparent
-              communication from first quote to final walkthrough.
+              Dilbagh Singh Chahal founded Dil Chahal Construction in 2016 with one goal: deliver residential and commercial interior construction in Saskatchewan that passes inspection, holds up over time, and earns the trust of every client. With over 7 years of hands-on experience across drywall installation, steel framing, insulation, ceiling systems, and full interior renovations, Dilbagh leads every project with trade-level precision and transparent communication.
             </p>
 
-            <h3
-              style={{
-                fontFamily: "var(--font-subheading)",
-                fontSize: "clamp(26px, 3.16vw, 36px)",
-                fontWeight: 500,
-                color: "#000000",
-                letterSpacing: "0.5px",
-                lineHeight: "46.8px",
-              }}
-            >
-              Why Choose Us?
-            </h3>
+            {/* Divider */}
+            <div className="border-t border-[#F3F4F6]" />
+
+            <div>
+              <h3
+                className="mb-5"
+                style={{
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "clamp(20px, 2.2vw, 26px)",
+                  fontWeight: 700,
+                  color: "#0a0a0a",
+                  letterSpacing: "-0.1px",
+                  lineHeight: "1.25",
+                }}
+              >
+                Why Choose Us?
+              </h3>
+
+              <ul className="flex flex-col gap-3" aria-label="Reasons to choose Dil Chahal Construction">
+                {reasons.map((r, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-3"
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: "14.5px",
+                      color: "#4B5563",
+                      lineHeight: "1.65",
+                    }}
+                  >
+                    <span
+                      className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#E00201]/10 flex items-center justify-center text-[#E00201] text-[11px] font-bold"
+                      aria-hidden="true"
+                    >
+                      {r.icon}
+                    </span>
+                    {r.text}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <p
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "16px",
-                fontWeight: 500,
-                color: "#7A7A7A",
-                lineHeight: "24.75px",
-                textAlign: "justify",
+                fontSize: "15px",
+                fontWeight: 400,
+                color: "#4B5563",
+                lineHeight: "1.85",
               }}
             >
-              Dil Chahal Construction is a licensed and fully insured general
-              contractor serving Saskatoon, Regina, Prince Albert, and communities
-              across Saskatchewan. Every project — from a small drywall repair to
-              a complete commercial fit-out — is completed to Saskatchewan Building
-              Code standards and is inspection-ready on schedule. We provide
-              written quotes before work begins, communicate clearly at every stage,
-              and do not leave a job site until the client is satisfied.
+              Dil Chahal Construction is a licensed and fully insured general contractor serving Saskatoon, Regina, Prince Albert, and communities across Saskatchewan. Every project is completed to Saskatchewan Building Code standards and is inspection-ready on schedule.
             </p>
 
-            <Button
-              variant="primary"
+            <Link
               href="/services"
-              className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a] self-start"
+              className="group self-start inline-flex items-center gap-2.5 bg-[#E00201] text-white text-[12px] font-[700] tracking-[0.5px] px-7 py-[13px] rounded-[2px] hover:bg-[#c50000] transition-all duration-300 hover:scale-[1.02] active:scale-[0.97]"
+              style={{ fontFamily: "var(--font-subheading)" }}
             >
               Our Services
-            </Button>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                className="transition-transform duration-300 group-hover:translate-x-0.5"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 6.5h9M8 3l3.5 3.5L8 10"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Link>
           </AnimateIn>
 
         </div>

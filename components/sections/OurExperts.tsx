@@ -3,65 +3,73 @@ import AnimateIn from "@/components/ui/AnimateIn";
 
 export default function OurExperts() {
   return (
-    // WP: section 385a48a — white bg
-    <section className="bg-white" style={{ padding: "20px 0 40px" }}>
-      <div className="max-w-[1140px] mx-auto px-4">
+    <section className="bg-white" style={{ padding: "clamp(24px, 4vw, 48px) 0 clamp(56px, 8vw, 96px)" }}>
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8">
 
-        {/* WP: ee5f9c7 — zoomInDown on scroll */}
         <AnimateIn variant="zoomInDown">
-          <div className="text-center">
-            <h3
+          {/* Section header */}
+          <div className="text-center mb-12">
+            <p
+              className="mb-3"
               style={{
                 fontFamily: "var(--font-subheading)",
-                fontSize: "24px",
-                fontWeight: 300,
+                fontSize: "11px",
+                fontWeight: 700,
                 color: "#E00201",
-                lineHeight: "31.2px",
-                letterSpacing: "normal",
-                marginBottom: "20px",
+                letterSpacing: "3px",
+                textTransform: "uppercase",
               }}
             >
               The Team
-            </h3>
-
+            </p>
             <h2
               style={{
                 fontFamily: "var(--font-subheading)",
-                fontSize: "clamp(30px, 3.16vw, 36px)",
-                fontWeight: 500,
-                color: "#000000",
-                letterSpacing: "0.5px",
-                lineHeight: "46.8px",
+                fontSize: "clamp(26px, 3.2vw, 40px)",
+                fontWeight: 700,
+                color: "#0a0a0a",
+                letterSpacing: "-0.3px",
+                lineHeight: "1.2",
               }}
             >
               Our Experts
             </h2>
           </div>
 
-          <div
-            className="flex flex-col md:flex-row"
-            style={{ paddingTop: "70px", gap: "20px" }}
-          >
-            <div className="flex-1">
+          {/* Photo grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div
+              className="relative overflow-hidden img-zoom-container"
+              style={{ aspectRatio: "4/3" }}
+            >
               <Image
                 src="/images/work4.jpeg"
                 alt="Dil Chahal Construction expert drywall and framing team on a commercial project in Saskatoon, SK"
-                width={1024}
-                height={768}
-                style={{ width: "100%", height: "auto", display: "block" }}
+                fill
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+                aria-hidden="true"
+              />
             </div>
 
-            <div className="flex-1">
+            <div
+              className="relative overflow-hidden img-zoom-container"
+              style={{ aspectRatio: "4/3" }}
+            >
               <Image
                 src="/images/work6.jpeg"
                 alt="Skilled construction crew from Dil Chahal Construction working on a renovation project in Saskatoon"
-                width={1024}
-                height={768}
-                style={{ width: "100%", height: "auto", display: "block" }}
+                fill
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"
+                aria-hidden="true"
               />
             </div>
           </div>

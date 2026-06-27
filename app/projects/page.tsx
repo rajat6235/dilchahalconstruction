@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import ProjectsHero from "@/components/sections/ProjectsHero";
+import PageHero from "@/components/sections/PageHero";
 import VideoPlayer from "@/components/ui/VideoPlayer";
 import Footer from "@/components/layout/Footer";
 
@@ -94,94 +94,120 @@ export default function ProjectsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <ProjectsHero />
+      <PageHero
+        title="Projects"
+        currentPage="Projects"
+        subtitle="Drywall, steel framing, renovations, and more — completed across Saskatoon and Saskatchewan."
+      />
 
       <main>
         {/* ── Section 1: Heading ── */}
-        {/* WP 3a31dfd: white bg, inner max-width 1140px, padding 100px 0 50px */}
-        <section className="bg-white">
-          <div className="max-w-[1140px] mx-auto px-4" style={{ padding: "100px 16px 50px" }}>
-            {/* WP 239a3f9: H3 "Our Projects" — Roboto 24px weight 200 #E00201 centered */}
-            <h3
-              style={{
-                fontFamily: "var(--font-roboto-sans)",
-                fontSize: "24px",
-                fontWeight: 200,
-                color: "#E00201",
-                lineHeight: "31.2px",
-                letterSpacing: "normal",
-                textAlign: "center",
-                marginBottom: "20px",
-              }}
-            >
-              Our Construction Projects
-            </h3>
-
-            {/* WP fdd3d01: H2 "Latest Works" — Roboto 40px weight 600 #242424 centered */}
-            <h2
-              style={{
-                fontFamily: "var(--font-roboto-sans)",
-                fontSize: "clamp(28px, 3.5vw, 40px)",
-                fontWeight: 600,
-                color: "rgb(36,36,36)",
-                lineHeight: "52px",
-                letterSpacing: "normal",
-                textAlign: "center",
-              }}
-            >
-              Drywall &amp; Renovation Portfolio
-            </h2>
-
-            <div className="flex flex-wrap gap-4 justify-center" style={{ marginTop: "24px" }}>
-              <Link
-                href="/services"
-                aria-label="View all drywall and construction services"
-                className="text-sm font-medium hover:underline"
-                style={{ color: "#E00201", fontFamily: "var(--font-body)" }}
-              >
-                Our Services →
-              </Link>
-              <Link
-                href="/contact-us"
-                aria-label="Get a free drywall or renovation quote"
-                className="text-sm font-medium hover:underline"
-                style={{ color: "#E00201", fontFamily: "var(--font-body)" }}
-              >
-                Get a Free Quote →
-              </Link>
+        <section
+          style={{
+            backgroundColor: "#fff",
+            paddingTop: "clamp(56px, 8vw, 96px)",
+            paddingBottom: "clamp(40px, 6vw, 64px)",
+          }}
+        >
+          <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+              <div>
+                <p
+                  className="mb-3"
+                  style={{
+                    fontFamily: "var(--font-subheading)",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                    color: "#E00201",
+                    letterSpacing: "3px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Our Work
+                </p>
+                <h2
+                  style={{
+                    fontFamily: "var(--font-subheading)",
+                    fontSize: "clamp(28px, 3.8vw, 48px)",
+                    fontWeight: 700,
+                    color: "#0a0a0a",
+                    letterSpacing: "-0.3px",
+                    lineHeight: "1.15",
+                  }}
+                >
+                  Drywall &amp; Renovation Portfolio
+                </h2>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/services"
+                  className="text-[#E00201] font-[600] text-[13px] hover:underline"
+                  style={{ fontFamily: "var(--font-body)" }}
+                >
+                  Our Services →
+                </Link>
+                <Link
+                  href="/contact-us"
+                  className="text-[#E00201] font-[600] text-[13px] hover:underline"
+                  style={{ fontFamily: "var(--font-body)" }}
+                >
+                  Get a Free Quote →
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
         {/* ── Section 2: Image Grid ── */}
-        {/* WP 2a2118d / 46faa25 / 24533ce: full-width, no gap, white bg, pb-100px */}
-        <section className="bg-white" style={{ paddingBottom: "100px" }}>
+        <section style={{ backgroundColor: "#0a0a0a", paddingBottom: "clamp(48px, 7vw, 80px)" }}>
           {rows.map((row, rowIdx) => (
-            <div key={rowIdx} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            <div key={rowIdx} className="grid grid-cols-2 lg:grid-cols-4">
               {row.map((img) => {
                 const inner = (
-                  <div className="relative w-full h-full" style={{ position: "absolute", inset: 0 }}>
+                  <>
                     <Image
                       src={img.src}
                       alt={img.alt}
                       fill
-                      className="object-cover object-center"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.06]"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
                     />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-all duration-400" />
                     {img.href && (
-                      <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0)", transition: "background 0.2s" }} className="hover-darken" />
+                      <span
+                        className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        style={{
+                          background: "#E00201",
+                          color: "#fff",
+                          fontFamily: "var(--font-subheading)",
+                          fontSize: "9.5px",
+                          fontWeight: 700,
+                          letterSpacing: "1.5px",
+                          padding: "4px 10px",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        View Case Study
+                      </span>
                     )}
-                  </div>
+                  </>
                 );
                 return img.href ? (
-                  <Link key={img.src} href={img.href} aria-label={img.alt} style={{ display: "block", position: "relative", height: "280px", overflow: "hidden" }}>
+                  <Link
+                    key={img.src}
+                    href={img.href}
+                    aria-label={img.alt}
+                    className="group relative overflow-hidden"
+                    style={{ height: "clamp(160px, 22vw, 300px)" }}
+                  >
                     {inner}
-                    <span style={{ position: "absolute", bottom: "12px", left: "12px", background: "#E00201", color: "#fff", fontFamily: "var(--font-body)", fontSize: "11px", fontWeight: 700, letterSpacing: "1px", padding: "4px 10px", textTransform: "uppercase", zIndex: 10 }}>
-                      View Case Study
-                    </span>
                   </Link>
                 ) : (
-                  <div key={img.src} className="relative" style={{ height: "280px" }}>
+                  <div
+                    key={img.src}
+                    className="group relative overflow-hidden"
+                    style={{ height: "clamp(160px, 22vw, 300px)" }}
+                  >
                     {inner}
                   </div>
                 );
@@ -190,35 +216,60 @@ export default function ProjectsPage() {
           ))}
 
           {/* ── Case Study Links ── */}
-          <div className="max-w-[1140px] mx-auto px-4" style={{ paddingTop: "48px", textAlign: "center" }}>
-            <h2 style={{ fontFamily: "var(--font-roboto-sans)", fontSize: "clamp(16px, 2vw, 20px)", fontWeight: 700, color: "#111", marginBottom: "20px" }}>
-              Project Case Studies
-            </h2>
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px" }}>
-              <Link href="/projects/commercial-office-fit-out-saskatoon" style={{ fontFamily: "var(--font-body)", fontSize: "13px", color: "#E00201", border: "1px solid #E00201", padding: "8px 18px", textDecoration: "none" }}>
-                Commercial Office Fit-Out
-              </Link>
-              <Link href="/projects/basement-development-saskatoon" style={{ fontFamily: "var(--font-body)", fontSize: "13px", color: "#E00201", border: "1px solid #E00201", padding: "8px 18px", textDecoration: "none" }}>
-                Basement Development
-              </Link>
-              <Link href="/projects/steel-framing-residential-saskatoon" style={{ fontFamily: "var(--font-body)", fontSize: "13px", color: "#E00201", border: "1px solid #E00201", padding: "8px 18px", textDecoration: "none" }}>
-                Steel Framing — Residential
-              </Link>
-              <Link href="/projects/interior-home-renovation-saskatoon" style={{ fontFamily: "var(--font-body)", fontSize: "13px", color: "#E00201", border: "1px solid #E00201", padding: "8px 18px", textDecoration: "none" }}>
-                Interior Home Renovation
-              </Link>
+          <div className="max-w-[1200px] mx-auto px-4 md:px-8 pt-12">
+            <p
+              className="mb-4 text-center"
+              style={{
+                fontFamily: "var(--font-subheading)",
+                fontSize: "11px",
+                fontWeight: 700,
+                color: "#E00201",
+                letterSpacing: "3px",
+                textTransform: "uppercase",
+              }}
+            >
+              Case Studies
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { href: "/projects/commercial-office-fit-out-saskatoon", label: "Commercial Office Fit-Out" },
+                { href: "/projects/basement-development-saskatoon", label: "Basement Development" },
+                { href: "/projects/steel-framing-residential-saskatoon", label: "Steel Framing — Residential" },
+                { href: "/projects/interior-home-renovation-saskatoon", label: "Interior Home Renovation" },
+              ].map((cs) => (
+                <Link
+                  key={cs.href}
+                  href={cs.href}
+                  className="group inline-flex items-center gap-2 border border-white/20 text-white/70 hover:border-[#E00201] hover:text-white transition-all duration-250 px-5 py-3 rounded-[2px]"
+                  style={{ fontFamily: "var(--font-body)", fontSize: "13px", fontWeight: 600 }}
+                >
+                  {cs.label}
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-[#E00201]" aria-hidden="true">
+                    <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* ── Section 3: Videos ── */}
-          {/* WP 1d3160d: max-width 1140px, padding 0 10px, two videos side-by-side 550×309px each */}
-          <div
-            className="mx-auto"
-            style={{ maxWidth: "1140px", padding: "60px 10px 0" }}
-          >
-            <div className="flex flex-col md:flex-row" style={{ gap: "20px" }}>
+          {/* ── Videos ── */}
+          <div className="max-w-[1200px] mx-auto px-4 md:px-8 pt-12">
+            <p
+              className="mb-6 text-center"
+              style={{
+                fontFamily: "var(--font-subheading)",
+                fontSize: "11px",
+                fontWeight: 700,
+                color: "#E00201",
+                letterSpacing: "3px",
+                textTransform: "uppercase",
+              }}
+            >
+              Project Videos
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {videos.map((src, i) => (
-                <div key={i} className="flex-1 overflow-hidden" style={{ aspectRatio: "16/9", backgroundColor: "#000" }}>
+                <div key={i} className="overflow-hidden rounded-[2px]" style={{ aspectRatio: "16/9", backgroundColor: "#111" }}>
                   <VideoPlayer
                     src={src}
                     style={{ width: "100%", height: "100%", display: "block" }}

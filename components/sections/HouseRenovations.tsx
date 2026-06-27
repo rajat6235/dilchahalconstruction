@@ -1,15 +1,38 @@
 "use client";
-
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
-import Button from "@/components/ui/Button";
+import Link from "next/link";
 import AnimateIn from "@/components/ui/AnimateIn";
 
 const slides = [
-  { src: "/images/reno1.jpeg", alt: "House renovation project — drywall and interior finishing completed by Dil Chahal Construction in Saskatoon, SK" },
-  { src: "/images/reno2.jpeg", alt: "Residential renovation showcasing mudding, taping, and texturing work in Saskatoon" },
-  { src: "/images/reno3.jpeg", alt: "Completed home renovation with drywall installation and ceiling work in Saskatoon, Saskatchewan" },
+  {
+    src: "/images/reno1.jpeg",
+    alt: "House renovation project — drywall and interior finishing completed by Dil Chahal Construction in Saskatoon, SK",
+  },
+  {
+    src: "/images/reno2.jpeg",
+    alt: "Residential renovation showcasing mudding, taping, and texturing work in Saskatoon",
+  },
+  {
+    src: "/images/reno3.jpeg",
+    alt: "Completed home renovation with drywall installation and ceiling work in Saskatoon, Saskatchewan",
+  },
 ];
+
+function ChevronLeft() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <path d="M11 14l-5-5 5-5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+function ChevronRight() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <path d="M7 4l5 5-5 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 function RenovationCarousel() {
   const [current, setCurrent] = useState(0);
@@ -22,26 +45,25 @@ function RenovationCarousel() {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       if (!paused) setCurrent((c) => (c + 1) % slides.length);
-    }, 2500);
+    }, 3000);
   }, [paused]);
 
   useEffect(() => {
     startTimer();
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
   }, [startTimer]);
 
   return (
     <div
-      style={{ paddingBottom: "30px" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* Slide container — 4:3 aspect ratio matching WP 534×431 */}
+      {/* Slide */}
       <div
         className="relative w-full overflow-hidden"
-        style={{ aspectRatio: "4/3" }}
+        style={{ aspectRatio: "4/3", borderRadius: "2px" }}
+        aria-label="Renovation project slideshow"
+        role="region"
       >
         {slides.map((slide, i) => (
           <div
@@ -49,9 +71,10 @@ function RenovationCarousel() {
             className="absolute inset-0"
             style={{
               opacity: i === current ? 1 : 0,
-              transition: "opacity 500ms ease",
+              transition: "opacity 0.6s ease",
               zIndex: i === current ? 1 : 0,
             }}
+            aria-hidden={i !== current}
           >
             <Image
               src={slide.src}
@@ -63,107 +86,37 @@ function RenovationCarousel() {
           </div>
         ))}
 
-        {/* WP: elementor-swiper-button-prev — chevron-left SVG inside */}
+        {/* Controls */}
         <button
-          onClick={() => {
-            goTo(current - 1);
-            startTimer();
-          }}
+          onClick={() => { goTo(current - 1); startTimer(); }}
           aria-label="Previous slide"
-          style={{
-            position: "absolute",
-            left: "10px",
-            top: "50%",
-            transform: "translateY(-50%)",
-            zIndex: 10,
-            background: "rgba(0,0,0,0.35)",
-            border: "none",
-            borderRadius: "50%",
-            width: "36px",
-            height: "36px",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            padding: 0,
-          }}
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center bg-black/50 text-white rounded-full hover:bg-black/75 transition-all duration-200 backdrop-blur-sm"
         >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 1000 1000"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-          >
-            <path d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z" />
-          </svg>
+          <ChevronLeft />
         </button>
-
-        {/* WP: elementor-swiper-button-next — chevron-right SVG inside */}
         <button
-          onClick={() => {
-            goTo(current + 1);
-            startTimer();
-          }}
+          onClick={() => { goTo(current + 1); startTimer(); }}
           aria-label="Next slide"
-          style={{
-            position: "absolute",
-            right: "10px",
-            top: "50%",
-            transform: "translateY(-50%)",
-            zIndex: 10,
-            background: "rgba(0,0,0,0.35)",
-            border: "none",
-            borderRadius: "50%",
-            width: "36px",
-            height: "36px",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            padding: 0,
-          }}
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center bg-black/50 text-white rounded-full hover:bg-black/75 transition-all duration-200 backdrop-blur-sm"
         >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 1000 1000"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-          >
-            <path d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z" />
-          </svg>
+          <ChevronRight />
         </button>
       </div>
 
-      {/* WP: swiper-pagination — dots below carousel */}
-      <div
-        className="flex justify-center gap-[8px]"
-        style={{ paddingTop: "14px" }}
-      >
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-4" role="tablist" aria-label="Select slide">
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => {
-              goTo(i);
-              startTimer();
-            }}
+            role="tab"
+            onClick={() => { goTo(i); startTimer(); }}
             aria-label={`Go to slide ${i + 1}`}
-            aria-current={i === current}
-            style={{
-              width: "10px",
-              height: "10px",
-              borderRadius: "50%",
-              border: "none",
-              cursor: "pointer",
-              backgroundColor: i === current ? "#333" : "#bbb",
-              transition: "background-color 0.3s",
-              padding: 0,
-            }}
+            aria-selected={i === current}
+            className={`transition-all duration-300 rounded-full ${
+              i === current
+                ? "w-5 h-[6px] bg-[#E00201]"
+                : "w-[6px] h-[6px] bg-[#D1D5DB] hover:bg-[#9CA3AF]"
+            }`}
           />
         ))}
       </div>
@@ -174,105 +127,115 @@ function RenovationCarousel() {
 export default function HouseRenovations() {
   return (
     <>
-      {/* Section 1: WP 1b490cc — fadeInDown on scroll */}
-      <section className="bg-white" style={{ padding: "10px 0 60px" }}>
-        <div className="max-w-[1140px] mx-auto px-4 text-center">
-          <AnimateIn variant="fadeInDown" style={{ display: "inline-block", width: "100%" }}>
-          <h2
-            style={{
-              fontFamily: "var(--font-subheading)",
-              fontSize: "clamp(28px, 3vw, 36px)",
-              fontWeight: 500,
-              color: "#242424",
-              letterSpacing: "0.5px",
-              lineHeight: "46.8px",
-            }}
-          >
-            House Renovations
-          </h2>
+      {/* Heading */}
+      <section className="bg-white" style={{ padding: "clamp(48px, 7vw, 80px) 0 clamp(24px, 4vw, 40px)" }}>
+        <div className="max-w-[1200px] mx-auto px-4 md:px-8 text-center">
+          <AnimateIn variant="fadeInDown">
+            <p
+              className="mb-3"
+              style={{
+                fontFamily: "var(--font-subheading)",
+                fontSize: "11px",
+                fontWeight: 700,
+                color: "#E00201",
+                letterSpacing: "3px",
+                textTransform: "uppercase",
+              }}
+            >
+              Residential
+            </p>
+            <h2
+              style={{
+                fontFamily: "var(--font-subheading)",
+                fontSize: "clamp(26px, 3.2vw, 40px)",
+                fontWeight: 700,
+                color: "#0a0a0a",
+                letterSpacing: "-0.3px",
+                lineHeight: "1.2",
+              }}
+            >
+              House Renovations
+            </h2>
           </AnimateIn>
         </div>
       </section>
 
-      {/* Section 2: WP 96e9b97 — bg #FFFFFF, margin-top:100px desktop, mb:30px */}
+      {/* Carousel + text */}
       <section
-        className="bg-[#f5f5f5]"
-        style={{ paddingTop: "clamp(40px, 8vw, 100px)" }}
+        className="bg-[#F9FAFB]"
+        style={{ paddingTop: "clamp(40px, 6vw, 72px)", paddingBottom: "clamp(56px, 8vw, 96px)" }}
       >
-        <div className="max-w-[1140px] mx-auto px-4">
-          <div className="flex flex-col md:flex-row" style={{ gap: "0px" }}>
-            {/* WP 828acec — 55% width — fadeInLeft */}
-            <AnimateIn
-              variant="fadeInLeft"
-              className="w-full md:w-[55%] flex-shrink-0"
-              style={{ marginRight: "clamp(0px, 2.5vw, 30px)" }}
-            >
+        <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-14">
+
+            {/* Carousel — 55% */}
+            <AnimateIn variant="fadeInLeft" className="w-full md:w-[55%] flex-shrink-0">
               <RenovationCarousel />
             </AnimateIn>
 
-            {/* WP c4b0a9a — remaining 45% — fadeInRight */}
-            <AnimateIn
-              variant="fadeInRight"
-              className="flex-1 flex flex-col justify-center pl-0 md:pl-5 pt-8 md:pt-10 pb-10"
-            >
-              {/* WP 594bb2f: H2 "Seamless Home Transformations" — Merriweather 34px/700/#E00201 */}
-              <h2
-                className="mb-4"
+            {/* Text — 45% */}
+            <AnimateIn variant="fadeInRight" className="flex-1 flex flex-col justify-center">
+              <h3
+                className="mb-3"
                 style={{
-                  fontFamily: "var(--font-heading)",
-                  fontSize: "clamp(24px, 2.5vw, 34px)",
+                  fontFamily: "var(--font-subheading)",
+                  fontSize: "clamp(22px, 2.4vw, 32px)",
                   fontWeight: 700,
                   color: "#E00201",
-                  lineHeight: "44.2px",
+                  letterSpacing: "-0.1px",
+                  lineHeight: "1.25",
                 }}
               >
                 Seamless Home Transformations
-              </h2>
+              </h3>
 
-              {/* WP f62c51c: H5 "Elevate Your Home's Value and Appeal" — Montserrat bold black */}
-              <h3
-                className="mb-4"
+              <h4
+                className="mb-5"
                 style={{
                   fontFamily: "var(--font-subheading)",
-                  fontSize: "clamp(18px, 2vw, 26px)",
+                  fontSize: "clamp(16px, 1.6vw, 20px)",
                   fontWeight: 700,
-                  color: "#000000",
-                  letterSpacing: "0.2px",
-                  lineHeight: "33.8px",
+                  color: "#0a0a0a",
+                  letterSpacing: "0",
+                  lineHeight: "1.35",
                 }}
               >
                 Elevate Your Home&apos;s Value and Appeal
-              </h3>
+              </h4>
 
-              {/* WP 33ea119: italic Open Sans 16px/500/#7A7A7A */}
               <p
-                className="mb-6"
+                className="mb-8"
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "16px",
-                  fontWeight: 500,
+                  fontSize: "15px",
+                  fontWeight: 400,
                   fontStyle: "italic",
-                  color: "#7A7A7A",
-                  lineHeight: "24.75px",
-                  textAlign: "justify",
+                  color: "#6B7280",
+                  lineHeight: "1.82",
                 }}
               >
-                Experience the difference of working with a dedicated team
-                committed to delivering seamless home transformations. Whether
-                you&apos;re looking to increase your home&apos;s value or
-                enhance its comfort and style, our renovation experts are here
-                to help you achieve your goals with precision and
-                professionalism.
+                Experience the difference of working with a dedicated team committed to seamless home transformations. Whether you&apos;re looking to increase your home&apos;s value or enhance its comfort and style, our renovation experts deliver precision and professionalism on every project.
               </p>
 
-              <Button
-                variant="primary"
+              <Link
                 href="/contact-us#contact"
-                className="!bg-[#737373] !border-[#737373] rounded hover:!bg-[#5a5a5a] hover:!border-[#5a5a5a] self-start"
+                className="group self-start inline-flex items-center gap-2.5 bg-[#E00201] text-white text-[12px] font-[700] tracking-[0.5px] px-7 py-[13px] rounded-[2px] hover:bg-[#c50000] transition-all duration-300 hover:scale-[1.02] active:scale-[0.97]"
+                style={{ fontFamily: "var(--font-subheading)" }}
               >
                 Get a Quote
-              </Button>
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  className="transition-transform duration-300 group-hover:translate-x-0.5"
+                  aria-hidden="true"
+                >
+                  <path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
             </AnimateIn>
+
           </div>
         </div>
       </section>
